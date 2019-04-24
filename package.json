@@ -1,0 +1,9 @@
+{
+  "name": "components",
+  "version": "1.0.0",
+  "description": "Wordpress Theme organized by components",
+  "main": "index.js",
+  "repository": "git@github.com:kalebheitzman/components.git",
+  "author": "Kaleb Heitzman <kalebheitzman@gmail.com>",
+  "license": "MIT"
+}
