@@ -10,10 +10,26 @@ by Kaleb Heitzman <kalebheitzman@gmail.com>
 https://heitzman.co
 
 (c) 2019 */
+/* media query mixins */
+/* branding mixins */
+/* typography */
+/* site footer element */
+.site-footer {
+  background: #efefed; }
 
-@import "_media.scss";
-@import "_branding.scss";
-@import "_typography.scss";
+/* site header element */
+.site-header {
+  background: #efefef; }
 
-@import "layout/**/*.scss";
-@import "components/**/*.scss";
+/* site navigation element */
+.site-navigation ul {
+  list-style: none; }
+  .site-navigation ul li {
+    display: inline-block; }
+
+/* hero element */
+.hero {
+  height: 80vh;
+  width: 100vw; }
+
+/*# sourceMappingURL=style.css.map */
