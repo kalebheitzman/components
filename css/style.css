@@ -10,9 +10,17 @@ by Kaleb Heitzman <kalebheitzman@gmail.com>
 https://heitzman.co
 
 (c) 2019 */
+body {
+  font-family: "Lato", sans-serif; }
+
 /* media query mixins */
 /* branding mixins */
 /* typography */
+/* hero element */
+.hero {
+  height: 80vh;
+  width: 100vw; }
+
 /* site footer element */
 .site-footer {
   background: #efefed; }
@@ -26,10 +34,5 @@ https://heitzman.co
   list-style: none; }
   .site-navigation ul li {
     display: inline-block; }
-
-/* hero element */
-.hero {
-  height: 80vh;
-  width: 100vw; }
 
 /*# sourceMappingURL=style.css.map */

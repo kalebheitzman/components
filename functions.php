@@ -85,5 +85,12 @@ function components_scripts() {
 	// if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 	// 	wp_enqueue_script( 'comment-reply' );
 	// }
+	wp_enqueue_script( 'fontloader_js', get_template_directory_uri() . '/js/webfont.js', null, '', true );
+	wp_add_inline_script( 'fontloader_js', 'WebFont.load({google:{families:["Lato:100,300,400,700", "Glyph:300"]}});', 'after' );
 }
 add_action( 'wp_enqueue_scripts', 'components_scripts' );
+
+/**
+ * Custom template tags for this theme.
+ */
+require get_template_directory() . '/inc/template-tags.php';

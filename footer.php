@@ -4,8 +4,7 @@
  */
 wp_footer(); ?>
 
-<footer id="footer">
-  
-</footer>
+<?php get_component( 'site-footer' ) ?>
+
 </body>
 </html>

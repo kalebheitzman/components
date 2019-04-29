@@ -13,3 +13,5 @@
 </head>
 
 <body <?php body_class(); ?>>
+
+<?php get_component( 'site-header' ); ?>

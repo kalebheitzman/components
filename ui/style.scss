@@ -11,9 +11,11 @@ https://heitzman.co
 
 (c) 2019 */
 
+body {
+  font-family: "Lato", sans-serif;
+}
+
 @import "_media.scss";
 @import "_branding.scss";
 @import "_typography.scss";
-
-@import "layout/**/*.scss";
 @import "components/**/*.scss";
