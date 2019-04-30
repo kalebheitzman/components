@@ -79,6 +79,7 @@ add_action( 'after_setup_theme', 'components_setup' );
  * Enqueue scripts and styles.
  */
 function components_scripts() {
+	wp_enqueue_style( 'normalize-css', get_template_directory_uri() . '/css/normalize.css' );
 	wp_enqueue_style( 'components-style', get_template_directory_uri() . '/css/style.css' );
 	//wp_enqueue_script( 'components-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 	//wp_enqueue_script( 'components-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
