@@ -439,13 +439,7 @@ import components
   width: 100vw; }
 
 /* site footer element */
-.site-footer {
-  background: #efefed; }
-
 /* site header element */
-.site-header {
-  background: #efefef; }
-
 /* site navigation element */
 .site-navigation ul {
   list-style: none; }
