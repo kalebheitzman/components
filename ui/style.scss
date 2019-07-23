@@ -15,11 +15,18 @@ https://heitzman.co
 
 (c) 2019 */
 
+/*
+import media mixins
+*/
 @import "_media.scss";
+
+/*
+import site branding
+*/
 @import "_branding.scss";
 
 /*
-ipmort normalize.css
+import normalize.css
 */
 @import "../node_modules/normalize-scss/sass/normalize/import-now";
 
@@ -29,6 +36,19 @@ import typography
 @import "_typography.scss";
 
 /*
-import components
+import layout components
+*/
+@import "layout/**/*.scss";
+
+/*
+import vaiorus site components
 */
 @import "components/**/*.scss";
+
+/*
+common styles
+*/
+.site-main {
+    max-width: 1120px;
+    margin: 0 auto;
+}

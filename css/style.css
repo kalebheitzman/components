@@ -14,10 +14,21 @@ https://heitzman.co
 @see the CONTRIBUTING.md for how to contribute
 
 (c) 2019 */
-/* media query mixins */
+/*
+import media mixins
+*/
+/*
+ * media query mixins 
+ * Components is designed to be a mobile first framework. It's recommended
+ * to develop your mobile site first, and then work your way up in each 
+ * component using the following sass mixins.
+ */
+/*
+import site branding
+*/
 /* branding mixins */
 /*
-ipmort normalize.css
+import normalize.css
 */
 /*! normalize-scss | MIT/GPLv2 License | bit.ly/normalize-scss */
 /* Document
@@ -431,19 +442,37 @@ body {
   font-family: "Lato", sans-serif; }
 
 /*
-import components
+import layout components
+*/
+/* site footer element */
+.site-footer {
+  max-width: 1120px;
+  margin: 0 auto; }
+
+/* site header element */
+.site-header {
+  max-width: 1120px;
+  margin: 0 auto; }
+
+/* site navigation element */
+.site-navigation ul {
+  list-style: none; }
+  .site-navigation ul li {
+    display: inline-block; }
+
+/*
+import vaiorus site components
 */
 /* hero element */
 .hero {
   height: 80vh;
   width: 100vw; }
 
-/* site footer element */
-/* site header element */
-/* site navigation element */
-.site-navigation ul {
-  list-style: none; }
-  .site-navigation ul li {
-    display: inline-block; }
+/*
+common styles
+*/
+.site-main {
+  max-width: 1120px;
+  margin: 0 auto; }
 
 /*# sourceMappingURL=style.css.map */
