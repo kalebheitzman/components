@@ -14,6 +14,7 @@
 				'container'  => 'nav',
 				'menu_class' => 'primary-menu',
 				'menu_id'    => '',
+				'walker'     => new Components_Menu_Walker(),
 			)
 		);
 		?>

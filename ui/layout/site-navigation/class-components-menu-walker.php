@@ -11,6 +11,52 @@
  * @since 1.0.0
  */
 
+/**
+ * Components Menu Walker Class
+ */
 class Components_Menu_Walker extends Walker_Nav_Menu {
 
+	/**
+	 * Start Element
+	 *
+	 * @param  string  $output Output of menu item.
+	 * @param  object  $item WP_Post representing menu item.
+	 * @param  integer $depth Depth.
+	 * @param  object  $args Arguments from wp_nav_menu.
+	 * @param  integer $id ID.
+	 * @return void
+	 */
+	public function start_el( &$output, $item, $depth = 0, $args = array(), $id = 0) {
+		$object      = $item->object;
+		$type        = $item->type;
+		$title       = $item->title;
+		$description = $item->description;
+		$permalink   = $item->url;
+
+		// opening li.
+		$output .= "<li class='" . implode( ' ', $item->classes ) . "'>";
+
+		// add span if no permalink.
+		if ( $permalink && '#' !== $permalink ) {
+			$output .= '<a href="' . $permalink . '">';
+		} else {
+			$output .= '<span>';
+		}
+
+		// title.
+		$output .= $title;
+
+		// description if visible.
+		if ( '' !== $description && 0 === $depth ) {
+			$output .= '<small class="description">' . $description . '</small>';
+		}
+
+		// close out a/span.
+		if ( $permalink && '#' !== $permalink ) {
+			$output .= '</a>';
+		} else {
+			$output .= '</span>';
+		}
+
+	}
 }
