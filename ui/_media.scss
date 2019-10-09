@@ -1,21 +1,21 @@
 /*
- * media query mixins 
+ * media query mixins
  * Components is designed to be a mobile first framework. It's recommended
- * to develop your mobile site first, and then work your way up in each 
+ * to develop your mobile site first, and then work your way up in each
  * component using the following sass mixins.
- */  
+ */
 @mixin tablet-up {
-    @media (min-width: 600px) { @content; }  
-  }
-  
-  @mixin tablet-side {
-      @media (min-width: 900px) { @content; }  
-  }
-  
-  @mixin desktop {
-      @media (min-width: 1200px) { @content; }  
-  }
-  
-  @mixin large-desktop {
-      @media (min-width: 1800px) { @content; }  
-  }
+	@media (min-width: 600px) { @content; }
+}
+
+@mixin tablet-side {
+	@media (min-width: 900px) { @content; }
+}
+
+@mixin desktop {
+	@media (min-width: 1200px) { @content; }
+}
+
+@mixin large-desktop {
+	@media (min-width: 1800px) { @content; }
+}
