@@ -11,12 +11,6 @@
  */
 function components_scripts() {
 	wp_enqueue_style(
-		'normalize-css',
-		get_template_directory_uri() . '/css/normalize.css',
-		null,
-		'1.0.0'
-	);
-	wp_enqueue_style(
 		'components-style',
 		get_template_directory_uri() . '/css/style.css',
 		null,
