@@ -13,9 +13,10 @@
 require get_template_directory() . '/inc/theme-support.php';
 
 /**
- * Register Nav Menus.
+ * Register Nav Menus and include custom nav walkers.
  */
 require get_template_directory() . '/inc/register-nav-menus.php';
+require get_template_directory() . '/ui/layout/class-components-menu-walker.php';
 
 /**
  * Enqueue scripts and styles.
