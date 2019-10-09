@@ -1,15 +1,69 @@
+@import '../../branding';
+@import '../../media';
+
 /* site navigation element */
 .site-navigation {
 
-    ul {
-        list-style: none;
+	ul.primary-menu {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		line-height: 4rem;
+		background: $primary-menu-background;
 
-        li {
-            display: inline-block;
+		@include tablet-side {
+			float: right;
+		}
 
-            a {
+		li {
+			display: inline-block;
+			position: relative;
 
-            }
-        }
-    }
+			a {
+				white-space: nowrap;
+				padding: 1rem;
+				display: block;
+				text-decoration: none;
+				color: $primary-menu-link;
+
+				&:hover {
+					background: $primary-menu-background-hover;
+				}
+			}
+
+			ul {
+				position: absolute;
+				left: -9999px; /* Hide off-screen when not needed (this is more accessible than display:none;) */
+				margin: 0;
+				padding: 0;
+				background: #f7f7f7;
+				line-height: 1;
+			}
+
+			&:hover {
+
+				ul {
+					left: 0; /* Bring back on-screen when needed */
+
+					li {
+
+						ul {
+							position: absolute;
+							left: -9999px; /* Hide off-screen when not needed (this is more accessible than display:none;) */
+							top: 0;
+							margin: 0;
+							padding: 0;
+						}
+
+						&:hover {
+
+							ul {
+								left: 100%;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
 }

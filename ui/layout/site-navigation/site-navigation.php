@@ -7,7 +7,14 @@
  */
 
 ?><div class="site-navigation">
-	<nav>
-
-	</nav>
+	<?php
+		wp_nav_menu(
+			array(
+				'menu'       => 'primary_menu',
+				'container'  => 'nav',
+				'menu_class' => 'primary-menu',
+				'menu_id'    => '',
+			)
+		);
+		?>
 </div>

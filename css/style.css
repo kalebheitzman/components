@@ -2,13 +2,13 @@
 Components Base Theme
 by Kaleb Heitzman <kalebheitzman@gmail.com>
 https://heitzman.co
-                                                  _       
-  ___ ___  _ __ ___  _ __   ___  _ __   ___ _ __ | |_ ___ 
+                                                  _
+  ___ ___  _ __ ___  _ __   ___  _ __   ___ _ __ | |_ ___
  / __/ _ \| '_ ` _ \| '_ \ / _ \| '_ \ / _ \ '_ \| __/ __|
 | (_| (_) | | | | | | |_) | (_) | | | |  __/ | | | |_\__ \
  \___\___/|_| |_| |_| .__/ \___/|_| |_|\___|_| |_|\__|___/
-                    |_|                              
-                                                    
+                    |_|
+
 @see the README.md for how to use
 @see the CHANGELOG.md for updates
 @see the CONTRIBUTING.md for how to contribute
@@ -27,6 +27,8 @@ import media mixins
 import site branding
 */
 /* branding mixins */
+/* text colors */
+/* menu colors */
 /*
 import normalize.css
 */
@@ -446,19 +448,75 @@ import layout components
 */
 /* site footer element */
 .site-footer {
-  max-width: 1120px;
-  margin: 0 auto; }
+  margin: 0; }
 
+/*
+ * media query mixins
+ * Components is designed to be a mobile first framework. It's recommended
+ * to develop your mobile site first, and then work your way up in each
+ * component using the following sass mixins.
+ */
 /* site header element */
 .site-header {
-  max-width: 1120px;
-  margin: 0 auto; }
+  margin: 0;
+  display: grid;
+  grid-template-columns: 1fr; }
+  @media (min-width: 900px) {
+    .site-header {
+      grid-template-columns: 300px 1fr; } }
+  .site-header h1 {
+    line-height: 4rem; }
 
+/* branding mixins */
+/* text colors */
+/* menu colors */
+/*
+ * media query mixins
+ * Components is designed to be a mobile first framework. It's recommended
+ * to develop your mobile site first, and then work your way up in each
+ * component using the following sass mixins.
+ */
 /* site navigation element */
-.site-navigation ul {
-  list-style: none; }
-  .site-navigation ul li {
-    display: inline-block; }
+.site-navigation ul.primary-menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  line-height: 4rem;
+  background: none; }
+  @media (min-width: 900px) {
+    .site-navigation ul.primary-menu {
+      float: right; } }
+  .site-navigation ul.primary-menu li {
+    display: inline-block;
+    position: relative; }
+    .site-navigation ul.primary-menu li a {
+      white-space: nowrap;
+      padding: 1rem;
+      display: block;
+      text-decoration: none;
+      color: #00b6f7; }
+      .site-navigation ul.primary-menu li a:hover {
+        background: #efefef; }
+    .site-navigation ul.primary-menu li ul {
+      position: absolute;
+      left: -9999px;
+      /* Hide off-screen when not needed (this is more accessible than display:none;) */
+      margin: 0;
+      padding: 0;
+      background: #f7f7f7;
+      line-height: 1; }
+    .site-navigation ul.primary-menu li:hover ul {
+      left: 0;
+      /* Bring back on-screen when needed */ }
+      .site-navigation ul.primary-menu li:hover ul li ul {
+        position: absolute;
+        left: -9999px;
+        /* Hide off-screen when not needed (this is more accessible than display:none;) */
+        top: 0;
+        margin: 0;
+        padding: 0; }
+      .site-navigation ul.primary-menu li:hover ul li:hover ul {
+        left: 100%; }
 
 /*
 import vaiorus site components
@@ -472,7 +530,6 @@ import vaiorus site components
 common styles
 */
 .site-main {
-  max-width: 1120px;
-  margin: 0 auto; }
+  width: 100%; }
 
 /*# sourceMappingURL=style.css.map */
