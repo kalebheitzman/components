@@ -13,9 +13,19 @@
 require get_template_directory() . '/inc/theme-support.php';
 
 /**
+ * Register Nav Menus.
+ */
+require get_template_directory() . '/inc/register-nav-menus.php';
+
+/**
  * Enqueue scripts and styles.
  */
 require get_template_directory() . '/inc/enqueue-scripts.php';
+
+/**
+ * Get Component Function that this theme is primarily built on.
+ */
+require get_template_directory() . '/inc/get-component.php';
 
 /**
  * Custom template tags for this theme.
