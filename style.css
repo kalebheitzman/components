@@ -1,9 +1,9 @@
 /*
 Theme Name: Components
-Theme URI: https://github.com/kalebheitzman/wordpress-components-theme
+Theme URI: https://github.com/kalebheitzman/components
 Author: Kaleb Heitzman
 Author URI: https://heitzman.co
-Description: A Wordpress theme organized using a components pattern
+Description: A minimalistic WordPress theme that uses component based design for theme organization. JS, CSS (sass), and HTML are bundled into individual components under the <code>./ui/components</code> directory to be used across your site.
 Version: 0.8.0
 License: GNU General Public License v2 or later
 Tags: components, minimal
