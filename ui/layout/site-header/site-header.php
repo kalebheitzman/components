@@ -7,7 +7,12 @@
  */
 
 ?><header class="site-header">
-	<h1><?php bloginfo( 'name' ); ?></h1>
+
+	<div class="site-branding">
+		<h1>
+			<a href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php echo bloginfo( 'name' ); ?></a>
+		</h1>
+	</div>
 
 	<?php get_component( 'site-navigation' ); ?>
 </header>

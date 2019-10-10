@@ -19,5 +19,10 @@
 		padding: 0;
 		line-height: 4rem;
 		color: $nav-color;
+
+		a {
+			color: $nav-color;
+			text-decoration: none;
+		}
 	}
 }

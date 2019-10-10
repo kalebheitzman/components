@@ -478,6 +478,9 @@ import layout components
     padding: 0;
     line-height: 4rem;
     color: #ccc; }
+    .site-header h1 a {
+      color: #ccc;
+      text-decoration: none; }
 
 /* branding mixins */
 /* text colors */
@@ -488,6 +491,9 @@ import layout components
  * to develop your mobile site first, and then work your way up in each
  * component using the following sass mixins.
  */
+.admin-bar .site-navigation .nav-mobile {
+  top: 46px; }
+
 nav.site-navigation {
   width: 100%; }
   @media (min-width: 900px) {

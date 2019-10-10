@@ -1,6 +1,16 @@
 @import '../../branding';
 @import '../../media';
 
+.admin-bar {
+
+	.site-navigation {
+
+		.nav-mobile {
+			top: 46px;
+		}
+	}
+}
+
 nav.site-navigation {
 	width: 100%;
 
