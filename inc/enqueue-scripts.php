@@ -18,7 +18,7 @@ function components_scripts() {
 	);
 	wp_enqueue_script(
 		'fontloader_js',
-		get_template_directory_uri() . '/js/webfont.js',
+		get_template_directory_uri() . '/js/webfontloader.js',
 		null,
 		'1.6.28',
 		true
