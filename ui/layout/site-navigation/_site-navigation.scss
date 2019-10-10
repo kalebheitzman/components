@@ -2,19 +2,91 @@
 @import '../../media';
 
 nav.site-navigation {
-	float: right;
+	width: 100%;
+
+	@include tablet-side {
+		width: auto;
+		justify-self: end;
+	}
 
 	.nav-mobile {
+		position: absolute;
+		top: 0;
+		right: 0;
+		background: $nav-background;
+		height: $nav-height;
+		width: $nav-height;
 
+		@include tablet-side {
+			display: none;
+		}
+
+		.nav-toggle {
+			position: absolute;
+			left: 18px;
+			top: 22px;
+			cursor: pointer;
+			padding: 10px 35px 16px 0px;
+
+			span,
+			span:before,
+			span:after {
+				cursor: pointer;
+				border-radius: 1px;
+				height: 5px;
+				width: 35px;
+				background: $nav-color;
+				position: absolute;
+				display: block;
+				content: '';
+				transition: all 300ms ease-in-out;
+			}
+			span:before {
+				top: -10px;
+			}
+			span:after {
+				bottom: -10px;
+			}
+			&.active span {
+				background-color: transparent;
+
+				&:before,
+				&:after {
+					top: 0;
+				}
+				&:before {
+					transform: rotate(45deg);
+				}
+				&:after {
+					transform: rotate(-45deg);
+				}
+			}
+		}
 	}
+
+	@include mobile {
+		ul {
+			display: none;
+		}
+	}
+
+	@include tablet-side {
+		ul {
+			display: block;
+		}
+	}
+
 	ul {
 		list-style: none;
 		margin: 0;
 		padding: 0;
 
 		li {
-			float: left;
-			position: relative;
+
+			@include tablet-side {
+				float: left;
+				position: relative;
+			}
 
 			a {
 				display: block;
@@ -41,6 +113,10 @@ nav.site-navigation {
 			z-index: 1;
 			box-shadow: 0 3px 12px rgba(0,0,0,0.15);
 			display: none;
+
+			@include mobile {
+				position: static;
+			}
 
 			li {
 				min-width: 190px;

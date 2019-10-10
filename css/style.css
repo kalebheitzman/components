@@ -459,12 +459,15 @@ import layout components
  * to develop your mobile site first, and then work your way up in each
  * component using the following sass mixins.
  */
+/* branding mixins */
+/* text colors */
+/* nav vars */
 /* site header element */
 .site-header {
   margin: 0;
   display: grid;
   grid-template-columns: 1fr;
-  background: #efefef; }
+  background: #333; }
   @media (min-width: 900px) {
     .site-header {
       grid-template-columns: 300px 1fr;
@@ -473,7 +476,8 @@ import layout components
     font-size: 1.5rem;
     margin: 0;
     padding: 0;
-    line-height: 4rem; }
+    line-height: 4rem;
+    color: #ccc; }
 
 /* branding mixins */
 /* text colors */
@@ -485,32 +489,86 @@ import layout components
  * component using the following sass mixins.
  */
 nav.site-navigation {
-  float: right; }
+  width: 100%; }
+  @media (min-width: 900px) {
+    nav.site-navigation {
+      width: auto;
+      justify-self: end; } }
+  nav.site-navigation .nav-mobile {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: #333;
+    height: 4rem;
+    width: 4rem; }
+    @media (min-width: 900px) {
+      nav.site-navigation .nav-mobile {
+        display: none; } }
+    nav.site-navigation .nav-mobile .nav-toggle {
+      position: absolute;
+      left: 18px;
+      top: 22px;
+      cursor: pointer;
+      padding: 10px 35px 16px 0px; }
+      nav.site-navigation .nav-mobile .nav-toggle span,
+      nav.site-navigation .nav-mobile .nav-toggle span:before,
+      nav.site-navigation .nav-mobile .nav-toggle span:after {
+        cursor: pointer;
+        border-radius: 1px;
+        height: 5px;
+        width: 35px;
+        background: #ccc;
+        position: absolute;
+        display: block;
+        content: '';
+        transition: all 300ms ease-in-out; }
+      nav.site-navigation .nav-mobile .nav-toggle span:before {
+        top: -10px; }
+      nav.site-navigation .nav-mobile .nav-toggle span:after {
+        bottom: -10px; }
+      nav.site-navigation .nav-mobile .nav-toggle.active span {
+        background-color: transparent; }
+        nav.site-navigation .nav-mobile .nav-toggle.active span:before, nav.site-navigation .nav-mobile .nav-toggle.active span:after {
+          top: 0; }
+        nav.site-navigation .nav-mobile .nav-toggle.active span:before {
+          transform: rotate(45deg); }
+        nav.site-navigation .nav-mobile .nav-toggle.active span:after {
+          transform: rotate(-45deg); }
+  @media (max-width: 599px) {
+    nav.site-navigation ul {
+      display: none; } }
+  @media (min-width: 900px) {
+    nav.site-navigation ul {
+      display: block; } }
   nav.site-navigation ul {
     list-style: none;
     margin: 0;
     padding: 0; }
-    nav.site-navigation ul li {
-      float: left;
-      position: relative; }
-      nav.site-navigation ul li a {
-        display: block;
-        padding: 0 1rem;
-        line-height: 4rem;
-        background: #333;
-        color: #ccc;
-        text-decoration: none; }
-        nav.site-navigation ul li a:hover {
-          background: #444;
-          color: #fff; }
-        nav.site-navigation ul li a:not(:only-child):after {
-          padding-left: 1rem;
-          content: ' \25BE'; }
+    @media (min-width: 900px) {
+      nav.site-navigation ul li {
+        float: left;
+        position: relative; } }
+    nav.site-navigation ul li a {
+      display: block;
+      padding: 0 1rem;
+      line-height: 4rem;
+      background: #333;
+      color: #ccc;
+      text-decoration: none; }
+      nav.site-navigation ul li a:hover {
+        background: #444;
+        color: #fff; }
+      nav.site-navigation ul li a:not(:only-child):after {
+        padding-left: 1rem;
+        content: ' \25BE'; }
     nav.site-navigation ul ul {
       position: absolute;
       z-index: 1;
       box-shadow: 0 3px 12px rgba(0, 0, 0, 0.15);
       display: none; }
+      @media (max-width: 599px) {
+        nav.site-navigation ul ul {
+          position: static; } }
       nav.site-navigation ul ul li {
         min-width: 190px; }
         nav.site-navigation ul ul li a {
