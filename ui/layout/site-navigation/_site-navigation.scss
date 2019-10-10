@@ -1,69 +1,58 @@
 @import '../../branding';
 @import '../../media';
 
-/* site navigation element */
-.site-navigation {
+nav.site-navigation {
+	float: right;
 
-	ul.primary-menu {
+	.nav-mobile {
+
+	}
+	ul {
 		list-style: none;
 		margin: 0;
 		padding: 0;
-		line-height: 4rem;
-		background: $primary-menu-background;
-
-		@include tablet-side {
-			float: right;
-		}
 
 		li {
-			display: inline-block;
+			float: left;
 			position: relative;
 
 			a {
-				white-space: nowrap;
-				padding: 1rem;
 				display: block;
+				padding: 0 1rem;
+				line-height: $nav-height;
+				background: $nav-background;
+				color: $nav-color;
 				text-decoration: none;
-				color: $primary-menu-link;
 
 				&:hover {
-					background: $primary-menu-background-hover;
+					background: $nav-hover-background;
+					color: $nav-hover-color;
+
+				}
+				&:not(:only-child):after {
+					padding-left: 1rem;
+					content: ' \25BE';
+
 				}
 			}
+		}
+		ul {
+			position: absolute;
+			z-index: 1;
+			box-shadow: 0 3px 12px rgba(0,0,0,0.15);
+			display: none;
 
-			ul {
-				position: absolute;
-				left: -9999px; /* Hide off-screen when not needed (this is more accessible than display:none;) */
-				margin: 0;
-				padding: 0;
-				background: #f7f7f7;
-				line-height: 1;
-			}
+			li {
+				min-width: 190px;
 
-			&:hover {
-
-				ul {
-					left: 0; /* Bring back on-screen when needed */
-
-					li {
-
-						ul {
-							position: absolute;
-							left: -9999px; /* Hide off-screen when not needed (this is more accessible than display:none;) */
-							top: 0;
-							margin: 0;
-							padding: 0;
-						}
-
-						&:hover {
-
-							ul {
-								left: 100%;
-							}
-						}
-					}
+				a {
+					padding: 0.75rem 1rem;
+					line-height: 1rem;
 				}
 			}
+		}
+		.submenu {
+
 		}
 	}
 }

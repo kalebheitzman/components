@@ -6,16 +6,19 @@
  * @since 1.0.0
  */
 
-?><div class="site-navigation">
+?><nav class="site-navigation" role="navigation">
+	<div class="nav-mobile">
+		<a class="nav-toggle" href="#!"><span></span></a>
+	</div>
 	<?php
 		wp_nav_menu(
 			array(
 				'menu'       => 'primary_menu',
-				'container'  => 'nav',
+				'container'  => 'ul',
 				'menu_class' => 'primary-menu',
 				'menu_id'    => '',
 				'walker'     => new Components_Menu_Walker(),
 			)
 		);
 		?>
-</div>
+</nav>

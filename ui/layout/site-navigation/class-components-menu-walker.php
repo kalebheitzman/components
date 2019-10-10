@@ -19,14 +19,13 @@ class Components_Menu_Walker extends Walker_Nav_Menu {
 	/**
 	 * Start Element
 	 *
-	 * @param  string  $output Output of menu item.
-	 * @param  object  $item WP_Post representing menu item.
-	 * @param  integer $depth Depth.
-	 * @param  object  $args Arguments from wp_nav_menu.
-	 * @param  integer $id ID.
-	 * @return void
+	 * @param  string $output Output of menu item.
+	 * @param  object $item WP_Post representing menu item.
+	 * @param  int    $depth Depth.
+	 * @param  object $args Arguments from wp_nav_menu.
+	 * @param  int    $id ID of current item.
 	 */
-	public function start_el( &$output, $item, $depth = 0, $args = array(), $id = 0) {
+	public function start_el( &$output, $item, $depth = 0, $args = array(), $id = 0 ) {
 		$object      = $item->object;
 		$type        = $item->type;
 		$title       = $item->title;
@@ -37,7 +36,10 @@ class Components_Menu_Walker extends Walker_Nav_Menu {
 		$output .= "<li class='" . implode( ' ', $item->classes ) . "'>";
 
 		// add span if no permalink.
-		if ( $permalink && '#' !== $permalink ) {
+		if ( $permalink && '#' !== $permalink && $this->has_children ) {
+			// add a hover style to the first level with children.
+			$output .= '<a href="' . $permalink . '" aria-haspopup="true">';
+		} elseif ( $permalink && '#' !== $permalink ) {
 			$output .= '<a href="' . $permalink . '">';
 		} else {
 			$output .= '<span>';
