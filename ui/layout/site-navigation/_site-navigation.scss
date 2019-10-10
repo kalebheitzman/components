@@ -1,6 +1,7 @@
 @import '../../branding';
 @import '../../media';
 
+/* admin bar adjustments */
 .admin-bar {
 
 	.site-navigation {
@@ -11,8 +12,17 @@
 	}
 }
 
+/* togglign submenus */
+[data-submenu-open="false"] {
+	&+ul.sub-menu {
+		display: none;
+	}
+}
+
+/* site navigation */
 nav.site-navigation {
 	width: 100%;
+	position: relative;
 
 	@include tablet-side {
 		width: auto;
@@ -113,10 +123,9 @@ nav.site-navigation {
 				color: $nav-color;
 				text-decoration: none;
 
-				&:not(:only-child):after {
+				&.has-sub-menu:after {
 					padding-left: 1rem;
 					content: ' \25BE';
-
 				}
 			}
 		}
@@ -124,7 +133,6 @@ nav.site-navigation {
 			position: absolute;
 			z-index: 1;
 			box-shadow: 0 3px 12px rgba(0,0,0,0.15);
-			display: none;
 
 			@include mobile {
 				position: static;
@@ -137,6 +145,7 @@ nav.site-navigation {
 					padding: 0.75rem 1rem;
 					line-height: 1rem;
 				}
+
 			}
 		}
 	}

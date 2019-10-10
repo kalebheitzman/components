@@ -525,11 +525,18 @@ body {
  * to develop your mobile site first, and then work your way up in each
  * component using the following sass mixins.
  */
+/* admin bar adjustments */
 .admin-bar .site-navigation .nav-mobile {
   top: 46px; }
 
+/* togglign submenus */
+[data-submenu-open="false"] + ul.sub-menu {
+  display: none; }
+
+/* site navigation */
 nav.site-navigation {
-  width: 100%; }
+  width: 100%;
+  position: relative; }
   @media (min-width: 900px) {
     nav.site-navigation {
       width: auto;
@@ -600,14 +607,13 @@ nav.site-navigation {
       background: #efefef;
       color: #333;
       text-decoration: none; }
-      nav.site-navigation ul li a:not(:only-child):after {
+      nav.site-navigation ul li a.has-sub-menu:after {
         padding-left: 1rem;
         content: ' \25BE'; }
     nav.site-navigation ul ul {
       position: absolute;
       z-index: 1;
-      box-shadow: 0 3px 12px rgba(0, 0, 0, 0.15);
-      display: none; }
+      box-shadow: 0 3px 12px rgba(0, 0, 0, 0.15); }
       @media (max-width: 599px) {
         nav.site-navigation ul ul {
           position: static; } }
