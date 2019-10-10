@@ -12,23 +12,8 @@
 	}
 }
 
-/* togglign submenus */
-[data-submenu-open="false"] {
-	&+ul.sub-menu {
-		display: none;
-	}
-}
-
-/* site navigation */
-nav.site-navigation {
-	width: 100%;
-	position: relative;
-
-	@include tablet-side {
-		width: auto;
-		justify-self: end;
-	}
-
+/* hamburger menu button */
+@include mobile {
 	.nav-mobile {
 		position: absolute;
 		top: 0;
@@ -36,10 +21,6 @@ nav.site-navigation {
 		background: $nav-background;
 		height: $nav-height;
 		width: $nav-height;
-
-		@include tablet-side {
-			display: none;
-		}
 
 		.nav-toggle {
 			position: absolute;
@@ -83,44 +64,48 @@ nav.site-navigation {
 			}
 		}
 	}
+}
 
-	@include mobile {
-		ul {
-			display: none;
-		}
-	}
+/* global nav menu styles */
+.site-navigation {
+	width: 100%;
 
-	@include tablet-side {
-		ul {
-			display: block;
-		}
-	}
-
+	/* .level-0 */
 	ul {
+		display: none;
 		list-style: none;
 		margin: 0;
 		padding: 0;
 
 		li {
 
-			@include tablet-side {
-				float: left;
-				position: relative;
+			&.current-menu-item a,
+			&.current-menu-parent a {
+				background: $nav-mobile-hover-background;
+				color: $nav-mobile-hover-color;
+			}
+
+			/* togglign submenus */
+			[data-submenu-open="false"] {
+				&+ul.sub-menu {
+					display: none;
+				}
 			}
 
 			a:hover,
-			&.current-menu-item a,
-			&.current-menu-parent a {
-				background: $nav-hover-background;
-				color: $nav-hover-color;
+			&.current-menu-item [data-submenu-open="true"],
+			&.current-menu-parent [data-submenu-open="true"],
+			[data-submenu-open="true"] {
+				background: $nav-mobile-open-background;
+				color: $nav-mobile-open-color;
 			}
 
 			a {
 				display: block;
 				padding: 0 1rem;
 				line-height: $nav-height;
-				background: $nav-background;
-				color: $nav-color;
+				background: $nav-mobile-background;
+				color: $nav-mobile-color;
 				text-decoration: none;
 
 				&.has-sub-menu:after {
@@ -128,24 +113,90 @@ nav.site-navigation {
 					content: ' \25BE';
 				}
 			}
-		}
-		ul {
-			position: absolute;
-			z-index: 1;
-			box-shadow: 0 3px 12px rgba(0,0,0,0.15);
 
-			@include mobile {
+			/* level-1 */
+			ul {
 				position: static;
+
+				li {
+
+					a {
+						padding: 0.75rem 1rem;
+						line-height: 1;
+					}
+
+					/* level-2 */
+					ul {
+
+						li {
+
+							a {
+								padding-left: 2rem;
+								display: block;
+							}
+						}
+					}
+				}
 			}
+		}
+	}
+}
+
+/* toggle for .primary-menu using js */
+@include mobile {
+	.site-navigation {
+
+		.primary-menu.active {
+			display: block;
+
+			ul {
+				display: block;
+			}
+		}
+	}
+}
+
+/* nav menu styles for table in portrait mode and larger */
+@include tablet-side {
+	.site-navigation {
+		width: auto;
+		justify-self: end;
+
+		ul {
+			display: block;
 
 			li {
-				min-width: 190px;
+				float: left;
+				position: relative;
 
 				a {
-					padding: 0.75rem 1rem;
-					line-height: 1rem;
+					background: $nav-background;
+					color: $nav-color;
 				}
 
+				&.current-menu-item a,
+				&.current-menu-parent a {
+					background: $nav-hover-background;
+					color: $nav-hover-color;
+				}
+
+				a:hover,
+				&.current-menu-item [data-submenu-open="true"],
+				&.current-menu-parent [data-submenu-open="true"],
+				[data-submenu-open="true"] {
+					background: $nav-open-background;
+					color: $nav-open-color;
+				}
+
+				ul {
+					position: absolute;
+					z-index: 1;
+					box-shadow: 0 3px 12px rgba(0,0,0,0.15);
+
+					li {
+						min-width: 190px;
+					}
+				}
 			}
 		}
 	}
