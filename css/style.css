@@ -449,9 +449,23 @@ body {
 /*
 import layout components
 */
+/* branding mixins */
+/* text colors */
+/* nav vars */
+/*
+ * media query mixins
+ * Components is designed to be a mobile first framework. It's recommended
+ * to develop your mobile site first, and then work your way up in each
+ * component using the following sass mixins.
+ */
 /* site footer element */
 .site-footer {
-  margin: 0; }
+  margin: 0;
+  padding: 1rem;
+  background: #efefef; }
+  @media (min-width: 900px) {
+    .site-footer {
+      padding: 2rem; } }
 
 /*
  * media query mixins
@@ -465,9 +479,10 @@ import layout components
 /* site header element */
 .site-header {
   margin: 0;
+  padding: 0 1rem;
   display: grid;
   grid-template-columns: 1fr;
-  background: #333; }
+  background: #efefef; }
   @media (min-width: 900px) {
     .site-header {
       grid-template-columns: 300px 1fr;
@@ -477,10 +492,29 @@ import layout components
     margin: 0;
     padding: 0;
     line-height: 4rem;
-    color: #ccc; }
+    color: #333; }
     .site-header h1 a {
-      color: #ccc;
+      color: #333;
       text-decoration: none; }
+
+/* branding mixins */
+/* text colors */
+/* nav vars */
+/*
+ * media query mixins
+ * Components is designed to be a mobile first framework. It's recommended
+ * to develop your mobile site first, and then work your way up in each
+ * component using the following sass mixins.
+ */
+body {
+  background: #333; }
+
+.site-main {
+  background: #fff;
+  padding: 1rem; }
+  @media (min-width: 900px) {
+    .site-main {
+      padding: 2rem; } }
 
 /* branding mixins */
 /* text colors */
@@ -503,8 +537,8 @@ nav.site-navigation {
   nav.site-navigation .nav-mobile {
     position: absolute;
     top: 0;
-    right: 0;
-    background: #333;
+    right: 10px;
+    background: #efefef;
     height: 4rem;
     width: 4rem; }
     @media (min-width: 900px) {
@@ -513,7 +547,7 @@ nav.site-navigation {
     nav.site-navigation .nav-mobile .nav-toggle {
       position: absolute;
       left: 18px;
-      top: 22px;
+      top: 18px;
       cursor: pointer;
       padding: 10px 35px 16px 0px; }
       nav.site-navigation .nav-mobile .nav-toggle span,
@@ -523,7 +557,7 @@ nav.site-navigation {
         border-radius: 1px;
         height: 5px;
         width: 35px;
-        background: #ccc;
+        background: #333;
         position: absolute;
         display: block;
         content: '';
@@ -554,16 +588,18 @@ nav.site-navigation {
       nav.site-navigation ul li {
         float: left;
         position: relative; } }
+    nav.site-navigation ul li a:hover,
+    nav.site-navigation ul li.current-menu-item a,
+    nav.site-navigation ul li.current-menu-parent a {
+      background: #f7f7f7;
+      color: #111; }
     nav.site-navigation ul li a {
       display: block;
       padding: 0 1rem;
       line-height: 4rem;
-      background: #333;
-      color: #ccc;
+      background: #efefef;
+      color: #333;
       text-decoration: none; }
-      nav.site-navigation ul li a:hover {
-        background: #444;
-        color: #fff; }
       nav.site-navigation ul li a:not(:only-child):after {
         padding-left: 1rem;
         content: ' \25BE'; }
@@ -588,11 +624,5 @@ import vaiorus site components
 .hero {
   height: 80vh;
   width: 100vw; }
-
-/*
-common styles
-*/
-.site-main {
-  width: 100%; }
 
 /*# sourceMappingURL=style.css.map */

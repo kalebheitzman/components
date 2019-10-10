@@ -1,11 +1,13 @@
 @import '../../branding';
 @import '../../media';
 
-/* site footer element */
-.site-footer {
-	margin: 0;
+body {
+	background: #333;
+}
+
+.site-main {
+	background: #fff;
 	padding: 1rem;
-	background: #efefef;
 
 	@include tablet-side {
 		padding: 2rem;

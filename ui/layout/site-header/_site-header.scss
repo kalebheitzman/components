@@ -4,6 +4,7 @@
 /* site header element */
 .site-header {
 	margin: 0;
+	padding: 0 1rem;
 	display: grid;
 	grid-template-columns: 1fr;
 	background: $nav-background;

@@ -22,7 +22,7 @@ nav.site-navigation {
 	.nav-mobile {
 		position: absolute;
 		top: 0;
-		right: 0;
+		right: 10px;
 		background: $nav-background;
 		height: $nav-height;
 		width: $nav-height;
@@ -34,7 +34,7 @@ nav.site-navigation {
 		.nav-toggle {
 			position: absolute;
 			left: 18px;
-			top: 22px;
+			top: 18px;
 			cursor: pointer;
 			padding: 10px 35px 16px 0px;
 
@@ -98,6 +98,13 @@ nav.site-navigation {
 				position: relative;
 			}
 
+			a:hover,
+			&.current-menu-item a,
+			&.current-menu-parent a {
+				background: $nav-hover-background;
+				color: $nav-hover-color;
+			}
+
 			a {
 				display: block;
 				padding: 0 1rem;
@@ -106,11 +113,6 @@ nav.site-navigation {
 				color: $nav-color;
 				text-decoration: none;
 
-				&:hover {
-					background: $nav-hover-background;
-					color: $nav-hover-color;
-
-				}
 				&:not(:only-child):after {
 					padding-left: 1rem;
 					content: ' \25BE';
