@@ -17,17 +17,12 @@ function components_scripts() {
 		'1.0.0'
 	);
 	wp_enqueue_script(
-		'fontloader_js',
-		get_template_directory_uri() . '/js/webfontloader.js',
+		'typography_js',
+		get_template_directory_uri() . '/js/typography.js',
 		null,
-		'1.6.28',
+		'1.0.0',
 		true
 	);
 
-	wp_add_inline_script(
-		'fontloader_js',
-		'WebFont.load({google:{families:["Lato:100,300,400,700", "Glyph:300"]}});',
-		'after'
-	);
 }
 add_action( 'wp_enqueue_scripts', 'components_scripts' );

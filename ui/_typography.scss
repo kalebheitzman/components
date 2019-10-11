@@ -1,5 +1,19 @@
 /* typography */
 body {
-    font-family: "Lato", sans-serif;
+	font-family: "Lato", sans-serif;
 }
-  
+
+.wf-active body {
+	font-family: 'Lato';
+}
+
+h1, p, li {
+	opacity: 0;
+	transition: opacity 250ms ease-in;
+}
+
+.wf-active {
+	h1, p, li {
+		opacity: 1;
+	}
+}
