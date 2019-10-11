@@ -527,11 +527,6 @@ h1, p, li {
 .wf-active h1, .wf-active p, .wf-active li {
   opacity: 1; }
 
-/* hero element */
-.hero {
-  height: 80vh;
-  width: 100vw; }
-
 /* branding mixins */
 /* text colors */
 /* nav vars */
