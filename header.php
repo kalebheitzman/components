@@ -18,4 +18,4 @@
 
 <body <?php body_class(); ?>>
 
-<?php get_component( 'site-header' ); ?>
+<?php get_template_part( 'ui/site-header/site-header' ); ?>

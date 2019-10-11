@@ -19,17 +19,12 @@ require $template_directory . '/inc/theme-support.php';
  * Register Nav Menus and include custom nav walkers.
  */
 require $template_directory . '/inc/register-nav-menus.php';
-require $template_directory . '/ui/layout/site-navigation/class-components-menu-walker.php';
+require $template_directory . '/ui/site-navigation/class-components-menu-walker.php';
 
 /**
  * Enqueue scripts and styles.
  */
 require $template_directory . '/inc/enqueue-scripts.php';
-
-/**
- * Get Component Function that this theme is primarily built on.
- */
-require $template_directory . '/inc/get-component.php';
 
 /**
  * Custom template tags for this theme.

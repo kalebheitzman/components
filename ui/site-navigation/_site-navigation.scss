@@ -1,5 +1,5 @@
-@import '../../branding';
-@import '../../media';
+@import '../branding';
+@import '../media';
 
 /* admin bar adjustments */
 .admin-bar {
@@ -210,9 +210,6 @@
 					li {
 						min-width: 190px;
 
-						ul {
-
-						}
 					}
 				}
 			}

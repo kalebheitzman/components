@@ -8,7 +8,7 @@
 
 wp_footer(); ?>
 
-<?php get_component( 'site-footer' ); ?>
+<?php get_template_part( 'ui/site-footer/site-footer' ); ?>
 
 </body>
 </html>

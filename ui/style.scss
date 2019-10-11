@@ -43,12 +43,12 @@ import typography
 @import "_typography.scss";
 
 /*
-import layout components
+import layout
 */
-@import "layout/**/*.scss";
+@import "_layout.scss";
 
 /*
-import vaiorus site components
+import vairious site components
 */
-@import "components/**/*.scss";
+@import "./**/*.scss";
 

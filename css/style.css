@@ -458,8 +458,80 @@ h1, p, li {
   opacity: 1; }
 
 /*
-import layout components
+import layout
 */
+/* branding mixins */
+/* text colors */
+/* nav vars */
+/* mobile nav vars */
+/*
+ * media query mixins
+ * Components is designed to be a mobile first framework. It's recommended
+ * to develop your mobile site first, and then work your way up in each
+ * component using the following sass mixins.
+ */
+body {
+  background: #333; }
+
+.site-main {
+  background: #fff;
+  padding: 1rem; }
+  @media (min-width: 900px) {
+    .site-main {
+      padding: 2rem 12rem 4rem; } }
+
+/*
+import vairious site components
+*/
+/* branding mixins */
+/* text colors */
+/* nav vars */
+/* mobile nav vars */
+/* branding mixins */
+/* text colors */
+/* nav vars */
+/* mobile nav vars */
+/*
+ * media query mixins
+ * Components is designed to be a mobile first framework. It's recommended
+ * to develop your mobile site first, and then work your way up in each
+ * component using the following sass mixins.
+ */
+body {
+  background: #333; }
+
+.site-main {
+  background: #fff;
+  padding: 1rem; }
+  @media (min-width: 900px) {
+    .site-main {
+      padding: 2rem 12rem 4rem; } }
+
+/*
+ * media query mixins
+ * Components is designed to be a mobile first framework. It's recommended
+ * to develop your mobile site first, and then work your way up in each
+ * component using the following sass mixins.
+ */
+/* typography */
+body {
+  font-family: "Lato", sans-serif; }
+
+.wf-active body {
+  font-family: 'Lato'; }
+
+h1, p, li {
+  opacity: 0;
+  transition: opacity 100ms ease-in; }
+
+.wf-active h1, .wf-active p, .wf-active li {
+  opacity: 1; }
+
+/* hero element */
+.hero {
+  height: 80vh;
+  width: 100vw; }
+
 /* branding mixins */
 /* text colors */
 /* nav vars */
@@ -511,26 +583,6 @@ import layout components
       padding: 0 2rem; }
       .site-header h1 {
         margin: 0; } }
-
-/* branding mixins */
-/* text colors */
-/* nav vars */
-/* mobile nav vars */
-/*
- * media query mixins
- * Components is designed to be a mobile first framework. It's recommended
- * to develop your mobile site first, and then work your way up in each
- * component using the following sass mixins.
- */
-body {
-  background: #333; }
-
-.site-main {
-  background: #fff;
-  padding: 1rem; }
-  @media (min-width: 900px) {
-    .site-main {
-      padding: 2rem 12rem 4rem; } }
 
 /* branding mixins */
 /* text colors */
@@ -675,13 +727,5 @@ body {
           box-shadow: 0 3px 12px rgba(0, 0, 0, 0.15); }
           .site-navigation ul li ul li {
             min-width: 190px; } }
-
-/*
-import vaiorus site components
-*/
-/* hero element */
-.hero {
-  height: 80vh;
-  width: 100vw; }
 
 /*# sourceMappingURL=style.css.map */
