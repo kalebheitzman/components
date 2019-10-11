@@ -10,6 +10,6 @@ body {
 	padding: 1rem;
 
 	@include tablet-side {
-		padding: 2rem;
+		padding: 2rem 12rem 4rem;
 	}
 }

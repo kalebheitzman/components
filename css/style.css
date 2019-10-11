@@ -530,7 +530,7 @@ body {
   padding: 1rem; }
   @media (min-width: 900px) {
     .site-main {
-      padding: 2rem; } }
+      padding: 2rem 12rem 4rem; } }
 
 /* branding mixins */
 /* text colors */
