@@ -19,3 +19,5 @@
 <body <?php body_class(); ?>>
 
 <?php get_template_part( 'ui/site-header/site-header' ); ?>
+
+<div id="content" class="site-content <?php component_content_class(); ?>">

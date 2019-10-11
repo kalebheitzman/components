@@ -3,7 +3,7 @@ Theme Name: Components
 Theme URI: https://github.com/kalebheitzman/components
 Author: Kaleb Heitzman
 Author URI: https://heitzman.co
-Description: A minimalistic WordPress theme that uses component based design for theme organization. JS, CSS, and HTML are bundled into individual components under the <code>./ui/components</code> folder to be used across your site using the included <code>get_component()</code> function. This theme includes gulp for compiling and minifying css and js.
+Description: A minimalistic WordPress theme that uses component based design for theme organization. JS, CSS, and HTML are bundled into individual components under the <code>./ui</code> folder to be used across your site heavily referencing the <code>get_template_part()</code> function. This theme includes gulp for compiling and minifying css and js.
 Version: 0.8.1
 License: GNU General Public License v2 or later
 Tags: components, minimal, sass, gulp, livereload

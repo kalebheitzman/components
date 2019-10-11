@@ -30,3 +30,8 @@ require $template_directory . '/inc/enqueue-scripts.php';
  * Custom template tags for this theme.
  */
 require $template_directory . '/inc/template-tags.php';
+
+/**
+ * Custom template functions for this theme.
+ */
+require $template_directory . '/inc/template-functions.php';

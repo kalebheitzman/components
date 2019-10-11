@@ -8,19 +8,20 @@
 
 get_header(); ?>
 
-<?php
-if ( have_posts() ) :
+<main class="site-main">
+	<?php
 	while ( have_posts() ) :
 		the_post();
-		?>
 
-	<div class="site-main">
-		<h1><?php the_title(); ?></h1>
-		<?php the_content(); ?>
-	</div>
+		get_template_part( 'ui/content/content', 'page' );
 
-<?php endwhile; else : ?>
-	<p><?php esc_html_e( 'Sorry, no posts matched your criteria.' ); ?></p>
-<?php endif; ?>
+		// If comments are open or we have at least one comment, load up the comment template.
+		if ( comments_open() || get_comments_number() ) :
+			comments_template();
+		endif;
+
+	endwhile; // End of the loop.
+	?>
+</main><!--.site-main-->
 
 <?php get_footer(); ?>

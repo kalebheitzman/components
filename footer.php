@@ -8,6 +8,8 @@
 
 wp_footer(); ?>
 
+</div><!-- #content -->
+
 <?php get_template_part( 'ui/site-footer/site-footer' ); ?>
 
 </body>
