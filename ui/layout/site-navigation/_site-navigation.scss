@@ -85,10 +85,25 @@
 				color: $nav-mobile-hover-color;
 			}
 
-			/* togglign submenus */
-			[data-submenu-open="false"] {
+			/* show submenus */
+			.has-sub-menu[data-submenu-open="true"] {
 				&+ul.sub-menu {
-					display: none;
+					transition: opacity 85ms linear;
+					transform:translate(0);
+					opacity: 1;
+					height: auto;
+				}
+				&.level-1+ul.sub-menu {
+					position: static;
+				}
+			}
+
+			/* hide submenus */
+			.has-sub-menu[data-submenu-open="false"] {
+				&+ul.sub-menu {
+					transform:translate(9999px);
+					opacity: 0;
+					height: 0;
 				}
 			}
 
@@ -116,7 +131,6 @@
 
 			/* level-1 */
 			ul {
-				position: static;
 
 				li {
 
@@ -197,7 +211,7 @@
 						min-width: 190px;
 
 						ul {
-							position: static;
+
 						}
 					}
 				}
