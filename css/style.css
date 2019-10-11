@@ -656,7 +656,9 @@ body {
           z-index: 1;
           box-shadow: 0 3px 12px rgba(0, 0, 0, 0.15); }
           .site-navigation ul li ul li {
-            min-width: 190px; } }
+            min-width: 190px; }
+            .site-navigation ul li ul li ul {
+              position: static; } }
 
 /*
 import vaiorus site components
