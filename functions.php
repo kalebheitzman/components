@@ -20,6 +20,7 @@ require $template_directory . '/inc/theme-support.php';
  */
 require $template_directory . '/inc/register-nav-menus.php';
 require $template_directory . '/ui/site-navigation/class-components-menu-walker.php';
+require $template_directory . '/ui/social-menu/class-social-menu-walker.php';
 
 /**
  * Enqueue scripts and styles.

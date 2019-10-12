@@ -22,6 +22,12 @@ function components_scripts() {
 		null,
 		'4.7.0'
 	);
+	wp_enqueue_style(
+		'load-fab',
+		'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/brands.min.css',
+		null,
+		'5.11.2'
+	);
 
 	wp_enqueue_script(
 		'typography_js',

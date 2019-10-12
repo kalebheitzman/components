@@ -18,12 +18,16 @@
 			}
 		});
 
-		/**
-		 * Detect clicks away from the menu to close submenus
-		 */
-    $('html').click(function() {
-			$('[data-submenu-open="true"]').attr('data-submenu-open', 'false')
-		})
+		// /**
+		//  * Detect clicks away from the menu to close submenus
+		//  */
+    // $('html').click(function() {
+		// 	let showSearch = $('.site-navigation-search form').attr('data-show-search')
+		// 	console.log(showSearch)
+		// 	if ("true" === showSearch) {
+		// 		$('.site-navigation-search form').attr('data-show-search', 'false')
+		// 	}
+		// })
 
   })
 })(jQuery)

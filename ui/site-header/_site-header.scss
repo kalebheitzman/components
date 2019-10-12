@@ -23,7 +23,7 @@
 	}
 
 	@include tablet-side {
-		grid-template-columns: 300px 1fr;
+		grid-template-columns: 1fr 6fr 2fr;
 		padding: 0 2rem;
 
 		h1 {

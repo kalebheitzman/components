@@ -22,13 +22,13 @@ wp_enqueue_script(
 	<?php
 		wp_nav_menu(
 			array(
-				'menu'       => 'primary_menu',
-				'container'  => 'ul',
-				'menu_class' => 'primary-menu',
-				'menu_id'    => '',
-				'walker'     => new Components_Menu_Walker(),
+				'theme_location' => 'primary_menu',
+				'container'      => 'ul',
+				'menu_class'     => 'primary-menu',
+				'menu_id'        => '',
+				'walker'         => new Components_Menu_Walker(),
 			)
 		);
 		?>
-	<?php get_template_part( 'ui/site-navigation/site-navigation', 'search' ); ?>
+	<?php get_template_part( 'ui/site-navigation-search/site-navigation-search' ); ?>
 </nav>

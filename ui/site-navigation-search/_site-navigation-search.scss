@@ -7,6 +7,7 @@ $placeholder: #aaa;
 
 	form {
 		font-size: 0;
+		position: relative;
 
 		input {
 			transition: all 250ms ease-in;
@@ -24,6 +25,7 @@ $placeholder: #aaa;
 			color: $color;
 			border-top-left-radius: 1.25rem;
 			border-bottom-left-radius: 1.25rem;
+			position: absolute;
 
 			&::placeholder {
 				color: $placeholder;
