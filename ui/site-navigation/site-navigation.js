@@ -34,9 +34,9 @@
 		 * Toggle the hamburger menu item
 		 */
 		$('.nav-toggle').on('click', function() {
-			$('.nav-mobile').toggleClass('active')
+			$('.site-navigation-search').attr('data-show-search', 'false')
+			$('.nav-mobile, .primary-menu').toggleClass('active')
 			$(this).toggleClass('active')
-			$('.primary-menu').toggleClass('active')
 		})
 
 		// /**

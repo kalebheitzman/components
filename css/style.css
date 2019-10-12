@@ -650,7 +650,7 @@ h1, p, li {
       background: #333;
       padding: 1rem;
       display: grid;
-      grid-template-columns: 1fr 100px;
+      grid-template-columns: 1fr 7rem;
       width: 100%;
       box-sizing: border-box; }
       .site-navigation-search form input {

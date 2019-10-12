@@ -11,6 +11,7 @@
 
 			// toggle search form
 			if ("false" === showSearch) {
+				$('.nav-mobile, .nav-toggle, .primary-menu').removeClass('active')
 				$('.site-navigation-search').attr('data-show-search', 'true')
 				setTimeout(function() {
 					$('.site-navigation-search .search-text-field').focus()
@@ -23,17 +24,6 @@
 
 			e.preventDefault();
 		});
-
-		// /**
-		//  * Detect clicks away from the menu to close submenus
-		//  */
-    // $('html').click(function() {
-		// 	let showSearch = $('.site-navigation-search form').attr('data-show-search')
-		// 	console.log(showSearch)
-		// 	if ("true" === showSearch) {
-		// 		$('.site-navigation-search form').attr('data-show-search', 'false')
-		// 	}
-		// })
 
   })
 })(jQuery)
