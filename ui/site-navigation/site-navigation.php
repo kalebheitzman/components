@@ -8,7 +8,7 @@
 
 // enqueue site navigation js.
 wp_enqueue_script(
-	$partial . '-js',
+	'site-navigation-js',
 	get_stylesheet_directory_uri() . '/ui/site-navigation/site-navigation.js',
 	array( 'jquery' ),
 	'1.0.0',
@@ -30,4 +30,5 @@ wp_enqueue_script(
 			)
 		);
 		?>
+	<?php get_template_part( 'ui/site-navigation/site-navigation', 'search' ); ?>
 </nav>

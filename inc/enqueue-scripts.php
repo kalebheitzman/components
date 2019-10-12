@@ -16,6 +16,13 @@ function components_scripts() {
 		null,
 		'1.0.0'
 	);
+	wp_enqueue_style(
+		'load-fa',
+		'https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css',
+		null,
+		'4.7.0'
+	);
+
 	wp_enqueue_script(
 		'typography_js',
 		get_template_directory_uri() . '/js/typography.js',

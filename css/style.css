@@ -579,6 +579,51 @@ h1, p, li {
       .site-header h1 {
         margin: 0; } }
 
+.site-navigation-search {
+  padding: 0.75rem 0; }
+  .site-navigation-search form {
+    font-size: 0; }
+    .site-navigation-search form input {
+      transition: all 250ms ease-in; }
+    .site-navigation-search form input[type="text"] {
+      padding: 0 1rem;
+      margin: 0;
+      display: inline-block;
+      line-height: 2.5rem;
+      border: 0;
+      outline: 0;
+      font-size: 1rem;
+      background: #777;
+      color: #ccc;
+      border-top-left-radius: 1.25rem;
+      border-bottom-left-radius: 1.25rem; }
+      .site-navigation-search form input[type="text"]::placeholder {
+        color: #aaa; }
+    .site-navigation-search form button {
+      background: #777;
+      color: #ccc;
+      vertical-align: top;
+      display: inline-block;
+      cursor: pointer;
+      width: 2.5rem;
+      height: 2.5rem;
+      border: 0;
+      outline: 0;
+      font-size: 1rem;
+      border-top-right-radius: 1.25rem;
+      border-bottom-right-radius: 1.25rem; }
+    .site-navigation-search form[data-show-search="false"] input {
+      width: 0;
+      padding: 0; }
+    .site-navigation-search form[data-show-search="false"] button {
+      border-top-left-radius: 1.25rem;
+      border-bottom-left-radius: 1.25rem; }
+    .site-navigation-search form[data-show-search="true"] input {
+      width: 160px; }
+    .site-navigation-search form[data-show-search="true"] button {
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0; }
+
 /* branding mixins */
 /* text colors */
 /* nav vars */
@@ -696,8 +741,8 @@ h1, p, li {
 /* nav menu styles for table in portrait mode and larger */
 @media (min-width: 900px) {
   .site-navigation {
-    width: auto;
-    justify-self: end; }
+    display: flex;
+    justify-content: flex-end; }
     .site-navigation ul {
       display: block; }
       .site-navigation ul li {

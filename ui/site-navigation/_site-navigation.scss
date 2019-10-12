@@ -173,8 +173,8 @@
 /* nav menu styles for table in portrait mode and larger */
 @include tablet-side {
 	.site-navigation {
-		width: auto;
-		justify-self: end;
+		display: flex;
+		justify-content: flex-end;
 
 		ul {
 			display: block;
