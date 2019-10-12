@@ -4,6 +4,12 @@ $color: #999;
 
 @import "../media";
 
+@include mobile {
+	.social-menu {
+		display: none;
+	}
+}
+
 /** social menu */
 .social-menu {
 
@@ -27,10 +33,10 @@ $color: #999;
 				color: $color;
 				border-radius: 2.5rem;
 				text-decoration: none;
-				transition: background-color 250ms ease-in;
+				transition: background-color 85ms ease-in;
 
 				&:hover {
-					background: $background-hover;
+					background: darken($background, 3%);
 				}
 
 				i {

@@ -6,19 +6,6 @@ $nav-search-submit-background: #e3c8ff;
 
 @import "../media";
 
-/* admin bar adjustments */
-@include mobile {
-	.admin-bar {
-
-		.site-navigation-search {
-			position: absolute;
-			top: 0;
-			top: 46px;
-			right: 4.5rem;
-		}
-	}
-}
-
 .site-navigation-search {
 	margin: 0.75rem 0;
 	background: $nav-search-background;
@@ -34,19 +21,25 @@ $nav-search-submit-background: #e3c8ff;
 
 	button {
 		border-radius: $nav-search-border-radius;
-		background: none;
+		background: $nav-search-background;
 		border: 0;
 		outline: 0;
 		cursor: pointer;
+		transition: all 85ms ease-in;
+
+		&:hover {
+			background: darken($nav-search-background, 3%);
+		}
 	}
 
 	form {
 		display: flex;
-
 		input {
 			background: none;
 			border: 0;
 			outline: 0;
+			line-height: 2.5rem;
+
 		}
 
 		input[type="text"] {
@@ -64,4 +57,39 @@ $nav-search-submit-background: #e3c8ff;
 	&[data-show-search="true"] {
 		width: 100%;
 	}
+}
+
+/* admin bar adjustments */
+@include mobile {
+	.admin-bar {
+
+		.site-navigation-search {
+
+			button {
+				top: 3.5rem;
+
+			}
+		}
+	}
+
+	.site-navigation-search-wrapper {
+		background: #ccc;
+		padding: 0.5rem 1rem;
+
+		.site-navigation-search {
+
+			button {
+				position: absolute;
+				right: 4.5rem;
+				width: 2.5rem;
+				height: 2.5rem;
+				border-radius: 100%;
+				top: 0.75rem;
+			}
+
+			form {
+			}
+		}
+	}
+
 }

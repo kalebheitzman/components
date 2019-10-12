@@ -18,7 +18,12 @@
 
 	.secondary-nav {
 		display: grid;
-		grid-template-columns: 1fr 1fr;
+		grid-template-columns: 1fr;
+
+		@include tablet-side {
+			grid-template-columns: 1fr 1fr;
+			padding-left: 1rem;
+		}
 	}
 }
 
@@ -128,6 +133,7 @@ ul.primary-menu {
 			background: $nav-mobile-background;
 			color: $nav-mobile-color;
 			text-decoration: none;
+			transition: all 85ms ease-in;
 
 			&.has-sub-menu:after {
 				padding-left: 1rem;

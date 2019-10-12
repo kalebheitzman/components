@@ -470,6 +470,7 @@ import layout
  * to develop your mobile site first, and then work your way up in each
  * component using the following sass mixins.
  */
+html,
 body {
   background: #333; }
 
@@ -497,6 +498,7 @@ import vairious site components
  * to develop your mobile site first, and then work your way up in each
  * component using the following sass mixins.
  */
+html,
 body {
   background: #333; }
 
@@ -585,14 +587,6 @@ h1, p, li {
  * to develop your mobile site first, and then work your way up in each
  * component using the following sass mixins.
  */
-/* admin bar adjustments */
-@media (max-width: 599px) {
-  .admin-bar .site-navigation-search {
-    position: absolute;
-    top: 0;
-    top: 46px;
-    right: 4.5rem; } }
-
 .site-navigation-search {
   margin: 0.75rem 0;
   background: #ddd;
@@ -605,16 +599,20 @@ h1, p, li {
   transition: all 250ms ease-in; }
   .site-navigation-search button {
     border-radius: 1.25rem;
-    background: none;
+    background: #ddd;
     border: 0;
     outline: 0;
-    cursor: pointer; }
+    cursor: pointer;
+    transition: all 85ms ease-in; }
+    .site-navigation-search button:hover {
+      background: #d5d5d5; }
   .site-navigation-search form {
     display: flex; }
     .site-navigation-search form input {
       background: none;
       border: 0;
-      outline: 0; }
+      outline: 0;
+      line-height: 2.5rem; }
     .site-navigation-search form input[type="text"] {
       flex-grow: 1; }
     .site-navigation-search form input[type="submit"] {
@@ -624,6 +622,21 @@ h1, p, li {
       padding: 0 1rem; }
   .site-navigation-search[data-show-search="true"] {
     width: 100%; }
+
+/* admin bar adjustments */
+@media (max-width: 599px) {
+  .admin-bar .site-navigation-search button {
+    top: 3.5rem; }
+  .site-navigation-search-wrapper {
+    background: #ccc;
+    padding: 0.5rem 1rem; }
+    .site-navigation-search-wrapper .site-navigation-search button {
+      position: absolute;
+      right: 4.5rem;
+      width: 2.5rem;
+      height: 2.5rem;
+      border-radius: 100%;
+      top: 0.75rem; } }
 
 /* branding mixins */
 /* text colors */
@@ -644,7 +657,11 @@ h1, p, li {
   width: 100%; }
   .site-navigation .secondary-nav {
     display: grid;
-    grid-template-columns: 1fr 1fr; }
+    grid-template-columns: 1fr; }
+    @media (min-width: 900px) {
+      .site-navigation .secondary-nav {
+        grid-template-columns: 1fr 1fr;
+        padding-left: 1rem; } }
 
 /* hamburger menu button */
 @media (max-width: 599px) {
@@ -723,7 +740,8 @@ ul.primary-menu {
       line-height: 4rem;
       background: #333;
       color: #ccc;
-      text-decoration: none; }
+      text-decoration: none;
+      transition: all 85ms ease-in; }
       ul.primary-menu li a.has-sub-menu:after {
         padding-left: 1rem;
         content: ' \25BE'; }
@@ -780,6 +798,10 @@ ul.primary-menu {
  * to develop your mobile site first, and then work your way up in each
  * component using the following sass mixins.
  */
+@media (max-width: 599px) {
+  .social-menu {
+    display: none; } }
+
 /** social menu */
 .social-menu ul.social-menu-links {
   list-style: none;
@@ -799,9 +821,9 @@ ul.primary-menu {
       color: #999;
       border-radius: 2.5rem;
       text-decoration: none;
-      transition: background-color 250ms ease-in; }
+      transition: background-color 85ms ease-in; }
       .social-menu ul.social-menu-links li.social-icon a:hover {
-        background: #ccc; }
+        background: #d5d5d5; }
       .social-menu ul.social-menu-links li.social-icon a i {
         font-style: normal; }
 
