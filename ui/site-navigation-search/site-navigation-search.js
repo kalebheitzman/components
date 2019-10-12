@@ -7,15 +7,21 @@
 		 */
 		$('.site-navigation-search-submit').click(function(e) {
 			// get current show search value
-			let showSearch = $(this).parent().attr('data-show-search')
+			let showSearch = $('.site-navigation-search').attr('data-show-search')
 
+			// toggle search form
 			if ("false" === showSearch) {
-				$(this).parent().attr('data-show-search', 'true')
-				e.preventDefault();
+				$('.site-navigation-search').attr('data-show-search', 'true')
+				setTimeout(function() {
+					$('.site-navigation-search .search-text-field').focus()
+				}, 250);
+
 			}
 			else {
-
+				$('.site-navigation-search').attr('data-show-search', 'false')
 			}
+
+			e.preventDefault();
 		});
 
 		// /**

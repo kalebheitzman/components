@@ -1,75 +1,67 @@
-$background: #777;
-$color: #ccc;
-$placeholder: #aaa;
+$nav-search-background: #ddd;
+$nav-search-color: #333;
+$nav-search-placeholder: #aaa;
+$nav-search-border-radius: 1.25rem;
+$nav-search-submit-background: #e3c8ff;
+
+@import "../media";
+
+/* admin bar adjustments */
+@include mobile {
+	.admin-bar {
+
+		.site-navigation-search {
+			position: absolute;
+			top: 0;
+			top: 46px;
+			right: 4.5rem;
+		}
+	}
+}
 
 .site-navigation-search {
-	padding: 0.75rem 0;
+	margin: 0.75rem 0;
+	background: $nav-search-background;
+	border-radius: $nav-search-border-radius;
+	width: 2.5rem;
+	line-height: 1.5rem;
+	overflow: hidden;
+
+	display: grid;
+	grid-template-columns: 2.5rem 1fr;
+
+	transition: all 250ms ease-in;
+
+	button {
+		border-radius: $nav-search-border-radius;
+		background: none;
+		border: 0;
+		outline: 0;
+		cursor: pointer;
+	}
 
 	form {
-		font-size: 0;
-		position: relative;
+		display: flex;
 
 		input {
-			transition: all 250ms ease-in;
+			background: none;
+			border: 0;
+			outline: 0;
 		}
 
 		input[type="text"] {
+			flex-grow: 1;
+		}
+
+		input[type="submit"] {
+			background: $nav-search-submit-background;
+			border-top-right-radius: $nav-search-border-radius;
+			border-bottom-right-radius: $nav-search-border-radius;
 			padding: 0 1rem;
-			margin: 0;
-			display: inline-block;
-			line-height: 2.5rem;
-			border: 0;
-			outline: 0;
-			font-size: 1rem;
-			background: $background;
-			color: $color;
-			border-top-left-radius: 1.25rem;
-			border-bottom-left-radius: 1.25rem;
-			position: absolute;
-
-			&::placeholder {
-				color: $placeholder;
-			}
 		}
+	}
 
-		button {
-			background: $background;
-			color: $color;
-			vertical-align: top;
-			display: inline-block;
-			cursor: pointer;
-			width: 2.5rem;
-			height: 2.5rem;
-			border: 0;
-			outline: 0;
-			font-size: 1rem;
-			border-top-right-radius: 1.25rem;
-			border-bottom-right-radius: 1.25rem;
-		}
-
-		&[data-show-search="false"] {
-
-			input {
-				width: 0;
-				padding: 0;
-			}
-
-			button {
-				border-top-left-radius: 1.25rem;
-				border-bottom-left-radius: 1.25rem;
-			}
-		}
-
-		&[data-show-search="true"] {
-
-			input {
-				width: 160px;
-			}
-
-			button {
-				border-top-left-radius: 0;
-				border-bottom-left-radius: 0;
-			}
-		}
+	&[data-show-search="true"] {
+		width: 100%;
 	}
 }

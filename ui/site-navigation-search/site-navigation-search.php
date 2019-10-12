@@ -15,11 +15,12 @@ wp_enqueue_script(
 	true
 );
 
-?><div class="site-navigation-search">
-	<form data-show-search="false" action="<?php echo get_site_url(); // phpcs:ignore WordPress.Security.EscapeOutput ?>" method="get">
-		<input type="text" placeholder="Search" name="s" />
-		<button class="site-navigation-search-submit">
-			<i class="fa fa-search"></i>
-		</button>
+?><div class="site-navigation-search" data-show-search="false">
+	<button class="site-navigation-search-submit">
+		<i class="fa fa-search"></i>
+	</button>
+	<form class="search-form" action="<?php echo get_site_url(); // phpcs:ignore WordPress.Security.EscapeOutput ?>" method="get">
+		<input type="text" placeholder="Search..." name="s" class="search-text-field" />
+		<input type="submit" value="Search" />
 	</form>
 </div>

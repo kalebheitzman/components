@@ -5,37 +5,37 @@ $color: #999;
 @import "../media";
 
 /** social menu */
-ul.social-menu {
-	list-style: none;
-	padding: 0.75rem 0;
-	margin: 0;
+.social-menu {
 
-	@include tablet-side {
-		text-align: right;
-	}
+	ul.social-menu-links {
+		list-style: none;
+		padding: 0.75rem 0;
+		margin: 0;
+		float: right;
 
-	li.social-icon {
-		margin: 0 0.25rem;
-		display: inline-block;
-		text-align: center;
+		li.social-icon {
+			margin: 0 0.25rem;
+			display: inline-block;
+			text-align: center;
 
-		a {
-			display: block;
-			width: 2.5rem;
-			height: 2.5rem;
-			line-height: 2.5rem;
-			background: $background;
-			color: $color;
-			border-radius: 2.5rem;
-			text-decoration: none;
-			transition: background-color 250ms ease-in;
+			a {
+				display: block;
+				width: 2.5rem;
+				height: 2.5rem;
+				line-height: 2.5rem;
+				background: $background;
+				color: $color;
+				border-radius: 2.5rem;
+				text-decoration: none;
+				transition: background-color 250ms ease-in;
 
-			&:hover {
-				background: $background-hover;
-			}
+				&:hover {
+					background: $background-hover;
+				}
 
-			i {
-				font-style: normal;
+				i {
+					font-style: normal;
+				}
 			}
 		}
 	}

@@ -15,20 +15,29 @@ wp_enqueue_script(
 	true
 );
 
-?><nav class="site-navigation" role="navigation">
-	<div class="nav-mobile">
-		<a class="nav-toggle" href="#!"><span></span></a>
-	</div>
-	<?php
-		wp_nav_menu(
-			array(
-				'theme_location' => 'primary_menu',
-				'container'      => 'ul',
-				'menu_class'     => 'primary-menu',
-				'menu_id'        => '',
-				'walker'         => new Components_Menu_Walker(),
-			)
-		);
-		?>
-	<?php get_template_part( 'ui/site-navigation-search/site-navigation-search' ); ?>
+?>
+<nav class="site-navigation" role="navigation">
+
+	<div class="primary-nav">
+		<div class="nav-mobile">
+			<a class="nav-toggle" href="#!"><span></span></a>
+		</div>
+		<?php
+			wp_nav_menu(
+				array(
+					'theme_location' => 'primary_menu',
+					'container'      => 'ul',
+					'menu_class'     => 'primary-menu',
+					'menu_id'        => '',
+					'walker'         => new Components_Menu_Walker(),
+				)
+			);
+			?>
+	</div><!--.primary-nav-->
+
+	<div class="secondary-nav">
+		<?php get_template_part( 'ui/site-navigation-search/site-navigation-search' ); ?>
+		<?php get_template_part( 'ui/social-menu/social-menu' ); ?>
+	</div><!--.secondary-nav-->
+
 </nav>

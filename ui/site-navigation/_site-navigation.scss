@@ -14,8 +14,12 @@
 
 /* site navigation alignment */
 .site-navigation {
-	display: flex;
-	justify-content: center;
+	width: 100%;
+
+	.secondary-nav {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+	}
 }
 
 /* hamburger menu button */
@@ -178,8 +182,6 @@ ul.primary-menu {
 /* nav menu styles for table in portrait mode and larger */
 @include tablet-side {
 	.site-navigation {
-		display: flex;
-		justify-content: center;
 
 		ul {
 			display: block;

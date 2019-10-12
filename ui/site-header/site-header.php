@@ -18,6 +18,4 @@
 
 	<?php get_template_part( '/ui/site-navigation/site-navigation' ); ?>
 
-	<?php get_template_part( 'ui/social-menu/social-menu' ); ?>
-
 </header>
