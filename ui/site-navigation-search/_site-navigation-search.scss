@@ -6,18 +6,9 @@ $nav-search-submit-background: #e3c8ff;
 
 @import "../media";
 
+/* all screens */
 .site-navigation-search {
-	margin: 0.75rem 0;
-	background: $nav-search-background;
-	border-radius: $nav-search-border-radius;
-	width: 2.5rem;
-	line-height: 1.5rem;
-	overflow: hidden;
-
-	display: grid;
-	grid-template-columns: 2.5rem 1fr;
-
-	transition: all 250ms ease-in;
+	height: 2.5rem;
 
 	button {
 		border-radius: $nav-search-border-radius;
@@ -26,40 +17,71 @@ $nav-search-submit-background: #e3c8ff;
 		outline: 0;
 		cursor: pointer;
 		transition: all 85ms ease-in;
+		width: 2.5rem;
+		height: 2.5rem;
 
 		&:hover {
 			background: darken($nav-search-background, 3%);
 		}
 	}
 
-	form {
-		display: flex;
-		input {
-			background: none;
-			border: 0;
-			outline: 0;
-			line-height: 2.5rem;
+	&[data-show-search="false"] {
 
-		}
-
-		input[type="text"] {
-			flex-grow: 1;
-		}
-
-		input[type="submit"] {
-			background: $nav-search-submit-background;
-			border-top-right-radius: $nav-search-border-radius;
-			border-bottom-right-radius: $nav-search-border-radius;
-			padding: 0 1rem;
+		form {
+			display: none;
 		}
 	}
 
 	&[data-show-search="true"] {
-		width: 100%;
+
+		form {
+			display: flex;
+		}
 	}
 }
 
-/* admin bar adjustments */
+@include tablet-up {
+
+	.site-navigation-search {
+		margin: 0.75rem 0 0;
+		background: $nav-search-background;
+		border-radius: $nav-search-border-radius;
+		width: 2.5rem;
+		line-height: 1.5rem;
+		overflow: hidden;
+		display: grid;
+		grid-template-columns: 2.5rem 1fr;
+		transition: all 250ms ease-in;
+
+		form {
+
+			input {
+				background: none;
+				border: 0;
+				outline: 0;
+				line-height: 2.5rem;
+
+			}
+
+			input[type="text"] {
+				flex-grow: 1;
+			}
+
+			input[type="submit"] {
+				background: $nav-search-submit-background;
+				border-top-right-radius: $nav-search-border-radius;
+				border-bottom-right-radius: $nav-search-border-radius;
+				padding: 0 1rem;
+			}
+		}
+
+		&[data-show-search="true"] {
+			width: 100%;
+		}
+	}
+}
+
+/* mobile search nav styles */
 @include mobile {
 	.admin-bar {
 
@@ -72,22 +94,71 @@ $nav-search-submit-background: #e3c8ff;
 		}
 	}
 
-	.site-navigation-search-wrapper {
-		background: #ccc;
-		padding: 0.5rem 1rem;
+	.site-navigation-search {
+		height: 0;
 
-		.site-navigation-search {
+		button {
+			position: absolute;
+			width: 2.5rem;
+			height: 2.5rem;
+			margin: 0.75rem;
+			top: 0;
+			right: 4rem;
+			border-radius: 100%;
+		}
+
+		form {
+			background: #333;
+			padding: 1rem;
+			display: grid;
+			grid-template-columns: 1fr 100px;
+			width: 100%;
+			box-sizing: border-box;
+
+			input {
+				line-height: 2.5rem;
+				border: 0;
+				outline: 0;
+			}
+
+			input[type="text"] {
+				border-top-left-radius: 1.25rem;
+				border-bottom-left-radius: 1.25rem;
+				padding-left: 1rem;
+				background: #444;
+				color: #efefef;
+			}
+
+			input[type="submit"] {
+				border-top-right-radius: 1.25rem;
+				border-bottom-right-radius: 1.25rem;
+				background: #ab98c6;
+				color: #efefef;
+			}
+		}
+
+		&[data-show-search="false"] {
+
+			form {
+				display: none;
+			}
+		}
+
+		&[data-show-search="true"] {
+			height: auto;
 
 			button {
-				position: absolute;
-				right: 4.5rem;
-				width: 2.5rem;
-				height: 2.5rem;
-				border-radius: 100%;
-				top: 0.75rem;
+				background: #333;
+				color: #aaa;
+				border-radius: 0;
+				top: 0;
+				width: 4rem;
+				height: 4rem;
+				margin: 0;
 			}
 
 			form {
+				display: grid;
 			}
 		}
 	}

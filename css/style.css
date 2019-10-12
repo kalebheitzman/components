@@ -587,27 +587,36 @@ h1, p, li {
  * to develop your mobile site first, and then work your way up in each
  * component using the following sass mixins.
  */
+/* all screens */
 .site-navigation-search {
-  margin: 0.75rem 0;
-  background: #ddd;
-  border-radius: 1.25rem;
-  width: 2.5rem;
-  line-height: 1.5rem;
-  overflow: hidden;
-  display: grid;
-  grid-template-columns: 2.5rem 1fr;
-  transition: all 250ms ease-in; }
+  height: 2.5rem; }
   .site-navigation-search button {
     border-radius: 1.25rem;
     background: #ddd;
     border: 0;
     outline: 0;
     cursor: pointer;
-    transition: all 85ms ease-in; }
+    transition: all 85ms ease-in;
+    width: 2.5rem;
+    height: 2.5rem; }
     .site-navigation-search button:hover {
       background: #d5d5d5; }
-  .site-navigation-search form {
+  .site-navigation-search[data-show-search="false"] form {
+    display: none; }
+  .site-navigation-search[data-show-search="true"] form {
     display: flex; }
+
+@media (min-width: 600px) {
+  .site-navigation-search {
+    margin: 0.75rem 0 0;
+    background: #ddd;
+    border-radius: 1.25rem;
+    width: 2.5rem;
+    line-height: 1.5rem;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 2.5rem 1fr;
+    transition: all 250ms ease-in; }
     .site-navigation-search form input {
       background: none;
       border: 0;
@@ -620,23 +629,59 @@ h1, p, li {
       border-top-right-radius: 1.25rem;
       border-bottom-right-radius: 1.25rem;
       padding: 0 1rem; }
-  .site-navigation-search[data-show-search="true"] {
-    width: 100%; }
+    .site-navigation-search[data-show-search="true"] {
+      width: 100%; } }
 
-/* admin bar adjustments */
+/* mobile search nav styles */
 @media (max-width: 599px) {
   .admin-bar .site-navigation-search button {
     top: 3.5rem; }
-  .site-navigation-search-wrapper {
-    background: #ccc;
-    padding: 0.5rem 1rem; }
-    .site-navigation-search-wrapper .site-navigation-search button {
+  .site-navigation-search {
+    height: 0; }
+    .site-navigation-search button {
       position: absolute;
-      right: 4.5rem;
       width: 2.5rem;
       height: 2.5rem;
-      border-radius: 100%;
-      top: 0.75rem; } }
+      margin: 0.75rem;
+      top: 0;
+      right: 4rem;
+      border-radius: 100%; }
+    .site-navigation-search form {
+      background: #333;
+      padding: 1rem;
+      display: grid;
+      grid-template-columns: 1fr 100px;
+      width: 100%;
+      box-sizing: border-box; }
+      .site-navigation-search form input {
+        line-height: 2.5rem;
+        border: 0;
+        outline: 0; }
+      .site-navigation-search form input[type="text"] {
+        border-top-left-radius: 1.25rem;
+        border-bottom-left-radius: 1.25rem;
+        padding-left: 1rem;
+        background: #444;
+        color: #efefef; }
+      .site-navigation-search form input[type="submit"] {
+        border-top-right-radius: 1.25rem;
+        border-bottom-right-radius: 1.25rem;
+        background: #ab98c6;
+        color: #efefef; }
+    .site-navigation-search[data-show-search="false"] form {
+      display: none; }
+    .site-navigation-search[data-show-search="true"] {
+      height: auto; }
+      .site-navigation-search[data-show-search="true"] button {
+        background: #333;
+        color: #aaa;
+        border-radius: 0;
+        top: 0;
+        width: 4rem;
+        height: 4rem;
+        margin: 0; }
+      .site-navigation-search[data-show-search="true"] form {
+        display: grid; } }
 
 /* branding mixins */
 /* text colors */
@@ -668,10 +713,17 @@ h1, p, li {
   .nav-mobile {
     position: absolute;
     top: 0;
-    right: 10px;
+    right: 0;
     background: #efefef;
     height: 4rem;
-    width: 4rem; }
+    width: 4rem;
+    transition: background-color 85ms ease-in; }
+    .nav-mobile.active {
+      background: #333; }
+      .nav-mobile.active .nav-toggle span,
+      .nav-mobile.active .nav-toggle span:before,
+      .nav-mobile.active .nav-toggle span:after {
+        background: #fff; }
     .nav-mobile .nav-toggle {
       position: absolute;
       left: 18px;

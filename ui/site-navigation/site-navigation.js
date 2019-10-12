@@ -34,7 +34,8 @@
 		 * Toggle the hamburger menu item
 		 */
 		$('.nav-toggle').on('click', function() {
-			this.classList.toggle('active')
+			$('.nav-mobile').toggleClass('active')
+			$(this).toggleClass('active')
 			$('.primary-menu').toggleClass('active')
 		})
 

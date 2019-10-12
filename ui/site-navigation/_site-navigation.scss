@@ -32,10 +32,23 @@
 	.nav-mobile {
 		position: absolute;
 		top: 0;
-		right: 10px;
+		right: 0;
 		background: $nav-background;
 		height: $nav-height;
 		width: $nav-height;
+		transition: background-color 85ms ease-in;
+
+		&.active {
+			background: #333;
+
+			.nav-toggle {
+				span,
+				span:before,
+				span:after {
+					background: #fff;
+				}
+			}
+		}
 
 		.nav-toggle {
 			position: absolute;
