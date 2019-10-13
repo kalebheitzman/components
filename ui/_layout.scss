@@ -1,11 +1,18 @@
 @import './branding';
 @import './media';
 
+/* html, body */
 html,
 body {
 	background: #333;
 }
 
+/* .site-content */
+.site-content {
+	position: relative;
+}
+
+/* .site-main elements */
 .site-main {
 	background: #fff;
 	padding: 1rem;
@@ -15,7 +22,7 @@ body {
 	}
 }
 
-/* Text meant only for screen readers. */
+/* accessibility */
 .screen-reader-text {
   border: 0;
   clip: rect(1px, 1px, 1px, 1px);
@@ -26,24 +33,26 @@ body {
   padding: 0;
   position: absolute;
   width: 1px;
-  word-wrap: normal !important;
+	word-wrap: normal !important;
+
+	&:focus {
+		background-color: #eee;
+		clip: auto !important;
+		clip-path: none;
+		color: #444;
+		display: block;
+		font-size: 1em;
+		height: auto;
+		left: 5px;
+		line-height: normal;
+		padding: 15px 23px 14px;
+		text-decoration: none;
+		top: 5px;
+		width: auto;
+		z-index: 100000; /* Above WP toolbar. */
+	}
 }
-.screen-reader-text:focus {
-  background-color: #eee;
-  clip: auto !important;
-  clip-path: none;
-  color: #444;
-  display: block;
-  font-size: 1em;
-  height: auto;
-  left: 5px;
-  line-height: normal;
-  padding: 15px 23px 14px;
-  text-decoration: none;
-  top: 5px;
-  width: auto;
-  z-index: 100000; /* Above WP toolbar. */
-}
+
 .skip-link {
 	background-color: #f1f1f1;
 	box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.2);
@@ -58,12 +67,13 @@ body {
 	text-decoration: none;
 	text-transform: none;
 	top: -9999em;
-}
-.skip-link:focus {
-	clip: auto;
-	height: auto;
-	left: 6px;
-	top: 7px;
-	width: auto;
-	z-index: 100000;
+
+	&:focus {
+		clip: auto;
+		height: auto;
+		left: 6px;
+		top: 7px;
+		width: auto;
+		z-index: 100000;
+	}
 }

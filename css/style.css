@@ -470,10 +470,16 @@ import layout
  * to develop your mobile site first, and then work your way up in each
  * component using the following sass mixins.
  */
+/* html, body */
 html,
 body {
   background: #333; }
 
+/* .site-content */
+.site-content {
+  position: relative; }
+
+/* .site-main elements */
 .site-main {
   background: #fff;
   padding: 1rem; }
@@ -481,7 +487,7 @@ body {
     .site-main {
       padding: 2rem 12rem 4rem; } }
 
-/* Text meant only for screen readers. */
+/* accessibility */
 .screen-reader-text {
   border: 0;
   clip: rect(1px, 1px, 1px, 1px);
@@ -493,23 +499,22 @@ body {
   position: absolute;
   width: 1px;
   word-wrap: normal !important; }
-
-.screen-reader-text:focus {
-  background-color: #eee;
-  clip: auto !important;
-  clip-path: none;
-  color: #444;
-  display: block;
-  font-size: 1em;
-  height: auto;
-  left: 5px;
-  line-height: normal;
-  padding: 15px 23px 14px;
-  text-decoration: none;
-  top: 5px;
-  width: auto;
-  z-index: 100000;
-  /* Above WP toolbar. */ }
+  .screen-reader-text:focus {
+    background-color: #eee;
+    clip: auto !important;
+    clip-path: none;
+    color: #444;
+    display: block;
+    font-size: 1em;
+    height: auto;
+    left: 5px;
+    line-height: normal;
+    padding: 15px 23px 14px;
+    text-decoration: none;
+    top: 5px;
+    width: auto;
+    z-index: 100000;
+    /* Above WP toolbar. */ }
 
 .skip-link {
   background-color: #f1f1f1;
@@ -525,14 +530,13 @@ body {
   text-decoration: none;
   text-transform: none;
   top: -9999em; }
-
-.skip-link:focus {
-  clip: auto;
-  height: auto;
-  left: 6px;
-  top: 7px;
-  width: auto;
-  z-index: 100000; }
+  .skip-link:focus {
+    clip: auto;
+    height: auto;
+    left: 6px;
+    top: 7px;
+    width: auto;
+    z-index: 100000; }
 
 /*
 import vairious site components
@@ -551,10 +555,16 @@ import vairious site components
  * to develop your mobile site first, and then work your way up in each
  * component using the following sass mixins.
  */
+/* html, body */
 html,
 body {
   background: #333; }
 
+/* .site-content */
+.site-content {
+  position: relative; }
+
+/* .site-main elements */
 .site-main {
   background: #fff;
   padding: 1rem; }
@@ -562,7 +572,7 @@ body {
     .site-main {
       padding: 2rem 12rem 4rem; } }
 
-/* Text meant only for screen readers. */
+/* accessibility */
 .screen-reader-text {
   border: 0;
   clip: rect(1px, 1px, 1px, 1px);
@@ -574,23 +584,22 @@ body {
   position: absolute;
   width: 1px;
   word-wrap: normal !important; }
-
-.screen-reader-text:focus {
-  background-color: #eee;
-  clip: auto !important;
-  clip-path: none;
-  color: #444;
-  display: block;
-  font-size: 1em;
-  height: auto;
-  left: 5px;
-  line-height: normal;
-  padding: 15px 23px 14px;
-  text-decoration: none;
-  top: 5px;
-  width: auto;
-  z-index: 100000;
-  /* Above WP toolbar. */ }
+  .screen-reader-text:focus {
+    background-color: #eee;
+    clip: auto !important;
+    clip-path: none;
+    color: #444;
+    display: block;
+    font-size: 1em;
+    height: auto;
+    left: 5px;
+    line-height: normal;
+    padding: 15px 23px 14px;
+    text-decoration: none;
+    top: 5px;
+    width: auto;
+    z-index: 100000;
+    /* Above WP toolbar. */ }
 
 .skip-link {
   background-color: #f1f1f1;
@@ -606,14 +615,13 @@ body {
   text-decoration: none;
   text-transform: none;
   top: -9999em; }
-
-.skip-link:focus {
-  clip: auto;
-  height: auto;
-  left: 6px;
-  top: 7px;
-  width: auto;
-  z-index: 100000; }
+  .skip-link:focus {
+    clip: auto;
+    height: auto;
+    left: 6px;
+    top: 7px;
+    width: auto;
+    z-index: 100000; }
 
 /*
  * media query mixins

@@ -6,15 +6,6 @@
  * @since 1.0.0
  */
 
-// enqueue site navigation js.
-wp_enqueue_script(
-	'site-navigation-js',
-	get_stylesheet_directory_uri() . '/ui/site-navigation/site-navigation.js',
-	array( 'jquery' ),
-	'1.0.0',
-	true
-);
-
 ?>
 <nav class="site-navigation" aria-label="Main Navigation">
 
@@ -36,8 +27,8 @@ wp_enqueue_script(
 	</div><!--.primary-nav-->
 
 	<div class="secondary-nav">
-		<?php get_template_part( 'ui/site-navigation-search/site-navigation-search' ); ?>
-		<?php get_template_part( 'ui/social-menu/social-menu' ); ?>
+		<?php get_component( 'site-navigation-search' ); ?>
+		<?php get_component( 'social-menu' ); ?>
 	</div><!--.secondary-nav-->
 
 </nav>

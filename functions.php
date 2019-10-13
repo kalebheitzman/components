@@ -11,6 +11,11 @@
 $template_directory = get_template_directory();
 
 /**
+ * Get Component Function that this theme is primarily built on.
+ */
+require $template_directory . '/inc/get-component.php';
+
+/**
  * Add theme support.
  */
 require $template_directory . '/inc/theme-support.php';

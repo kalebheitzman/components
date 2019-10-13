@@ -6,15 +6,6 @@
  * @since 1.0.0
  */
 
-// enqueue site navigation js.
-wp_enqueue_script(
-	'site-navigation-search-js',
-	get_stylesheet_directory_uri() . '/ui/site-navigation-search/site-navigation-search.js',
-	array( 'jquery' ),
-	'1.0.0',
-	true
-);
-
 ?><div class="site-navigation-search" data-show-search="false" role="search">
 	<button class="site-navigation-search-submit">
 		<i class="fa fa-search" aria-hidden="true"></i>

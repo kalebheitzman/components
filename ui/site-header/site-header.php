@@ -24,6 +24,6 @@ $frontpage = is_front_page();
 		<?php endif; ?>
 	</div>
 
-	<?php get_template_part( '/ui/site-navigation/site-navigation' ); ?>
+	<?php get_component( 'site-navigation' ); ?>
 
 </header>
