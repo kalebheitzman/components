@@ -39,7 +39,6 @@ if ( ! function_exists( 'components_setup' ) ) :
 		 * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
 		 */
 		add_theme_support( 'post-thumbnails' );
-		// This theme uses wp_nav_menu() in one location.
 
 		/*
 		 * Switch default core markup for search form, comment form, and comments

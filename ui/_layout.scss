@@ -9,16 +9,20 @@ body {
 
 /* .site-content */
 .site-content {
-	position: relative;
-}
-
-/* .site-main elements */
-.site-main {
 	background: #fff;
 	padding: 1rem;
 
 	@include tablet-side {
-		padding: 2rem 12rem 4rem;
+		padding: 2rem 0 4rem;
+	}
+}
+
+/* .site-main elements */
+.site-main {
+
+	@include tablet-side {
+		max-width: 1120px;
+		margin: 0 auto;
 	}
 }
 

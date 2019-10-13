@@ -6,6 +6,12 @@
  * @since 1.0.0
  */
 
-?><section class="site-colophon">
+if ( ! is_active_sidebar( 'colophon-sidebar' ) ) {
+	return;
+}
 
+?><section class="site-colophon" class="widget-area">
+	<ul>
+		<?php dynamic_sidebar( 'colophon-sidebar' ); ?>
+	</ul>
 </section><!--.site-colophon-->

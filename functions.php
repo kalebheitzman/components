@@ -28,6 +28,11 @@ require $template_directory . '/ui/site-navigation/class-components-menu-walker.
 require $template_directory . '/ui/social-menu/class-social-menu-walker.php';
 
 /**
+ * Register Sidebars.
+ */
+require $template_directory . '/inc/register-sidebars.php';
+
+/**
  * Enqueue scripts and styles.
  */
 require $template_directory . '/inc/enqueue-scripts.php';

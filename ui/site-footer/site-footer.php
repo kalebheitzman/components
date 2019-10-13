@@ -7,5 +7,7 @@
  */
 
 ?><footer class="site-footer">
-	<p>&copy; <?php echo esc_attr( date( 'Y' ) ); ?> <?php bloginfo( 'name' ); ?></p>
+	<div class="inner">
+		<p>&copy; <?php echo esc_attr( date( 'Y' ) ); ?> <?php bloginfo( 'name' ); ?></p>
+	</div>
 </footer>

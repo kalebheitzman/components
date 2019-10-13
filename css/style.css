@@ -477,15 +477,17 @@ body {
 
 /* .site-content */
 .site-content {
-  position: relative; }
-
-/* .site-main elements */
-.site-main {
   background: #fff;
   padding: 1rem; }
   @media (min-width: 900px) {
-    .site-main {
-      padding: 2rem 12rem 4rem; } }
+    .site-content {
+      padding: 2rem 0 4rem; } }
+
+/* .site-main elements */
+@media (min-width: 900px) {
+  .site-main {
+    max-width: 1120px;
+    margin: 0 auto; } }
 
 /* accessibility */
 .screen-reader-text {
@@ -539,6 +541,18 @@ body {
     z-index: 100000; }
 
 /*
+import widgets
+*/
+/* widgets */
+.widget {
+  list-style: none; }
+
+.widget ul {
+  list-style: none;
+  margin: 0;
+  padding: 0; }
+
+/*
 import vairious site components
 */
 /* branding mixins */
@@ -562,15 +576,17 @@ body {
 
 /* .site-content */
 .site-content {
-  position: relative; }
-
-/* .site-main elements */
-.site-main {
   background: #fff;
   padding: 1rem; }
   @media (min-width: 900px) {
-    .site-main {
-      padding: 2rem 12rem 4rem; } }
+    .site-content {
+      padding: 2rem 0 4rem; } }
+
+/* .site-main elements */
+@media (min-width: 900px) {
+  .site-main {
+    max-width: 1120px;
+    margin: 0 auto; } }
 
 /* accessibility */
 .screen-reader-text {
@@ -643,6 +659,15 @@ h1, p, li {
 .wf-active h1, .wf-active p, .wf-active li {
   opacity: 1; }
 
+/* widgets */
+.widget {
+  list-style: none; }
+
+.widget ul {
+  list-style: none;
+  margin: 0;
+  padding: 0; }
+
 /*
  * media query mixins
  * Components is designed to be a mobile first framework. It's recommended
@@ -654,6 +679,17 @@ h1, p, li {
   background: #e3d1f4;
   color: #333;
   padding: 1rem; }
+  .site-colophon > ul {
+    display: grid;
+    grid-template-columns: 1fr; }
+  @media (min-width: 900px) {
+    .site-colophon {
+      padding: 2rem 0 4rem; }
+      .site-colophon > ul {
+        max-width: 1120px;
+        margin: 0 auto;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-column-gap: 2rem; } }
 
 /* branding mixins */
 /* text colors */
@@ -673,7 +709,10 @@ h1, p, li {
   color: #777; }
   @media (min-width: 900px) {
     .site-footer {
-      padding: 2rem; } }
+      padding: 2rem; }
+      .site-footer .inner {
+        max-width: 1120px;
+        margin: 0 auto; } }
 
 /*
  * media query mixins

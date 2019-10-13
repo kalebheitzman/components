@@ -5,4 +5,20 @@
 	background: #e3d1f4;
 	color: #333;
 	padding: 1rem;
+
+	& > ul {
+		display: grid;
+		grid-template-columns: 1fr;
+	}
+
+	@include tablet-side {
+		padding: 2rem 0 4rem;
+
+		& > ul {
+			max-width: 1120px;
+			margin: 0 auto;
+			grid-template-columns: 1fr 1fr 1fr 1fr;
+			grid-column-gap: 2rem;
+		}
+	}
 }
