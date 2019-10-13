@@ -42,7 +42,7 @@ get_component('site-header', 'logo');
 
 ## Styles
 
-This theme has built in support for SASS compilation using gulp. Simply run ```gulp``` in your terminal and the ```default``` task will compile your styles automatically.
+This theme has built in support for SASS compilation using gulp. Simply run ```gulp``` in your terminal and the ```default``` task will compile your styles automatically. Bundle individual ```.scss``` files inside each component subfolder and gulp will glob your files together under the main ```ui/styles.scss``` file.
 
 ## Scripts
 
