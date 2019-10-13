@@ -10,7 +10,7 @@ if ( ! is_active_sidebar( 'colophon-sidebar' ) ) {
 	return;
 }
 
-?><section class="site-colophon" class="widget-area">
+?><section class="site-colophon widget-area">
 	<ul>
 		<?php dynamic_sidebar( 'colophon-sidebar' ); ?>
 	</ul>

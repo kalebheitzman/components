@@ -9,11 +9,47 @@ body {
 
 h1, p, li {
 	opacity: 0;
-	transition: opacity 100ms ease-in;
+	transition: opacity 50ms ease-in;
 }
 
 .wf-active {
 	h1, p, li {
 		opacity: 1;
+	}
+}
+
+/* headings */
+h1, h2, h3, h4, h5, h6 {
+	font-weight: normal;
+}
+h1 {
+	font-size: 2rem;
+	line-height: 3.36;
+}
+h2 {
+	font-size: 1.65rem;
+	line-height: 3.36;
+}
+h3,
+h4,
+h5,
+h6 {
+	font-size: 1.25rem;
+	line-height: 1.68;
+}
+
+/* body elements */
+p {
+	font-size: 1rem;
+	line-height: 1.68;
+}
+
+/* links */
+a {
+	color: #279dff;
+	transition: color 85ms ease-in;
+
+	&:hover {
+		color: darken(#279dff, 10%);
 	}
 }

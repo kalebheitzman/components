@@ -1,6 +1,6 @@
 <?php
 /**
- * Components Theme Page
+ * Template name: With Left Sidebar
  *
  * @package Components
  * @since 1.0.0

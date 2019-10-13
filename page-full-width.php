@@ -1,6 +1,6 @@
 <?php
 /**
- * Components Theme Page
+ * Template name: Full Width Page
  *
  * @package Components
  * @since 1.0.0
