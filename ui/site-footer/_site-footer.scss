@@ -5,7 +5,8 @@
 .site-footer {
 	margin: 0;
 	padding: 1rem;
-	background: #efefef;
+	background: #333;
+	color: #777;
 
 	@include tablet-side {
 		padding: 2rem;

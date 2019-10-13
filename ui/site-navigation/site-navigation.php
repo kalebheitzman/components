@@ -9,10 +9,11 @@
 ?>
 <nav class="site-navigation" aria-label="Main Navigation">
 
+	<div class="nav-mobile">
+		<a class="nav-toggle" href="#!"><span></span></a>
+	</div>
+
 	<div class="primary-nav">
-		<div class="nav-mobile">
-			<a class="nav-toggle" href="#!"><span></span></a>
-		</div>
 		<?php
 			wp_nav_menu(
 				array(

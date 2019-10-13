@@ -38,7 +38,7 @@ class Components_Menu_Walker extends Walker_Nav_Menu {
 		// add span if no permalink.
 		if ( $permalink && '#' !== $permalink && $this->has_children ) {
 			// add a hover style to the first level with children.
-			$output .= '<a href="' . $permalink . '" aria-haspopup="true" aria-expanded="false" class="has-sub-menu level-' . $depth . '" data-submenu-open="false" data-level="' . $depth . '">';
+			$output .= '<a href="' . $permalink . '" aria-haspopup="true" aria-expanded="false" class="has-sub-menu level-' . $depth . '" data-level="' . $depth . '">';
 		} elseif ( $permalink && '#' !== $permalink ) {
 			$output .= '<a href="' . $permalink . '">';
 		} else {
