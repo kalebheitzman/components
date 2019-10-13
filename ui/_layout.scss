@@ -80,3 +80,50 @@ body {
 		z-index: 100000;
 	}
 }
+
+/* sidebar layouts */
+.page-template {
+
+	.site-content-wrapper {
+		grid-column-gap: 4rem;
+	}
+}
+
+.page-template-page-left-sidebar {
+
+	.site-content-wrapper {
+		max-width: 1120px;
+		margin: 0 auto;
+		display: grid;
+		grid-template-columns: 1fr;
+
+		@include tablet-side {
+			grid-template-columns: 1fr 3fr;
+
+			.site-main {
+				grid-column: 2;
+				grid-row: 1;
+			}
+
+			.secondary {
+				grid-column: 1;
+				grid-row: 1;
+			}
+		}
+	}
+}
+
+/* sidebar layouts */
+.page-template-page-right-sidebar {
+
+	.site-content-wrapper {
+		max-width: 1120px;
+		margin: 0 auto;
+		display: grid;
+		grid-template-columns: 1fr;
+
+		@include tablet-side {
+			grid-template-columns: 3fr 1fr;
+		}
+	}
+}

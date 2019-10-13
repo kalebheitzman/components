@@ -2,6 +2,8 @@
 /**
  * Site Colophon
  *
+ * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
+ *
  * @package Components
  * @since 1.0.0
  */

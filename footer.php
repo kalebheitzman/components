@@ -8,6 +8,7 @@
 
 wp_footer(); ?>
 
+	</div><!--.site-content-wrapper-->
 </div><!-- #content -->
 
 <?php get_component( 'site-colophon' ); ?>

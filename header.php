@@ -25,3 +25,4 @@
 <?php get_component( 'site-header' ); ?>
 
 <div id="content" class="site-content <?php component_content_class(); ?>">
+	<div class="site-content-wrapper">

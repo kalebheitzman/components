@@ -23,6 +23,8 @@ function components_body_classes( $classes ) {
 		$classes[] = 'no-sidebar';
 	}
 
+	$page_template = get_page_template_slug();
+
 	return $classes;
 }
 add_filter( 'body_class', 'components_body_classes' );

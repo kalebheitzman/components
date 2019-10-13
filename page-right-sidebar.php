@@ -24,4 +24,6 @@ get_header(); ?>
 	?>
 </main><!--.site-main-->
 
+<?php get_component( 'sidebar-page' ); ?>
+
 <?php get_footer(); ?>
