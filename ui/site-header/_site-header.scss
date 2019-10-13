@@ -9,12 +9,13 @@
 	grid-template-columns: 1fr;
 	background: $nav-background;
 
-	h1 {
+	.site-title {
 		font-size: 1.5rem;
 		margin: 0 0 0 1rem;
 		padding: 0;
 		line-height: 4rem;
 		color: $nav-color;
+		font-weight: normal;
 
 		a {
 			color: $nav-color;
@@ -23,7 +24,7 @@
 	}
 
 	@include tablet-side {
-		grid-template-columns: 160px 1fr;
+		grid-template-columns: 180px 1fr;
 		padding: 0 2rem;
 
 		h1 {

@@ -16,7 +16,7 @@ wp_enqueue_script(
 );
 
 ?>
-<nav class="site-navigation" role="navigation">
+<nav class="site-navigation" aria-label="Main Navigation">
 
 	<div class="primary-nav">
 		<div class="nav-mobile">

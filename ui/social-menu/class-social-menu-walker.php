@@ -31,8 +31,8 @@ class Social_Menu_Walker extends Walker_Nav_Menu {
 
 		// link output.
 		$output .= '<li class="social-icon">';
-		$output .= '<a href="' . $item->url . '" title="' . $item->title . '" target="' . $target . '">';
-		$output .= '<i class="fab ' . $item->classes[0] . '"></i>';
+		$output .= '<a href="' . $item->url . '" aria-label="' . $item->title . '">';
+		$output .= '<i class="fab ' . $item->classes[0] . '" aria-hidden="true"></i>';
 		$output .= '</a>';
 
 	}

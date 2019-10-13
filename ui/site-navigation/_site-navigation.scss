@@ -110,7 +110,7 @@ ul.primary-menu {
 		}
 
 		/* show submenus */
-		.has-sub-menu[data-submenu-open="true"] {
+		.has-sub-menu[aria-expanded="true"] {
 			&+ul.sub-menu {
 				transition: opacity 85ms linear;
 				transform:translate(0);
@@ -123,7 +123,7 @@ ul.primary-menu {
 		}
 
 		/* hide submenus */
-		.has-sub-menu[data-submenu-open="false"] {
+		.has-sub-menu[aria-expanded="false"] {
 			&+ul.sub-menu {
 				transform:translate(9999px);
 				opacity: 0;
@@ -132,9 +132,9 @@ ul.primary-menu {
 		}
 
 		a:hover,
-		&.current-menu-item [data-submenu-open="true"],
-		&.current-menu-parent [data-submenu-open="true"],
-		[data-submenu-open="true"] {
+		&.current-menu-item [aria-expanded="true"],
+		&.current-menu-parent [aria-expanded="true"],
+		[aria-expanded="true"] {
 			background: $nav-mobile-open-background;
 			color: $nav-mobile-open-color;
 		}
@@ -221,9 +221,9 @@ ul.primary-menu {
 				}
 
 				a:hover,
-				&.current-menu-item [data-submenu-open="true"],
-				&.current-menu-parent [data-submenu-open="true"],
-				[data-submenu-open="true"] {
+				&.current-menu-item [aria-expanded="true"],
+				&.current-menu-parent [aria-expanded="true"],
+				[aria-expanded="true"] {
 					background: $nav-open-background;
 					color: $nav-open-color;
 				}

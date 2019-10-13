@@ -6,7 +6,7 @@
  * @since 1.0.0
  */
 
-?><div class="social-menu">
+?><nav class="social-menu">
 	<?php
 		wp_nav_menu(
 			array(
@@ -18,4 +18,4 @@
 			)
 		);
 		?>
-</div><!--.social-menu-->
+</nav><!--.social-menu-->

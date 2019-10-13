@@ -4,20 +4,20 @@
 		/**
 		 * Detect anchor click with submenu children
 		 */
-		$('.has-sub-menu').click(function(e) {
+		$('[aria-haspopup="true"]').click(function(e) {
 			// add an attribute specifiying menu is open
-			let open = $(this).attr('data-submenu-open')
+			let open = $(this).attr('aria-expanded')
 			let state = open === 'false' ? 'true' : 'false'
-			$(this).attr('data-submenu-open', state)
+			$(this).attr('aria-expanded', state)
 
 			// hide all other sub menus at this data level
 			let dataLevel = $(this).attr('data-level')
 			$('.has-sub-menu.level-' + dataLevel)
 				.not($(this))
-				.attr('data-submenu-open', 'false')
+				.attr('aria-expanded', 'false')
 
 			// // if submenu is open, stop click propogation
-			if ($(this).attr('data-submenu-open') === 'true') {
+			if ($(this).attr('aria-expanded') === 'true') {
 				e.preventDefault()
 			}
 			e.stopPropagation()
@@ -27,7 +27,7 @@
 		 * Detect clicks away from the menu to close submenus
 		 */
     $('html').click(function() {
-			$('[data-submenu-open="true"]').attr('data-submenu-open', 'false')
+			$('[aria-expanded="true"]').attr('aria-expanded', 'false')
 		})
 
 		/**
@@ -38,13 +38,6 @@
 			$('.nav-mobile, .primary-menu').toggleClass('active')
 			$(this).toggleClass('active')
 		})
-
-		// /**
-		//  *
-		//  */
-		// $('.nav-toggle').click(function() {
-		// 	$('nav ul').toggle()
-		// })
 
   })
 })(jQuery)

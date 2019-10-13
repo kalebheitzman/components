@@ -18,6 +18,10 @@
 
 <body <?php body_class(); ?>>
 
+<a class="skip-link screen-reader-text" href="#content">
+	<?php esc_attr_e( 'Skip to content', 'components' ); ?>
+</a>
+
 <?php get_template_part( 'ui/site-header/site-header' ); ?>
 
 <div id="content" class="site-content <?php component_content_class(); ?>">
