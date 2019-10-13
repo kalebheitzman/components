@@ -6,10 +6,10 @@ Organize each component or building block of your site under the ```ui``` folder
 
 ```
 ui/
-	site-navigation/
-		_site-navigation.scss
-		site-navigation.php
-		site-navigation.js
+  site-navigation/
+    _site-navigation.scss
+    site-navigation.php
+    site-navigation.js
 ```
 
 ## Initial Setup
