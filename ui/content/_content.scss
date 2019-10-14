@@ -1,0 +1,167 @@
+/*
+CSS for shared content elements like headers, paragraphs, lists, etc
+*/
+
+/* =WordPress Core
+-------------------------------------------------------------- */
+.alignnone {
+	margin: 5px 20px 20px 0;
+}
+
+.aligncenter,
+div.aligncenter {
+	display: block;
+	margin: 5px auto 5px auto;
+}
+
+.alignright {
+	float:right;
+	margin: 5px 0 20px 20px;
+}
+
+.alignleft {
+	float: left;
+	margin: 5px 20px 20px 0;
+}
+
+a img.alignright {
+	float: right;
+	margin: 5px 0 20px 20px;
+}
+
+a img.alignnone {
+	margin: 5px 20px 20px 0;
+}
+
+a img.alignleft {
+	float: left;
+	margin: 5px 20px 20px 0;
+}
+
+a img.aligncenter {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.wp-caption {
+	background: #fff;
+	border: 1px solid #f0f0f0;
+	max-width: 96%; /* Image does not overflow the content area */
+	padding: 5px 3px 10px;
+	text-align: center;
+}
+
+.wp-caption.alignnone {
+	margin: 5px 20px 20px 0;
+}
+
+.wp-caption.alignleft {
+	margin: 5px 20px 20px 0;
+}
+
+.wp-caption.alignright {
+	margin: 5px 0 20px 20px;
+}
+
+.wp-caption img {
+	border: 0 none;
+	height: auto;
+	margin: 0;
+	max-width: 98.5%;
+	padding: 0;
+	width: auto;
+}
+
+.wp-caption p.wp-caption-text {
+	font-size: 11px;
+	line-height: 17px;
+	margin: 0;
+	padding: 0 4px 5px;
+}
+
+/* Components CSS for Entry Content */
+.entry-content {
+
+	blockquote {
+		border-left: 5px solid #efefef;
+		margin: 0;
+		padding: 0 0 0 1rem;
+	}
+
+	cite {
+		font-style: italic;
+	}
+
+	table {
+		width: 100%;
+		border-collapse: collapse;
+
+		tbody {
+
+			tr {
+
+				th {
+					background: #999;
+					color: #fff;
+					padding: 0 1rem;
+					font-weight: normal;
+				}
+				td {
+					padding: 0 1rem;
+				}
+
+				&:nth-child(odd) {
+					background: #f7f7f7;
+				}
+			}
+		}
+	}
+
+	dl {
+
+		dt {
+			margin: 0;
+		}
+
+		dd {
+			margin: 0 0 0 2.5rem;
+		}
+	}
+
+	ul, ol {
+		padding-left: 1.5rem;
+	}
+
+	address {
+		border-left: 5px solid #efefef;
+		margin: 0;
+		padding: 0 0 0 1rem;
+	}
+
+	abbr {
+		border-bottom: none;
+    text-decoration: underline dotted;
+	}
+
+	code {
+		font-family: monospace, monospace;
+		white-space: pre-wrap;       /* Since CSS 2.1 */
+		word-wrap: break-word;       /* Internet Explorer 5.5+ */
+	}
+
+	hr {
+		border: 0;
+		border-bottom: 1px solid #ccc;
+	}
+
+	pre {
+		font-family: monospace, monospace;
+		white-space: pre-wrap;       /* Since CSS 2.1 */
+		word-wrap: break-word;       /* Internet Explorer 5.5+ */
+
+		cite {
+
+		}
+	}
+}
