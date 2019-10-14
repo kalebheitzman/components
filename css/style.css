@@ -798,6 +798,9 @@ a {
 /*
 CSS For Gutenberg Blocks
 */
+.comments-area {
+  clear: both; }
+
 /*
 CSS for shared content elements like headers, paragraphs, lists, etc
 */
@@ -930,6 +933,9 @@ a img.aligncenter {
 
 .entry-content img {
   max-width: 100%; }
+
+.entry-footer {
+  clear: both; }
 
 .page-links {
   clear: both; }
