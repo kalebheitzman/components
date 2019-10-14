@@ -803,32 +803,35 @@ CSS for shared content elements like headers, paragraphs, lists, etc
 */
 /* =WordPress Core
 -------------------------------------------------------------- */
-.alignnone {
-  margin: 5px 20px 20px 0; }
+figure {
+  margin: 0;
+  padding: 1.5rem 0; }
 
 .aligncenter,
 div.aligncenter {
   display: block;
-  margin: 5px auto 5px auto; }
+  margin: 0 auto 0 auto; }
 
 .alignright {
   float: right;
-  margin: 5px 0 20px 20px; }
+  margin: 0 0 1.5rem 1.5rem; }
 
 .alignleft {
   float: left;
-  margin: 5px 20px 20px 0; }
+  margin: 0 1.5rem 1.5rem 0;
+  overflow: hidden; }
 
 a img.alignright {
   float: right;
-  margin: 5px 0 20px 20px; }
+  margin: 0 0 1rem 1rem;
+  overflow: hidden; }
 
 a img.alignnone {
-  margin: 5px 20px 20px 0; }
+  margin: 0 1rem 1rem 0; }
 
 a img.alignleft {
   float: left;
-  margin: 5px 20px 20px 0; }
+  margin: 0 1rem 1rem 0; }
 
 a img.aligncenter {
   display: block;
@@ -838,19 +841,20 @@ a img.aligncenter {
 .wp-caption {
   background: #fff;
   border: 1px solid #f0f0f0;
-  max-width: 96%;
+  max-width: 100%;
   /* Image does not overflow the content area */
-  padding: 5px 3px 10px;
-  text-align: center; }
+  padding: 0.5rem 0.5rem 1rem;
+  text-align: center;
+  box-sizing: border-box; }
 
 .wp-caption.alignnone {
-  margin: 5px 20px 20px 0; }
+  margin: 0 1.5rem 1.5rem 0; }
 
 .wp-caption.alignleft {
-  margin: 5px 20px 20px 0; }
+  margin: 0 1.5rem 1.5rem 0; }
 
 .wp-caption.alignright {
-  margin: 5px 0 20px 20px; }
+  margin: 0 0 1.5rem 1.5rem; }
 
 .wp-caption img {
   border: 0 none;
@@ -864,11 +868,11 @@ a img.aligncenter {
   font-size: 11px;
   line-height: 17px;
   margin: 0;
-  padding: 0 4px 5px; }
+  padding: 0 4px 0; }
 
 /* Components CSS for Entry Content */
 .entry-content blockquote {
-  border-left: 5px solid #efefef;
+  border-left: 0 solid #efefef;
   margin: 0;
   padding: 0 0 0 1rem; }
 
@@ -898,7 +902,7 @@ a img.aligncenter {
   padding-left: 1.5rem; }
 
 .entry-content address {
-  border-left: 5px solid #efefef;
+  border-left: 0 solid #efefef;
   margin: 0;
   padding: 0 0 0 1rem; }
 
@@ -923,6 +927,12 @@ a img.aligncenter {
   /* Since CSS 2.1 */
   word-wrap: break-word;
   /* Internet Explorer 5.5+ */ }
+
+.entry-content img {
+  max-width: 100%; }
+
+.page-links {
+  clear: both; }
 
 /* Main Sidebar */
 /* pager sidebar */
