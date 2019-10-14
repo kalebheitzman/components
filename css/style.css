@@ -489,33 +489,74 @@ a {
     color: #0085f3; }
 
 /*
-import layout
+import common
 */
-/* branding mixins */
-/* text colors */
-/* nav vars */
-/* mobile nav vars */
-/*
- * media query mixins
- * Components is designed to be a mobile first framework. It's recommended
- * to develop your mobile site first, and then work your way up in each
- * component using the following sass mixins.
- */
-/* html, body */
-html,
-body {
-  background: #333; }
+/* =WordPress Core
+-------------------------------------------------------------- */
+.alignnone {
+  margin: 5px 20px 20px 0; }
 
-/* .site-content */
-.site-content {
+.aligncenter,
+div.aligncenter {
+  display: block;
+  margin: 5px auto 5px auto; }
+
+.alignright {
+  float: right;
+  margin: 5px 0 20px 20px; }
+
+.alignleft {
+  float: left;
+  margin: 5px 20px 20px 0; }
+
+a img.alignright {
+  float: right;
+  margin: 5px 0 20px 20px; }
+
+a img.alignnone {
+  margin: 5px 20px 20px 0; }
+
+a img.alignleft {
+  float: left;
+  margin: 5px 20px 20px 0; }
+
+a img.aligncenter {
+  display: block;
+  margin-left: auto;
+  margin-right: auto; }
+
+.wp-caption {
   background: #fff;
-  padding: 1rem; }
-  @media (min-width: 900px) {
-    .site-content {
-      padding: 2rem 0 4rem; } }
+  border: 1px solid #f0f0f0;
+  max-width: 96%;
+  /* Image does not overflow the content area */
+  padding: 5px 3px 10px;
+  text-align: center; }
 
-/* .site-main elements */
-/* accessibility */
+.wp-caption.alignnone {
+  margin: 5px 20px 20px 0; }
+
+.wp-caption.alignleft {
+  margin: 5px 20px 20px 0; }
+
+.wp-caption.alignright {
+  margin: 5px 0 20px 20px; }
+
+.wp-caption img {
+  border: 0 none;
+  height: auto;
+  margin: 0;
+  max-width: 98.5%;
+  padding: 0;
+  width: auto; }
+
+.wp-caption p.wp-caption-text {
+  font-size: 11px;
+  line-height: 17px;
+  margin: 0;
+  padding: 0 4px 5px; }
+
+/* Text meant only for screen readers. */
 .screen-reader-text {
   border: 0;
   clip: rect(1px, 1px, 1px, 1px);
@@ -566,9 +607,58 @@ body {
     width: auto;
     z-index: 100000; }
 
-/* sidebar layouts */
-.page-template .site-content-wrapper {
-  grid-column-gap: 4rem; }
+/*
+import layout
+*/
+/* branding mixins */
+/* text colors */
+/* nav vars */
+/* mobile nav vars */
+/*
+ * media query mixins
+ * Components is designed to be a mobile first framework. It's recommended
+ * to develop your mobile site first, and then work your way up in each
+ * component using the following sass mixins.
+ */
+/* html, body */
+html,
+body {
+  background: #333; }
+
+/* admin related */
+.post-edit-link {
+  background: #efefef;
+  color: #888;
+  border-radius: 5px;
+  padding: 0.5rem 1rem;
+  margin-top: 1rem;
+  text-decoration: none;
+  display: inline-block;
+  transition: all 85ms ease-in; }
+  .post-edit-link:hover {
+    background: #ddd;
+    color: #444; }
+
+/* .site-content */
+.site-content {
+  background: #fff;
+  padding: 1rem; }
+  @media (min-width: 900px) {
+    .site-content {
+      padding: 2rem 0 4rem; } }
+
+/* .site-main elements */
+/* post and page layouts */
+.page-template .site-content-wrapper,
+.single-post .site-content-wrapper,
+.blog .site-content-wrapper {
+  grid-column-gap: 9rem; }
+
+.page-template-default .site-content-wrapper,
+.post-template-default .site-content-wrapper,
+.blog .site-content-wrapper {
+  width: 1120px;
+  margin: 0 auto; }
 
 .page-template-page-left-sidebar .site-content-wrapper {
   max-width: 1120px;
@@ -586,13 +676,17 @@ body {
         grid-row: 1; } }
 
 /* sidebar layouts */
-.page-template-page-right-sidebar .site-content-wrapper {
+.page-template-page-right-sidebar .site-content-wrapper,
+.single-post .site-content-wrapper,
+.blog .site-content-wrapper {
   max-width: 1120px;
   margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr; }
   @media (min-width: 900px) {
-    .page-template-page-right-sidebar .site-content-wrapper {
+    .page-template-page-right-sidebar .site-content-wrapper,
+    .single-post .site-content-wrapper,
+    .blog .site-content-wrapper {
       grid-template-columns: 3fr 1fr; } }
 
 /*
@@ -619,31 +713,72 @@ import vairious site components
 /* text colors */
 /* nav vars */
 /* mobile nav vars */
-/* branding mixins */
-/* text colors */
-/* nav vars */
-/* mobile nav vars */
-/*
- * media query mixins
- * Components is designed to be a mobile first framework. It's recommended
- * to develop your mobile site first, and then work your way up in each
- * component using the following sass mixins.
- */
-/* html, body */
-html,
-body {
-  background: #333; }
+/* =WordPress Core
+-------------------------------------------------------------- */
+.alignnone {
+  margin: 5px 20px 20px 0; }
 
-/* .site-content */
-.site-content {
+.aligncenter,
+div.aligncenter {
+  display: block;
+  margin: 5px auto 5px auto; }
+
+.alignright {
+  float: right;
+  margin: 5px 0 20px 20px; }
+
+.alignleft {
+  float: left;
+  margin: 5px 20px 20px 0; }
+
+a img.alignright {
+  float: right;
+  margin: 5px 0 20px 20px; }
+
+a img.alignnone {
+  margin: 5px 20px 20px 0; }
+
+a img.alignleft {
+  float: left;
+  margin: 5px 20px 20px 0; }
+
+a img.aligncenter {
+  display: block;
+  margin-left: auto;
+  margin-right: auto; }
+
+.wp-caption {
   background: #fff;
-  padding: 1rem; }
-  @media (min-width: 900px) {
-    .site-content {
-      padding: 2rem 0 4rem; } }
+  border: 1px solid #f0f0f0;
+  max-width: 96%;
+  /* Image does not overflow the content area */
+  padding: 5px 3px 10px;
+  text-align: center; }
 
-/* .site-main elements */
-/* accessibility */
+.wp-caption.alignnone {
+  margin: 5px 20px 20px 0; }
+
+.wp-caption.alignleft {
+  margin: 5px 20px 20px 0; }
+
+.wp-caption.alignright {
+  margin: 5px 0 20px 20px; }
+
+.wp-caption img {
+  border: 0 none;
+  height: auto;
+  margin: 0;
+  max-width: 98.5%;
+  padding: 0;
+  width: auto; }
+
+.wp-caption p.wp-caption-text {
+  font-size: 11px;
+  line-height: 17px;
+  margin: 0;
+  padding: 0 4px 5px; }
+
+/* Text meant only for screen readers. */
 .screen-reader-text {
   border: 0;
   clip: rect(1px, 1px, 1px, 1px);
@@ -694,9 +829,55 @@ body {
     width: auto;
     z-index: 100000; }
 
-/* sidebar layouts */
-.page-template .site-content-wrapper {
-  grid-column-gap: 4rem; }
+/* branding mixins */
+/* text colors */
+/* nav vars */
+/* mobile nav vars */
+/*
+ * media query mixins
+ * Components is designed to be a mobile first framework. It's recommended
+ * to develop your mobile site first, and then work your way up in each
+ * component using the following sass mixins.
+ */
+/* html, body */
+html,
+body {
+  background: #333; }
+
+/* admin related */
+.post-edit-link {
+  background: #efefef;
+  color: #888;
+  border-radius: 5px;
+  padding: 0.5rem 1rem;
+  margin-top: 1rem;
+  text-decoration: none;
+  display: inline-block;
+  transition: all 85ms ease-in; }
+  .post-edit-link:hover {
+    background: #ddd;
+    color: #444; }
+
+/* .site-content */
+.site-content {
+  background: #fff;
+  padding: 1rem; }
+  @media (min-width: 900px) {
+    .site-content {
+      padding: 2rem 0 4rem; } }
+
+/* .site-main elements */
+/* post and page layouts */
+.page-template .site-content-wrapper,
+.single-post .site-content-wrapper,
+.blog .site-content-wrapper {
+  grid-column-gap: 9rem; }
+
+.page-template-default .site-content-wrapper,
+.post-template-default .site-content-wrapper,
+.blog .site-content-wrapper {
+  width: 1120px;
+  margin: 0 auto; }
 
 .page-template-page-left-sidebar .site-content-wrapper {
   max-width: 1120px;
@@ -714,13 +895,17 @@ body {
         grid-row: 1; } }
 
 /* sidebar layouts */
-.page-template-page-right-sidebar .site-content-wrapper {
+.page-template-page-right-sidebar .site-content-wrapper,
+.single-post .site-content-wrapper,
+.blog .site-content-wrapper {
   max-width: 1120px;
   margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr; }
   @media (min-width: 900px) {
-    .page-template-page-right-sidebar .site-content-wrapper {
+    .page-template-page-right-sidebar .site-content-wrapper,
+    .single-post .site-content-wrapper,
+    .blog .site-content-wrapper {
       grid-template-columns: 3fr 1fr; } }
 
 /*
@@ -790,6 +975,7 @@ a {
 
 /* Main Sidebar */
 /* pager sidebar */
+/* post sidebar */
 /*
  * media query mixins
  * Components is designed to be a mobile first framework. It's recommended

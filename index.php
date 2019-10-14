@@ -43,4 +43,6 @@ get_header(); ?>
 	?>
 </main><!--.site-main-->
 
+<?php get_component( 'sidebar-post' ); ?>
+
 <?php get_footer(); ?>
