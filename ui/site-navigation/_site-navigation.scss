@@ -1,6 +1,3 @@
-@import '../branding';
-@import '../media';
-
 /* admin bar adjustments */
 .admin-bar {
 
@@ -146,7 +143,7 @@ ul.primary-menu {
 		a {
 			display: block;
 			padding: 0 1rem;
-			line-height: $nav-height;
+			line-height: $header-line-height-tablet;
 			background: $nav-mobile-background;
 			color: $nav-mobile-color;
 			text-decoration: none;
@@ -208,6 +205,7 @@ ul.primary-menu {
 
 		ul.primary-menu {
 			display: flex;
+			line-height: 6rem;
 
 			li {
 

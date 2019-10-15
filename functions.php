@@ -21,6 +21,16 @@ require $template_directory . '/inc/get-component.php';
 require $template_directory . '/inc/theme-support.php';
 
 /**
+ * Implement the Custom Header feature.
+ */
+require get_template_directory() . '/inc/custom-header.php';
+
+/**
+ * Customizer tweaks.
+ */
+require get_template_directory() . '/inc/customizer.php';
+
+/**
  * Register Nav Menus and include custom nav walkers.
  */
 require $template_directory . '/inc/register-nav-menus.php';

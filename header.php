@@ -17,12 +17,13 @@
 </head>
 
 <body <?php body_class(); ?>>
+	<div class="site-wrapper">
 
-<a class="skip-link screen-reader-text" href="#content">
-	<?php esc_attr_e( 'Skip to content', 'components' ); ?>
-</a>
+		<a class="skip-link screen-reader-text" href="#content">
+			<?php esc_attr_e( 'Skip to content', 'components' ); ?>
+		</a>
 
-<?php get_component( 'site-header' ); ?>
+		<?php get_component( 'site-header' ); ?>
 
-<div id="content" class="site-content <?php component_content_class(); ?>">
-	<div class="site-content-wrapper">
+		<div id="content" class="site-content <?php component_content_class(); ?>">
+			<div class="site-content-wrapper">

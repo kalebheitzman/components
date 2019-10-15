@@ -2,8 +2,6 @@ $background: #ddd;
 $background-hover: #ccc;
 $color: #999;
 
-@import "../media";
-
 @include mobile {
 	.social-menu {
 		display: none;
@@ -15,9 +13,13 @@ $color: #999;
 
 	ul.social-menu-links {
 		list-style: none;
-		padding: 0.75rem 0;
+		padding: 0;
 		margin: 0;
 		float: right;
+
+		@include tablet-side {
+			line-height: $header-line-height-tablet;
+		}
 
 		li.social-icon {
 			margin: 0 0.25rem;

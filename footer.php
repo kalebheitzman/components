@@ -6,14 +6,16 @@
  * @since 1.0.0
  */
 
-wp_footer(); ?>
+?>
 
-	</div><!--.site-content-wrapper-->
-</div><!-- #content -->
+			</div><!--.site-content-wrapper-->
+		</div><!-- #content -->
 
-<?php get_component( 'site-colophon' ); ?>
+		<?php get_component( 'site-colophon' ); ?>
 
-<?php get_component( 'site-footer' ); ?>
+		<?php get_component( 'site-footer' ); ?>
+	<div><!--.site-wrapper-->
 
+	<?php wp_footer(); ?>
 </body>
 </html>

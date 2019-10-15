@@ -4,8 +4,6 @@ $nav-search-placeholder: #aaa;
 $nav-search-border-radius: 1.25rem;
 $nav-search-submit-background: #e3c8ff;
 
-@import "../media";
-
 /* all screens */
 .site-navigation-search {
 	height: 2.5rem;
@@ -43,11 +41,11 @@ $nav-search-submit-background: #e3c8ff;
 @include tablet-up {
 
 	.site-navigation-search {
-		margin: 0.75rem 0 0;
-		background: $nav-search-background;
+		margin: auto 0;
 		border-radius: $nav-search-border-radius;
+		background: $nav-search-background;
 		width: 2.5rem;
-		line-height: 1.5rem;
+		height: 2.5rem;
 		overflow: hidden;
 		display: grid;
 		grid-template-columns: 2.5rem 1fr;

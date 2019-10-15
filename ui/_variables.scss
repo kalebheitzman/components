@@ -4,13 +4,17 @@
 $text-color: #222;
 $link-color: #00b6f7;
 
+/* header vars */
+$header-line-height-tablet: 6rem;
+$header-line-height-desktop: 6rem;
+
 /* nav vars */
 $nav-height: 4rem;
-$nav-background: #efefef;
+$nav-background: #fff;
 $nav-hover-background: #f7f7f7;
 $nav-color: #333;
 $nav-hover-color: #111;
-$nav-open-background: #e3d1f4;
+$nav-open-background: #f7f7f7;
 $nav-open-color: #222;
 
 /* mobile nav vars */

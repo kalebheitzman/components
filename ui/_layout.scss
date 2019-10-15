@@ -1,4 +1,4 @@
-@import './branding';
+@import './variables';
 @import './media';
 
 /* html, body */
@@ -25,9 +25,13 @@ body {
 	}
 }
 
+/* .site-layout */
+.site-wrapper {
+	background: #fff;
+}
+
 /* .site-content */
 .site-content {
-	background: #fff;
 	padding: 1rem;
 
 	@include tablet-side {

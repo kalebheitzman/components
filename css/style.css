@@ -28,6 +28,7 @@ import site branding
 */
 /* branding mixins */
 /* text colors */
+/* header vars */
 /* nav vars */
 /* mobile nav vars */
 /*
@@ -486,6 +487,7 @@ import layout
 */
 /* branding mixins */
 /* text colors */
+/* header vars */
 /* nav vars */
 /* mobile nav vars */
 /*
@@ -515,9 +517,12 @@ body {
     background: #ddd;
     color: #444; }
 
+/* .site-layout */
+.site-wrapper {
+  background: #fff; }
+
 /* .site-content */
 .site-content {
-  background: #fff;
   padding: 1rem; }
   @media (min-width: 900px) {
     .site-content {
@@ -621,10 +626,7 @@ import vairious site components
 */
 /* branding mixins */
 /* text colors */
-/* nav vars */
-/* mobile nav vars */
-/* branding mixins */
-/* text colors */
+/* header vars */
 /* nav vars */
 /* mobile nav vars */
 /*
@@ -654,9 +656,12 @@ body {
     background: #ddd;
     color: #444; }
 
+/* .site-layout */
+.site-wrapper {
+  background: #fff; }
+
 /* .site-content */
 .site-content {
-  background: #fff;
   padding: 1rem; }
   @media (min-width: 900px) {
     .site-content {
@@ -799,6 +804,11 @@ a {
   a:hover {
     color: #0085f3; }
 
+/* branding mixins */
+/* text colors */
+/* header vars */
+/* nav vars */
+/* mobile nav vars */
 /*
 CSS For Gutenberg Blocks
 */
@@ -1014,12 +1024,6 @@ a img.aligncenter {
 /* Main Sidebar */
 /* pager sidebar */
 /* post sidebar */
-/*
- * media query mixins
- * Components is designed to be a mobile first framework. It's recommended
- * to develop your mobile site first, and then work your way up in each
- * component using the following sass mixins.
- */
 /* site colophon */
 .site-colophon.widget-area {
   background: #efefef;
@@ -1037,16 +1041,6 @@ a img.aligncenter {
         grid-template-columns: 1fr 1fr 1fr 1fr;
         grid-column-gap: 2rem; } }
 
-/* branding mixins */
-/* text colors */
-/* nav vars */
-/* mobile nav vars */
-/*
- * media query mixins
- * Components is designed to be a mobile first framework. It's recommended
- * to develop your mobile site first, and then work your way up in each
- * component using the following sass mixins.
- */
 /* site footer element */
 .site-footer {
   margin: 0;
@@ -1060,46 +1054,34 @@ a img.aligncenter {
         max-width: 1120px;
         margin: 0 auto; } }
 
-/*
- * media query mixins
- * Components is designed to be a mobile first framework. It's recommended
- * to develop your mobile site first, and then work your way up in each
- * component using the following sass mixins.
- */
-/* branding mixins */
-/* text colors */
-/* nav vars */
-/* mobile nav vars */
 /* site header element */
 .site-header {
   margin: 0;
   padding: 0;
   display: grid;
   grid-template-columns: 1fr;
-  background: #efefef; }
-  .site-header .site-title {
-    font-size: 1.5rem;
-    margin: 0 0 0 1rem;
-    padding: 0;
-    line-height: 4rem;
-    color: #333;
-    font-weight: normal; }
-    .site-header .site-title a {
-      color: #333;
-      text-decoration: none; }
+  background: #fff; }
+  .site-header .custom-logo-link img {
+    width: 100%;
+    height: auto;
+    vertical-align: middle; }
+  .site-header .site-title,
+  .site-header .site-description {
+    display: none; }
+  @media (min-width: 600px) {
+    .site-header {
+      line-height: 6rem; } }
   @media (min-width: 900px) {
     .site-header {
-      grid-template-columns: 180px 1fr;
+      line-height: 6rem;
+      grid-template-columns: 245px 1fr;
       padding: 0 2rem; }
       .site-header h1 {
         margin: 0; } }
+  @media (min-width: 1200px) {
+    .site-header {
+      line-height: 6rem; } }
 
-/*
- * media query mixins
- * Components is designed to be a mobile first framework. It's recommended
- * to develop your mobile site first, and then work your way up in each
- * component using the following sass mixins.
- */
 /* all screens */
 .site-navigation-search {
   height: 2.5rem; }
@@ -1121,11 +1103,11 @@ a img.aligncenter {
 
 @media (min-width: 600px) {
   .site-navigation-search {
-    margin: 0.75rem 0 0;
-    background: #ddd;
+    margin: auto 0;
     border-radius: 1.25rem;
+    background: #ddd;
     width: 2.5rem;
-    line-height: 1.5rem;
+    height: 2.5rem;
     overflow: hidden;
     display: grid;
     grid-template-columns: 2.5rem 1fr;
@@ -1196,16 +1178,6 @@ a img.aligncenter {
       .site-navigation-search[data-show-search="true"] form {
         display: grid; } }
 
-/* branding mixins */
-/* text colors */
-/* nav vars */
-/* mobile nav vars */
-/*
- * media query mixins
- * Components is designed to be a mobile first framework. It's recommended
- * to develop your mobile site first, and then work your way up in each
- * component using the following sass mixins.
- */
 /* admin bar adjustments */
 .admin-bar .site-navigation .nav-mobile {
   top: 46px; }
@@ -1228,7 +1200,7 @@ a img.aligncenter {
     position: absolute;
     top: 0;
     right: 0;
-    background: #efefef;
+    background: #fff;
     height: 4rem;
     width: 4rem;
     transition: background-color 85ms ease-in; }
@@ -1304,7 +1276,7 @@ ul.primary-menu {
     ul.primary-menu li a {
       display: block;
       padding: 0 1rem;
-      line-height: 4rem;
+      line-height: 6rem;
       background: #333;
       color: #ccc;
       text-decoration: none;
@@ -1335,9 +1307,10 @@ ul.primary-menu {
 /* nav menu styles for table in portrait mode and larger */
 @media (min-width: 900px) {
   .site-navigation ul.primary-menu {
-    display: flex; }
+    display: flex;
+    line-height: 6rem; }
     .site-navigation ul.primary-menu li a {
-      background: #efefef;
+      background: #fff;
       color: #333; }
     .site-navigation ul.primary-menu li.current-menu-item a,
     .site-navigation ul.primary-menu li.current-menu-parent a {
@@ -1347,7 +1320,7 @@ ul.primary-menu {
     .site-navigation ul.primary-menu li.current-menu-item [aria-expanded="true"],
     .site-navigation ul.primary-menu li.current-menu-parent [aria-expanded="true"],
     .site-navigation ul.primary-menu li [aria-expanded="true"] {
-      background: #e3d1f4;
+      background: #f7f7f7;
       color: #222; }
     .site-navigation ul.primary-menu li ul {
       position: absolute;
@@ -1356,12 +1329,6 @@ ul.primary-menu {
       .site-navigation ul.primary-menu li ul li {
         min-width: 190px; } }
 
-/*
- * media query mixins
- * Components is designed to be a mobile first framework. It's recommended
- * to develop your mobile site first, and then work your way up in each
- * component using the following sass mixins.
- */
 @media (max-width: 599px) {
   .social-menu {
     display: none; } }
@@ -1369,9 +1336,12 @@ ul.primary-menu {
 /** social menu */
 .social-menu ul.social-menu-links {
   list-style: none;
-  padding: 0.75rem 0;
+  padding: 0;
   margin: 0;
   float: right; }
+  @media (min-width: 900px) {
+    .social-menu ul.social-menu-links {
+      line-height: 6rem; } }
   .social-menu ul.social-menu-links li.social-icon {
     margin: 0 0.25rem;
     display: inline-block;
