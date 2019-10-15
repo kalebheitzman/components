@@ -1006,6 +1006,11 @@ a img.aligncenter {
 .page-links {
   clear: both; }
 
+/* post css */
+.post.sticky {
+  padding: 0 2rem 2rem;
+  background: #f7f7f7; }
+
 /* Main Sidebar */
 /* pager sidebar */
 /* post sidebar */
