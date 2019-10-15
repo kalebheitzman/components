@@ -1,3 +1,111 @@
+/* comment css */
 .comments-area {
 	clear: both;
+
+	.comment-list {
+		list-style: none;
+		padding: 0;
+
+		li {
+			margin-bottom: 1.5rem;
+
+			article {
+
+				/* Single Comment */
+				.comment-meta {
+
+					.comment-author {
+
+						img {
+							border-radius: 100%;
+							margin-right: 0.5rem;
+						}
+					}
+
+					.comment-metadata {
+
+						.comment-edit-link {
+							margin-left: 1rem;
+						}
+					}
+				}
+
+				.comment-content {
+					position: relative;
+				}
+
+				.reply {
+
+					a {
+						background: #efefef;
+						color: #888;
+						border-radius: 5px;
+						padding: 0.5rem 1rem;
+						margin-top: 1rem;
+						text-decoration: none;
+						display: inline-block;
+						transition: all 85ms ease-in;
+
+						&:hover {
+							background: #ddd;
+							color: #444;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	/* Comment Responde Area */
+	.comment-respond {
+
+		.comment-form {
+
+			p {
+				overflow: hidden;
+
+				* {
+					box-sizing: border-box;
+				}
+
+				label {
+					width: 100%;
+					display: block;
+
+					@include tablet-up {
+						width: 30%;
+						float: left;
+					}
+				}
+
+				textarea,
+				input[type="text"],
+				input[type="email"],
+				input[type="url"] {
+					width: 100%;
+					display: block;
+					padding: 1rem;
+
+					@include tablet-up {
+						width: 70%;
+						float: left;
+					}
+				}
+
+				input[type="submit"] {
+					border: 0;
+					outline: 0;
+					padding: 1rem;
+					background: #efefef;
+					transition: all 85ms ease-in;
+					cursor: pointer;
+
+					&:hover {
+						background: #ddd;
+					}
+				}
+			}
+		}
+	}
+
 }

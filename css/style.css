@@ -500,7 +500,8 @@ body {
   background: #333; }
 
 /* admin related */
-.post-edit-link {
+.post-edit-link,
+.comment-edit-link {
   background: #efefef;
   color: #888;
   border-radius: 5px;
@@ -509,7 +510,8 @@ body {
   text-decoration: none;
   display: inline-block;
   transition: all 85ms ease-in; }
-  .post-edit-link:hover {
+  .post-edit-link:hover,
+  .comment-edit-link:hover {
     background: #ddd;
     color: #444; }
 
@@ -637,7 +639,8 @@ body {
   background: #333; }
 
 /* admin related */
-.post-edit-link {
+.post-edit-link,
+.comment-edit-link {
   background: #efefef;
   color: #888;
   border-radius: 5px;
@@ -646,7 +649,8 @@ body {
   text-decoration: none;
   display: inline-block;
   transition: all 85ms ease-in; }
-  .post-edit-link:hover {
+  .post-edit-link:hover,
+  .comment-edit-link:hover {
     background: #ddd;
     color: #444; }
 
@@ -798,8 +802,70 @@ a {
 /*
 CSS For Gutenberg Blocks
 */
+/* comment css */
 .comments-area {
-  clear: both; }
+  clear: both;
+  /* Comment Responde Area */ }
+  .comments-area .comment-list {
+    list-style: none;
+    padding: 0; }
+    .comments-area .comment-list li {
+      margin-bottom: 1.5rem; }
+      .comments-area .comment-list li article {
+        /* Single Comment */ }
+        .comments-area .comment-list li article .comment-meta .comment-author img {
+          border-radius: 100%;
+          margin-right: 0.5rem; }
+        .comments-area .comment-list li article .comment-meta .comment-metadata .comment-edit-link {
+          margin-left: 1rem; }
+        .comments-area .comment-list li article .comment-content {
+          position: relative; }
+        .comments-area .comment-list li article .reply a {
+          background: #efefef;
+          color: #888;
+          border-radius: 5px;
+          padding: 0.5rem 1rem;
+          margin-top: 1rem;
+          text-decoration: none;
+          display: inline-block;
+          transition: all 85ms ease-in; }
+          .comments-area .comment-list li article .reply a:hover {
+            background: #ddd;
+            color: #444; }
+  .comments-area .comment-respond .comment-form p {
+    overflow: hidden; }
+    .comments-area .comment-respond .comment-form p * {
+      box-sizing: border-box; }
+    .comments-area .comment-respond .comment-form p label {
+      width: 100%;
+      display: block; }
+      @media (min-width: 600px) {
+        .comments-area .comment-respond .comment-form p label {
+          width: 30%;
+          float: left; } }
+    .comments-area .comment-respond .comment-form p textarea,
+    .comments-area .comment-respond .comment-form p input[type="text"],
+    .comments-area .comment-respond .comment-form p input[type="email"],
+    .comments-area .comment-respond .comment-form p input[type="url"] {
+      width: 100%;
+      display: block;
+      padding: 1rem; }
+      @media (min-width: 600px) {
+        .comments-area .comment-respond .comment-form p textarea,
+        .comments-area .comment-respond .comment-form p input[type="text"],
+        .comments-area .comment-respond .comment-form p input[type="email"],
+        .comments-area .comment-respond .comment-form p input[type="url"] {
+          width: 70%;
+          float: left; } }
+    .comments-area .comment-respond .comment-form p input[type="submit"] {
+      border: 0;
+      outline: 0;
+      padding: 1rem;
+      background: #efefef;
+      transition: all 85ms ease-in;
+      cursor: pointer; }
+      .comments-area .comment-respond .comment-form p input[type="submit"]:hover {
+        background: #ddd; }
 
 /*
 CSS for shared content elements like headers, paragraphs, lists, etc
