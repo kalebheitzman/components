@@ -2,31 +2,36 @@
 .site-header {
 	margin: 0;
 	padding: 0;
-	display: grid;
-	grid-template-columns: 1fr;
 	background: $nav-background;
 
-	.custom-logo-link {
+	.site-branding {
 
-		img {
-			width: 100%;
-			height: auto;
-			vertical-align: middle;
+		.custom-logo-link {
+			img {
+				width: 100%;
+				height: auto;
+				vertical-align: middle;
+			}
 		}
-	}
 
-	.site-title,
-	.site-description {
-		display: none;
+		.site-title,
+		.site-description {
+			display: none;
+		}
 	}
 
 	@include tablet-up {
 		line-height: $header-line-height-tablet;
+		display: flex;
+
+		.site-branding {
+			padding-right: 1rem;
+			width: 245px;
+		}
 	}
 
 	@include tablet-side {
 		line-height: $header-line-height-tablet;
-		grid-template-columns: 245px 1fr;
 		padding: 0 2rem;
 
 		h1 {

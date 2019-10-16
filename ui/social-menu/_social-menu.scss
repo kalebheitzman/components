@@ -8,6 +8,12 @@ $color: #999;
 	}
 }
 
+@include tablet-side {
+	.social-menu {
+
+	}
+}
+
 /** social menu */
 .social-menu {
 
@@ -19,6 +25,7 @@ $color: #999;
 
 		@include tablet-side {
 			line-height: $header-line-height-tablet;
+			padding-left: 1.5rem;
 		}
 
 		li.social-icon {

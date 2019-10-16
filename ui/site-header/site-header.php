@@ -30,5 +30,7 @@ $frontpage = is_front_page();
 	</div>
 
 	<?php get_component( 'site-navigation' ); ?>
+	<?php get_component( 'site-navigation-search' ); ?>
+	<?php get_component( 'social-menu' ); ?>
 
 </header>

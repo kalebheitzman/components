@@ -9,24 +9,6 @@
 	}
 }
 
-/* site navigation alignment */
-.site-navigation {
-
-	.primary-nav {
-		float: left;
-	}
-
-	.secondary-nav {
-		display: grid;
-		grid-template-columns: 1fr;
-
-		@include tablet-side {
-			grid-template-columns: 1fr 1fr;
-			padding-left: 1rem;
-		}
-	}
-}
-
 /* hamburger menu button */
 @include mobile {
 	.nav-mobile {
@@ -202,10 +184,13 @@ ul.primary-menu {
 /* nav menu styles for table in portrait mode and larger */
 @include tablet-side {
 	.site-navigation {
+		flex-grow: 1;
 
 		ul.primary-menu {
 			display: flex;
 			line-height: 6rem;
+			justify-content: center;
+			width: 100%;
 
 			li {
 
