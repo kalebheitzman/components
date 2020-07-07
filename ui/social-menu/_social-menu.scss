@@ -1,6 +1,6 @@
-$background: #ddd;
-$background-hover: #ccc;
-$color: #999;
+$background: #111;
+$background-hover: #555;
+$color: #555;
 
 @include mobile {
 	.social-menu {
@@ -24,7 +24,6 @@ $color: #999;
 		float: right;
 
 		@include tablet-side {
-			line-height: $header-line-height-tablet;
 			padding-left: 1.5rem;
 		}
 

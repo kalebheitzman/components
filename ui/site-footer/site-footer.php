@@ -9,5 +9,6 @@
 ?><footer class="site-footer">
 	<div class="inner">
 		<p>&copy; <?php echo esc_attr( date( 'Y' ) ); ?> <?php bloginfo( 'name' ); ?></p>
+    <?php get_component( 'social-menu' ); ?>
 	</div>
 </footer>
