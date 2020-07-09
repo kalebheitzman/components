@@ -1,6 +1,6 @@
-$background: #111;
+$background: #222;
 $background-hover: #555;
-$color: #555;
+$color: #aaa;
 
 @include mobile {
 	.social-menu {
@@ -41,7 +41,8 @@ $color: #555;
 				color: $color;
 				border-radius: 2.5rem;
 				text-decoration: none;
-				transition: background-color 85ms ease-in;
+        transition: background-color 85ms ease-in;
+        font-size: 1.5rem;
 
 				&:hover {
 					background: darken($background, 3%);

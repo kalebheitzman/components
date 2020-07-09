@@ -49,3 +49,15 @@ This theme has built in support for SASS compilation using gulp. Simply run ```g
 This theme will automatically load your js files if you follow the component structure. The included ```get_component``` function will search for a js file of the same name of the component and partial you pass and will automatically enqueue it into your site. 
 
 For example, if you were to call ```get_component( 'site-navigation` )```, it would enqueue the ```ui/site-navigation/site-navigation.js``` if it exists.
+
+## Theme Features
+
+This is a complete WordPress skeleton theme that includes multiple navigation menus, react-based Gutenberg Blocks, a custom theme panel, and more.
+
+### Primary Nav Menu
+
+The Primary Nav Menu features a ```callout-button``` css class that can be added to menu items under **Appearance -> Menus.** This callout class highlights specified menu items to give them more visibility to clients visiting your site.
+
+### Social Nav Menu
+
+The Social Nav Menu uses Fontawesome Icons to display social networks. For example, if you want to add a Facebook icon, you would add the ```fa-facebook``` css class to your menu item under **Appearance -> Menus.**

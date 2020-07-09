@@ -18,5 +18,8 @@
     "hover.css": "^2.3.2",
     "node-sass": "^4.11.0",
     "normalize-scss": "^7.0.1"
+  },
+  "scripts": {
+    "dev": "./node_modules/.bin/gulp"
   }
 }

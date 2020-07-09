@@ -174,7 +174,7 @@ if ( ! function_exists( 'components_post_thumbnail' ) ) :
 			?>
 
 			<div class="post-thumbnail">
-				<?php the_post_thumbnail(); ?>
+				<?php the_post_thumbnail( 'hero' ); ?>
 			</div><!-- .post-thumbnail -->
 
 		<?php else : ?>

@@ -1,0 +1,23 @@
+.site-branding {
+
+  .custom-logo-link {
+    img {
+      width: 100%;
+      height: auto;
+      vertical-align: middle;
+    }
+  }
+
+  .site-title,
+  .site-description {
+    display: none;
+  }
+
+  @include tablet-up {
+
+		.site-branding {
+			padding-right: 1rem;
+			width: 245px;
+		}
+	}
+}

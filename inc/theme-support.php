@@ -38,7 +38,15 @@ if ( ! function_exists( 'components_setup' ) ) :
 		 *
 		 * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
 		 */
-		add_theme_support( 'post-thumbnails' );
+    add_theme_support( 'post-thumbnails' );
+    
+    // hero image
+    add_image_size(
+      'hero',
+      1920,
+      700,
+      true
+    );
 
 		/*
 		 * Switch default core markup for search form, comment form, and comments

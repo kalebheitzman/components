@@ -9,9 +9,7 @@
 ?>
 <nav class="site-navigation" aria-label="Main Navigation">
 
-	<div class="nav-mobile">
-		<a class="nav-toggle" href="#!"><span></span></a>
-	</div>
+  <?php get_component( 'site-branding' ); ?>
 
 	<?php
 		wp_nav_menu(
@@ -25,4 +23,8 @@
 		);
 		?>
 
+  <div class="nav-mobile">
+		<a class="nav-toggle" href="#!"><span></span></a>
+  </div>
+  
 </nav>

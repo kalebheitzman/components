@@ -1,0 +1,149 @@
+/* global secondary nav menu styles */
+.site-navigation-secondary {
+  background: #efefef;
+  padding: 0 1rem;
+
+  ul.secondary-menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+
+    li {
+
+      &.current-menu-item a,
+      &.current-menu-parent a {
+        color: #222;
+      }
+
+      /* show submenus */
+      .has-sub-menu[aria-expanded="true"] {
+        &+ul.sub-menu {
+          transition: opacity 85ms linear;
+          display: block;
+          opacity: 1;
+          height: auto;
+        }
+        &.level-1+ul.sub-menu {
+          position: static;
+        }
+      }
+
+      /* hide submenus */
+      .has-sub-menu[aria-expanded="false"] {
+        &+ul.sub-menu {
+          display: none;
+          opacity: 0;
+          height: 0;
+        }
+      }
+
+      a:hover,
+      &.current-menu-item [aria-expanded="true"],
+      &.current-menu-parent [aria-expanded="true"],
+      [aria-expanded="true"] {
+        
+        
+      }
+
+      a {
+        display: block;
+        padding: 0 0.5rem;
+        line-height: 2.5rem;
+
+        text-decoration: none;
+        transition: all 85ms ease-in;
+
+        &.has-sub-menu:after {
+          padding-left: 1rem;
+          content: ' \25BE';
+        }
+      }
+
+      /* level-1 */
+      ul {
+
+        list-style: none;
+        padding: 0;
+        margin: 0;
+
+        li {
+
+          a {
+            padding: 0.75rem 1rem;
+            line-height: 1;
+          }
+
+          /* level-2 */
+          ul {
+
+            li {
+
+              a {
+                padding-left: 2rem;
+                display: block;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/* toggle for .secondary-menu using js */
+@include mobile {
+	.site-navigation-secondary {
+
+		.secondary-menu.active {
+			display: block;
+
+			ul {
+				display: block;
+			}
+		}
+	}
+}
+
+/* nav menu styles for table in portrait mode and larger */
+@include tablet-side {
+	.site-navigation-secondary {
+    
+		ul.secondary-menu {
+      float: right;
+      
+			li {
+        display: inline-block;
+
+				a {
+          color: $nav-color;
+        }
+
+				&.current-menu-item a,
+				&.current-menu-parent a {
+					background: $nav-hover-background;
+					color: $nav-hover-color;
+				}
+
+				a:hover,
+				&.current-menu-item [aria-expanded="true"],
+				&.current-menu-parent [aria-expanded="true"],
+				[aria-expanded="true"] {
+					background: $nav-open-background;
+					color: $nav-open-color;
+				}
+
+				ul {
+					position: absolute;
+					z-index: 1;
+					box-shadow: 0 3px 12px rgba(0,0,0,0.15);
+
+					li {
+						min-width: 190px;
+            display: block;
+					}
+				}
+			}
+		}
+	}
+}

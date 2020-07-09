@@ -32,11 +32,10 @@ body {
 
 /* .site-content */
 .site-content {
-	padding: 1rem;
 
 	@include tablet-side {
-		padding: 2rem 0 4rem;
-	}
+
+  }
 }
 
 /* .site-main elements */
@@ -62,9 +61,8 @@ body {
 .blog {
 
 	.site-content-wrapper {
-		width: 1120px;
-		margin: 0 auto;
-	}
+
+  }
 }
 
 .page-template-page-left-sidebar {

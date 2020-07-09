@@ -1,45 +1,5 @@
 /* site header element */
 .site-header {
-	margin: 0;
-	padding: 0;
-	background: $nav-background;
-
-	.site-branding {
-
-		.custom-logo-link {
-			img {
-				width: 100%;
-				height: auto;
-				vertical-align: middle;
-			}
-		}
-
-		.site-title,
-		.site-description {
-			display: none;
-		}
-	}
-
-	@include tablet-up {
-		line-height: $header-line-height-tablet;
-		display: flex;
-
-		.site-branding {
-			padding-right: 1rem;
-			width: 245px;
-		}
-	}
-
-	@include tablet-side {
-		line-height: $header-line-height-tablet;
-		padding: 0 2rem;
-
-		h1 {
-			margin: 0;
-		}
-	}
-
-	@include desktop {
-		line-height: $header-line-height-desktop;
-	}
+  display: grid;
+  grid-template-columns: 1fr;
 }
