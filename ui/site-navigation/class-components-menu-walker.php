@@ -33,7 +33,7 @@ class Components_Menu_Walker extends Walker_Nav_Menu {
 		$permalink   = $item->url;
 
 		// opening li.
-		$output .= "<li class='" . implode( ' ', $item->classes ) . "'>";
+		$output .= '<li class="' . implode( ' ', $item->classes ) . '">';
 
 		// add span if no permalink.
 		if ( $permalink && '#' !== $permalink && $this->has_children ) {
