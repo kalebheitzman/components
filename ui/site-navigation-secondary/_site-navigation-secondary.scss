@@ -4,8 +4,65 @@
   padding: 0 1rem;
   display: none;
 
+  .site-secondary-menu {
+
+    @include tablet-up {
+      margin: 0 auto;
+    }
+
+    @include tablet-side {
+      width: 960px;
+    }
+
+    @include desktop {
+      width: 1280px;
+    }
+  }
+
   @include tablet-up {
     display: block;
+  }
+
+  /* nav menu styles for table in portrait mode and larger */
+  @include tablet-up {
+    
+    ul.secondary-menu {
+      float: right;
+      
+      li {
+        display: inline-block;
+
+        a {
+          color: $nav-color;
+        }
+
+        &.current-menu-item a,
+        &.current-menu-parent a {
+          background: $nav-hover-background;
+          color: $nav-hover-color;
+        }
+
+        a:hover,
+        &.current-menu-item [aria-expanded="true"],
+        &.current-menu-parent [aria-expanded="true"],
+        [aria-expanded="true"] {
+          background: $nav-open-background;
+          color: $nav-open-color;
+        }
+
+        ul {
+          position: absolute;
+          z-index: 1;
+          box-shadow: 0 3px 12px rgba(0,0,0,0.15);
+          background: #fff;
+          
+          li {
+            min-width: 190px;
+            display: block;
+          }
+        }
+      }
+    }
   }
 
   ul.secondary-menu {
@@ -106,50 +163,6 @@
 
 			ul {
 				display: block;
-			}
-		}
-	}
-}
-
-/* nav menu styles for table in portrait mode and larger */
-@include tablet-up {
-	.site-navigation-secondary {
-    
-		ul.secondary-menu {
-      float: right;
-      
-			li {
-        display: inline-block;
-
-				a {
-          color: $nav-color;
-        }
-
-				&.current-menu-item a,
-				&.current-menu-parent a {
-					background: $nav-hover-background;
-					color: $nav-hover-color;
-				}
-
-				a:hover,
-				&.current-menu-item [aria-expanded="true"],
-				&.current-menu-parent [aria-expanded="true"],
-				[aria-expanded="true"] {
-					background: $nav-open-background;
-					color: $nav-open-color;
-				}
-
-				ul {
-					position: absolute;
-					z-index: 1;
-					box-shadow: 0 3px 12px rgba(0,0,0,0.15);
-          background: #fff;
-          
-					li {
-						min-width: 190px;
-            display: block;
-					}
-				}
 			}
 		}
 	}

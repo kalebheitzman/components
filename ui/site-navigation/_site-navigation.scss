@@ -12,16 +12,17 @@
 .site-navigation {
   grid-row-start: 2;
   display: grid;
-  grid-template-columns: 140px 1fr 50px;
+  grid-template-columns: 140px 1fr 120px;
   padding: 1rem 0;
 
   @include tablet-side {
-    grid-template-columns: 160px 1fr 2.5rem;
+    grid-template-columns: 160px 1fr 120px;
     grid-column-gap: 1rem;
+    padding: 0;
   }
 
   @include desktop {
-    grid-template-columns: 240px 1fr 2.5rem;
+    grid-template-columns: 240px 1fr 120px;
     grid-column-gap: 2rem;
     width: 1280px;
     margin: 0 auto;
@@ -174,7 +175,10 @@ ul.primary-menu {
 
 				a {
 					padding: 0.75rem 1rem;
-					line-height: 1;
+          line-height: 1;
+          height: auto;
+          display: block;
+          padding: 1rem 1rem;
 				}
 
 				/* level-2 */
@@ -184,7 +188,8 @@ ul.primary-menu {
 
 						a {
 							padding-left: 2rem;
-							display: block;
+              display: block;
+              height: auto;
 						}
 					}
 				}
@@ -251,4 +256,10 @@ ul.primary-menu {
 			}
 		}
 	}
+}
+
+.site-navigation-controls {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
 }

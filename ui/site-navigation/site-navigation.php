@@ -23,7 +23,10 @@
 		);
     ?>
     
-  <?php get_component( 'site-navigation-search' ); ?>
+  <div class="site-navigation-controls">
+    <?php get_component( 'site-navigation-search' ); ?>
+    <?php // get_component( 'language-switcher' ); ?>
+  </div>
 
   <div class="nav-mobile">
 		<a class="nav-toggle" href="#!"><span></span></a>
