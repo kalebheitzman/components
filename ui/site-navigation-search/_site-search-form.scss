@@ -1,0 +1,26 @@
+.site-search-form {
+
+  form {
+    display: grid;
+    background: #efefef;
+    padding: 1rem 1rem 1rem 2rem;
+    grid-template-columns: 1fr 50px;
+    font-size: 1.25rem;
+    border-radius: 5rem;
+
+    input[type="text"] {
+      padding: 0;
+      margin: 0;
+      border: 0;
+      outline: 0;
+      background: transparent;
+    }
+  
+    button {
+      padding: 0;
+      margin: 0;
+      border: 0;
+      outline: 0;
+    }  
+  }
+}

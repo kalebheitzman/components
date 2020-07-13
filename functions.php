@@ -38,9 +38,9 @@ require $template_directory . '/ui/site-navigation/class-components-menu-walker.
 require $template_directory . '/ui/social-menu/class-social-menu-walker.php';
 
 /**
- * Register Sidebars.
+ * Register Widget Areas.
  */
-require $template_directory . '/inc/register-sidebars.php';
+require $template_directory . '/inc/register-widgets.php';
 
 /**
  * Enqueue scripts and styles.

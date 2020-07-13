@@ -6,13 +6,21 @@
  * @since 1.0.0
  */
 
-?><div class="site-navigation-search" data-show-search="false" role="search">
-	<button class="site-navigation-search-submit">
-		<i class="fa fa-search" aria-hidden="true"></i>
-	</button>
-	<form class="search-form" action="<?php echo get_site_url(); // phpcs:ignore WordPress.Security.EscapeOutput ?>" method="get">
-		<label class="screen-reader-text" for="s">Search</label>
-		<input type="text" placeholder="Search..." name="s" class="search-text-field" />
-		<input type="submit" value="Search" />
-	</form>
+?><div class="site-navigation-search" role="search">
+	<button class="site-navigation-search-button" data-show-search="false">
+    <i class="fa fa-search" aria-hidden="true"></i>
+  </button>
 </div><!--.site-navigation-search-->
+
+<div class="site-navigation-search-box" data-show-search="false">
+
+  <div class="content">
+
+    <?php get_search_form(); ?>
+
+    <?php get_component( 'sidebar-search' ); ?>
+
+  </div><!--.content-->
+
+
+</div><!--/site-navigation-search-box-->

@@ -21,7 +21,9 @@
 				'walker'         => new Components_Menu_Walker(),
 			)
 		);
-		?>
+    ?>
+    
+  <?php get_component( 'site-navigation-search' ); ?>
 
   <div class="nav-mobile">
 		<a class="nav-toggle" href="#!"><span></span></a>

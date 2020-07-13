@@ -1,8 +1,8 @@
 <?php
 /**
- * Register Sidebars
+ * Register Widget Areas
  *
- * Registers sidebars for use throughout the site.
+ * Register widget areas for use throughout the site.
  *
  * @package Components
  * @since 1.0.0
@@ -88,3 +88,23 @@ function components_register_colophon_sidebar() {
 	);
 }
 add_action( 'widgets_init', 'components_register_colophon_sidebar' );
+
+/**
+ * Register Search Widgets Area
+ *
+ * @return void
+ */
+function components_register_search_sidebar() {
+	register_sidebar(
+		array(
+			'name'          => __( 'Search Widgets', 'components' ),
+			'id'            => 'sidebar-search',
+			'description'   => __( 'Widgets in this area will be shown under the search form.', 'components' ),
+			'before_widget' => '<li id="%1$s" class="widget %2$s">',
+			'after_widget'  => '</li>',
+			'before_title'  => '<h2 class="widgettitle">',
+			'after_title'   => '</h2>',
+		)
+	);
+}
+add_action( 'widgets_init', 'components_register_search_sidebar' );

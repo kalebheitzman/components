@@ -8,6 +8,7 @@
     margin: 0;
     padding: 0;
     overflow: hidden;
+    display: flex;
 
     li {
 
@@ -137,7 +138,8 @@
 					position: absolute;
 					z-index: 1;
 					box-shadow: 0 3px 12px rgba(0,0,0,0.15);
-
+          background: #fff;
+          
 					li {
 						min-width: 190px;
             display: block;
