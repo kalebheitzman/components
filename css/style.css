@@ -1028,19 +1028,16 @@ a img.aligncenter {
     .sidebar-search ul li a {
       color: #fff; }
 
-.site-branding .custom-logo-link img {
-  width: 100%;
-  height: auto;
-  vertical-align: middle; }
-
-.site-branding .site-title,
-.site-branding .site-description {
-  display: none; }
-
-@media (min-width: 600px) {
-  .site-branding .site-branding {
-    padding-right: 1rem;
-    width: 245px; } }
+.site-branding {
+  display: flex;
+  align-items: center; }
+  .site-branding .custom-logo-link img {
+    width: 100%;
+    height: auto;
+    vertical-align: middle; }
+  .site-branding .site-title,
+  .site-branding .site-description {
+    display: none; }
 
 /* site colophon */
 .site-colophon.widget-area {
@@ -1148,7 +1145,11 @@ a img.aligncenter {
 /* global secondary nav menu styles */
 .site-navigation-secondary {
   background: #efefef;
-  padding: 0 1rem; }
+  padding: 0 1rem;
+  display: none; }
+  @media (min-width: 600px) {
+    .site-navigation-secondary {
+      display: block; } }
   .site-navigation-secondary ul.secondary-menu {
     list-style: none;
     margin: 0;
@@ -1203,7 +1204,7 @@ a img.aligncenter {
       display: block; } }
 
 /* nav menu styles for table in portrait mode and larger */
-@media (min-width: 900px) {
+@media (min-width: 600px) {
   .site-navigation-secondary ul.secondary-menu {
     float: right; }
     .site-navigation-secondary ul.secondary-menu li {
@@ -1236,8 +1237,8 @@ a img.aligncenter {
 .site-navigation {
   grid-row-start: 2;
   display: grid;
-  grid-template-columns: 1fr;
-  padding: 0 1rem; }
+  grid-template-columns: 140px 1fr 50px;
+  padding: 1rem 0; }
   @media (min-width: 900px) {
     .site-navigation {
       grid-template-columns: 160px 1fr 2.5rem;
@@ -1251,6 +1252,9 @@ a img.aligncenter {
 
 /* hamburger menu button */
 @media (max-width: 599px) {
+  ul.primary-menu {
+    position: absolute;
+    width: 100%; }
   .nav-mobile {
     position: absolute;
     top: 0;

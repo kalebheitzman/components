@@ -2,6 +2,11 @@
 .site-navigation-secondary {
   background: #efefef;
   padding: 0 1rem;
+  display: none;
+
+  @include tablet-up {
+    display: block;
+  }
 
   ul.secondary-menu {
     list-style: none;
@@ -107,7 +112,7 @@
 }
 
 /* nav menu styles for table in portrait mode and larger */
-@include tablet-side {
+@include tablet-up {
 	.site-navigation-secondary {
     
 		ul.secondary-menu {

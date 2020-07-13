@@ -12,8 +12,8 @@
 .site-navigation {
   grid-row-start: 2;
   display: grid;
-  grid-template-columns: 1fr;
-  padding: 0 1rem;
+  grid-template-columns: 140px 1fr 50px;
+  padding: 1rem 0;
 
   @include tablet-side {
     grid-template-columns: 160px 1fr 2.5rem;
@@ -30,6 +30,11 @@
 
 /* hamburger menu button */
 @include mobile {
+
+  ul.primary-menu {
+    position: absolute;
+    width: 100%;
+  }
 	.nav-mobile {
 		position: absolute;
 		top: 0;
