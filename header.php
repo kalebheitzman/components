@@ -23,7 +23,7 @@
 			<?php esc_attr_e( 'Skip to content', 'components' ); ?>
 		</a>
 
-		<?php get_component( 'site-header' ); ?>
-
+    <?php get_component( 'site-header' ); ?>
+    
 		<div id="content" class="site-content <?php component_content_class(); ?>">
 			<div class="site-content-wrapper">

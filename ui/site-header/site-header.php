@@ -14,3 +14,6 @@ $frontpage = is_front_page();
   <?php get_component( 'site-navigation-secondary' ); ?>
 
 </header>
+
+<?php get_component( 'site-navigation-search-box' ); ?>
+
