@@ -159,6 +159,33 @@ if ( ! function_exists( 'components_entry_footer' ) ) :
 	}
 endif;
 
+if ( ! function_exists( 'components_breadcrumbs' ) ) :
+  /**
+   * Componets Breadcrumbs
+   * 
+   * @return void
+   */
+  function components_breadcrumbs() {
+    echo '<a href="'.home_url().'" rel="nofollow">Home</a>';
+    if (is_category() || is_single()) {
+      echo "&nbsp;&nbsp;&#187;&nbsp;&nbsp;";
+      the_category(' &bull; ');
+        if (is_single()) {
+          echo " &nbsp;&nbsp;&#187;&nbsp;&nbsp; ";
+          the_title();
+        }
+    } elseif (is_page()) {
+      echo "&nbsp;&nbsp;&#187;&nbsp;&nbsp;";
+      echo the_title();
+    } elseif (is_search()) {
+      echo "&nbsp;&nbsp;&#187;&nbsp;&nbsp;Search Results for... ";
+      echo '"<em>';
+      echo the_search_query();
+      echo '</em>"';
+    }
+  }
+endif;
+
 if ( ! function_exists( 'components_post_thumbnail' ) ) :
 	/**
 	 * Components Post Thumbnail

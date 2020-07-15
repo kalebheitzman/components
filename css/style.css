@@ -31,6 +31,7 @@ import site branding
 /* header vars */
 /* nav vars */
 /* mobile nav vars */
+/* content widths */
 /* hero vars */
 /*
 import hover.css mixins
@@ -491,6 +492,7 @@ import layout
 /* header vars */
 /* nav vars */
 /* mobile nav vars */
+/* content widths */
 /* hero vars */
 /*
  * media query mixins
@@ -619,6 +621,7 @@ import vairious site components
 /* header vars */
 /* nav vars */
 /* mobile nav vars */
+/* content widths */
 /* hero vars */
 /*
  * media query mixins
@@ -788,6 +791,7 @@ a {
 /* header vars */
 /* nav vars */
 /* mobile nav vars */
+/* content widths */
 /* hero vars */
 /*
 CSS For Gutenberg Blocks
@@ -1003,6 +1007,92 @@ a img.aligncenter {
 .page-links {
   clear: both; }
 
+/* hero banner */
+.hero {
+  width: 100%;
+  background: #333;
+  position: relative; }
+  @media (max-width: 599px) {
+    .hero {
+      height: 60vh; } }
+  @media (min-width: 600px) {
+    .hero {
+      height: 60vh; } }
+  @media (min-width: 900px) {
+    .hero {
+      height: 60vh; } }
+  @media (min-width: 1200px) {
+    .hero {
+      height: 69vh; } }
+  .hero img {
+    width: 100% !important;
+    object-fit: cover;
+    animation: fadeIn ease 300ms; }
+    @media (max-width: 599px) {
+      .hero img {
+        height: 60vh; } }
+    @media (min-width: 600px) {
+      .hero img {
+        height: 60vh; } }
+    @media (min-width: 900px) {
+      .hero img {
+        height: 60vh; } }
+    @media (min-width: 1200px) {
+      .hero img {
+        height: 69vh; } }
+  .hero .outer {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.25);
+    position: absolute;
+    top: 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    box-sizing: border-box; }
+    .hero .outer .inner {
+      padding: 1rem; }
+      @media (min-width: 600px) {
+        .hero .outer .inner {
+          padding: 0;
+          margin: 0 auto;
+          width: 720px; } }
+      @media (min-width: 900px) {
+        .hero .outer .inner {
+          width: 960px; } }
+      @media (min-width: 1200px) {
+        .hero .outer .inner {
+          width: 1280px; } }
+    .hero .outer h1 {
+      color: #fff;
+      font-size: 4rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      margin: 0; }
+      @media (max-width: 599px) {
+        .hero .outer h1 {
+          font-size: 3rem; } }
+    .hero .outer .breadcrumbs {
+      color: #fff; }
+      .hero .outer .breadcrumbs a {
+        background: rgba(255, 255, 255, 0.35);
+        color: #fff;
+        text-decoration: none;
+        display: inline-block;
+        padding: 0.25rem 0.75rem;
+        border-radius: 3px;
+        transition: all 85ms ease-in-out; }
+        .hero .outer .breadcrumbs a:hover {
+          background: white;
+          color: #333; }
+
+/* animations */
+@keyframes fadeIn {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
 /* page css */
 .page .post-thumbnail img {
   display: block;
@@ -1106,7 +1196,7 @@ a img.aligncenter {
   @media (min-width: 900px) {
     .site-header {
       grid-template-columns: 180px 1fr 50px;
-      width: 920px; } }
+      width: 960px; } }
   @media (min-width: 1200px) {
     .site-header {
       width: 1280px; } }

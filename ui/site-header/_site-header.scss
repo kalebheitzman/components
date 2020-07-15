@@ -21,18 +21,18 @@
   
   @include tablet-up {
     margin: 0 auto;
-    width: 720px;
+    width: $content-tablet-up;
     grid-template-columns: 120px 1fr 50px;
     grid-column-gap: 2rem;
   }
 
   @include tablet-side {
     grid-template-columns: 180px 1fr 50px;
-    width: 920px;
+    width: $content-tablet-side;
   }
   
   @include desktop {
-    width: 1280px;
+    width: $content-desktop;
   }
   
   .site-branding {

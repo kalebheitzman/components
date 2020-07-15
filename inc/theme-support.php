@@ -44,7 +44,7 @@ if ( ! function_exists( 'components_setup' ) ) :
     add_image_size(
       'hero',
       1920,
-      700,
+      0,
       true
     );
 

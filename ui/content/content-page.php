@@ -11,8 +11,8 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-
-	<?php components_post_thumbnail(); ?>
+  
+  <?php get_component( 'hero' ); ?>
 
 	<header class="entry-header">
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
