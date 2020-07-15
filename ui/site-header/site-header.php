@@ -18,12 +18,8 @@ $frontpage = is_front_page();
 
   <?php get_component( 'site-navigation-secondary' ); ?>
 
-  <div class="site-navigation-controls">
-    <?php get_component( 'site-navigation-search' ); ?>
-    <?php // get_component( 'language-switcher' ); ?>
-  </div>
-
-  <?php get_component( 'site-navigation-search-box' ); ?>
+  <?php get_component( 'site-navigation-controls' ); ?>
 
 </header>
 
+<?php get_component( 'site-navigation-search-box' ); ?>

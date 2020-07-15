@@ -9,6 +9,11 @@
       height: auto;
       vertical-align: middle;
     }
+
+    @include mobile {
+      width: 120px;
+      padding: 1rem;
+    }
   }
 
   .site-title,

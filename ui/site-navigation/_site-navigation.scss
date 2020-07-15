@@ -2,10 +2,6 @@
 .admin-bar {
 
 	.site-navigation {
-
-		.nav-mobile {
-			top: 46px;
-    }
     
     @include mobile {
       ul.primary-menu {
@@ -253,28 +249,4 @@ ul.primary-menu {
 			}
 		}
 	}
-}
-
-/**
- * Site Navigation Controls
- */
-.site-navigation-controls {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-
-  @include mobile {
-    position: absolute;
-    top: 0;
-  }
-}
-
-@include mobile {
-  .admin-bar {
-  
-    .site-navigation-controls {
-      top: 58px;
-      right: 75px;
-    }
-  }
 }
