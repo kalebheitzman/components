@@ -19,7 +19,7 @@
 
   <div class="outer">
     <div class="inner">
-      <h1><?php the_title(); ?></h1>
+      <?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
       <p class="breadcrumbs"><?php components_breadcrumbs(); ?></p>
     </div><!--.innter-->
   </div><!--.wrapper-->
