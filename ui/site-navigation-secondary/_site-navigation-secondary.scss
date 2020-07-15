@@ -1,33 +1,21 @@
 /* global secondary nav menu styles */
 .site-navigation-secondary {
-  background: #efefef;
-  padding: 0 1rem;
   display: none;
-
-  .site-secondary-menu {
-
-    @include tablet-up {
-      margin: 0 auto;
-    }
-
-    @include tablet-side {
-      width: 960px;
-    }
-
-    @include desktop {
-      width: 1280px;
-    }
-  }
 
   @include tablet-up {
     display: block;
   }
 
+  .site-secondary-menu {
+
+  }
+
   /* nav menu styles for table in portrait mode and larger */
   @include tablet-up {
+    display: flex;
+    justify-content: flex-end;
     
     ul.secondary-menu {
-      float: right;
       
       li {
         display: inline-block;

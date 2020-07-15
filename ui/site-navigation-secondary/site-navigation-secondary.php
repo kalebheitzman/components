@@ -16,7 +16,6 @@
       endif;
       ?>
       
-    <?php //get_component( 'site-navigation-search' ); ?>
 
   </nav><!--.site-secondary-menu-->
 

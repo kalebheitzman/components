@@ -8,12 +8,22 @@
 
 $frontpage = is_front_page();
 
-?><header class="site-header">
+?><div class="site-header-background-bar"></div>
 
-	<?php get_component( 'site-navigation' ); ?>
+<header class="site-header">
+
+  <?php get_component( 'site-branding' ); ?>
+
+  <?php get_component( 'site-navigation' ); ?>
+
   <?php get_component( 'site-navigation-secondary' ); ?>
 
-</header>
+  <div class="site-navigation-controls">
+    <?php get_component( 'site-navigation-search' ); ?>
+    <?php // get_component( 'language-switcher' ); ?>
+  </div>
 
-<?php get_component( 'site-navigation-search-box' ); ?>
+  <?php get_component( 'site-navigation-search-box' ); ?>
+
+</header>
 

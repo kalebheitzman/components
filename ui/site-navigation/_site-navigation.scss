@@ -2,10 +2,6 @@
 .admin-bar {
 
 	.site-navigation {
-    grid-row-start: 2;
-    display: grid;
-    grid-template-columns: 140px 1fr;
-    padding: 0.5rem 1rem;
 
 		.nav-mobile {
 			top: 46px;
@@ -15,19 +11,6 @@
       ul.primary-menu {
         top: 109px;
       }
-    }
-
-    @include tablet-side {
-      grid-template-columns: 160px 1fr 120px;
-      grid-column-gap: 1rem;
-      padding: 0;
-    }
-  
-    @include desktop {
-      grid-template-columns: 240px 1fr 120px;
-      grid-column-gap: 2rem;
-      width: 1280px;
-      margin: 0 auto;
     }
 	}
 }
@@ -148,7 +131,7 @@ ul.primary-menu {
 
 		a {
       display: flex;
-      height: 3rem;
+      line-height: 2.75rem;
       align-items: center;
       justify-content: flex-start;
 			padding: 0 1rem;
@@ -222,7 +205,7 @@ ul.primary-menu {
 }
 
 /* nav menu styles for table in portrait mode and larger */
-@include tablet-side {
+@include tablet-up {
 	.site-navigation {
 		flex-grow: 1;
 
