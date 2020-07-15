@@ -3,16 +3,24 @@
 	margin: 0;
 	padding: 1rem;
 	background: #333;
-	color: #777;
+  color: #777;
+  
+  .inner {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-column-gap: 2rem;  
 
-	@include tablet-side {
-		padding: 2rem;
-
-		.inner {
-			max-width: 1120px;
+    @include tablet-up {
       margin: 0 auto;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-		}
-	}
+      width: $content-tablet-up;
+    }
+  
+    @include tablet-side {
+      width: $content-tablet-side;
+    }
+    
+    @include desktop {
+      width: $content-desktop;
+    }
+  }
 }

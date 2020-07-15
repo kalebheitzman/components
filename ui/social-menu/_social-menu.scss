@@ -1,12 +1,6 @@
 $background: #222;
 $background-hover: #555;
-$color: #aaa;
-
-@include mobile {
-	.social-menu {
-		display: none;
-	}
-}
+$color: #777;
 
 @include tablet-side {
 	.social-menu {
@@ -16,16 +10,18 @@ $color: #aaa;
 
 /** social menu */
 .social-menu {
+  margin-block-start: 0.65rem;
+  margin-block-end: 1rem;
+
+  @include tablet-up {
+    display: flex;
+    justify-content: flex-end;
+  }
 
 	ul.social-menu-links {
 		list-style: none;
 		padding: 0;
 		margin: 0;
-		float: right;
-
-		@include tablet-side {
-			padding-left: 1.5rem;
-		}
 
 		li.social-icon {
 			margin: 0 0.25rem;
@@ -37,7 +33,6 @@ $color: #aaa;
 				width: 2.5rem;
 				height: 2.5rem;
 				line-height: 2.5rem;
-				background: $background;
 				color: $color;
 				border-radius: 2.5rem;
 				text-decoration: none;
@@ -45,7 +40,7 @@ $color: #aaa;
         font-size: 1.5rem;
 
 				&:hover {
-					background: darken($background, 3%);
+					color: #ccc;
 				}
 
 				i {

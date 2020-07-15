@@ -6,17 +6,22 @@
 
 	& > ul {
 		display: grid;
-		grid-template-columns: 1fr;
-	}
-
-	@include tablet-side {
-		padding: 2rem 0 4rem;
-
-		& > ul {
-			max-width: 1120px;
-			margin: 0 auto;
-			grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr;
+    
+    @include tablet-up {
+      margin: 0 auto;
+      width: $content-tablet-up;
+      grid-template-columns: 2fr 1fr 1fr;
 			grid-column-gap: 2rem;
-		}
+    }
+  
+    @include tablet-side {
+      width: $content-tablet-side;
+      grid-column-gap: 4rem;
+    }
+    
+    @include desktop {
+      width: $content-desktop;
+    }
 	}
 }
