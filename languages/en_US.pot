@@ -1,0 +1,244 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"Project-Id-Version: Components\n"
+"POT-Creation-Date: 2020-07-17 08:04-0400\n"
+"PO-Revision-Date: 2020-07-17 08:03-0400\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.3.1\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-Flags-xgettext: --add-comments=translators:\n"
+"X-Poedit-WPHeader: style.css\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.min.js\n"
+"X-Poedit-SearchPathExcluded-1: vendor\n"
+"X-Poedit-SearchPathExcluded-2: node_modules\n"
+
+#: 404.php:19
+msgid "Oops! That page can&rsquo;t be found."
+msgstr ""
+
+#: 404.php:23
+msgid ""
+"It looks like nothing was found at this location. Maybe try one of the links "
+"below or a search?"
+msgstr ""
+
+#: 404.php:32
+msgid "Most Used Categories"
+msgstr ""
+
+#. translators: %1$s: smiley
+#: 404.php:48
+#, php-format
+msgid "Try looking in the monthly archives. %1$s"
+msgstr ""
+
+#. translators: 1: title.
+#: comments.php:36
+#, php-format
+msgid "One thought on &ldquo;%1$s&rdquo;"
+msgstr ""
+
+#. translators: 1: comment count number, 2: title.
+#: comments.php:42
+#, php-format
+msgctxt "comments title"
+msgid "%1$s thought on &ldquo;%2$s&rdquo;"
+msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
+msgstr[0] ""
+msgstr[1] ""
+
+#: comments.php:69
+msgid "Comments are closed."
+msgstr ""
+
+#: header.php:23
+msgid "Skip to content"
+msgstr ""
+
+#: inc/register-nav-menus.php:20
+msgid "Primary Menu"
+msgstr ""
+
+#: inc/register-nav-menus.php:21
+msgid "Secondary Menu"
+msgstr ""
+
+#: inc/register-nav-menus.php:22
+msgid "Footer Menu"
+msgstr ""
+
+#: inc/register-nav-menus.php:23
+msgid "Social Menu"
+msgstr ""
+
+#: inc/register-widgets.php:19
+msgid "Main Sidebar"
+msgstr ""
+
+#: inc/register-widgets.php:21
+msgid "Widgets in this area will be shown on the main sidebar."
+msgstr ""
+
+#: inc/register-widgets.php:39
+msgid "Post Sidebar"
+msgstr ""
+
+#: inc/register-widgets.php:41
+msgid "Widgets in this area will be shown on all posts."
+msgstr ""
+
+#: inc/register-widgets.php:59
+msgid "Page Sidebar"
+msgstr ""
+
+#: inc/register-widgets.php:61
+msgid "Widgets in this area will be shown on all pages."
+msgstr ""
+
+#: inc/register-widgets.php:80
+msgid "Colophon Sidebar"
+msgstr ""
+
+#: inc/register-widgets.php:82
+msgid "Widgets in this area will be shown on the colophon area."
+msgstr ""
+
+#: inc/register-widgets.php:100
+msgid "Search Widgets"
+msgstr ""
+
+#: inc/register-widgets.php:102
+msgid "Widgets in this area will be shown under the search form."
+msgstr ""
+
+#. translators: %s: post date.
+#: inc/template-tags.php:75
+#, php-format
+msgctxt "post date"
+msgid "Posted on %s"
+msgstr ""
+
+#. translators: %s: post author.
+#: inc/template-tags.php:92
+#, php-format
+msgctxt "post author"
+msgid "by %s"
+msgstr ""
+
+#. translators: used between list items, there is a space after the comma
+#: inc/template-tags.php:110
+msgid ", "
+msgstr ""
+
+#. translators: 1: list of categories.
+#: inc/template-tags.php:113
+#, php-format
+msgid "Posted in %1$s"
+msgstr ""
+
+#. translators: used between list items, there is a space after the comma
+#: inc/template-tags.php:117
+msgctxt "list item separator"
+msgid ", "
+msgstr ""
+
+#. translators: 1: list of tags.
+#: inc/template-tags.php:120
+#, php-format
+msgid "Tagged %1$s"
+msgstr ""
+
+#. translators: %s: post title
+#: inc/template-tags.php:130
+#, php-format
+msgid "Leave a Comment<span class=\"screen-reader-text\"> on %s</span>"
+msgstr ""
+
+#. translators: %s: Name of current post. Only visible to screen readers
+#: inc/template-tags.php:147 ui/content/content-page.php:35
+#, php-format
+msgid "Edit <span class=\"screen-reader-text\">%s</span>"
+msgstr ""
+
+#. translators: %s: search query.
+#: search.php:23
+#, php-format
+msgid "Search Results for: %s"
+msgstr ""
+
+#: ui/content/content-none.php:14
+msgid "Nothing Found"
+msgstr ""
+
+#. translators: 1: link to WP admin new post page.
+#: ui/content/content-none.php:24
+#, php-format
+msgid ""
+"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr ""
+
+#: ui/content/content-none.php:37
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+msgstr ""
+
+#: ui/content/content-none.php:44
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
+msgstr ""
+
+#: ui/content/content-page.php:21 ui/content/content.php:51
+msgid "Pages:"
+msgstr ""
+
+#. translators: %s: Name of current post. Only visible to screen readers
+#: ui/content/content.php:38
+#, php-format
+msgid "Continue reading<span class=\"screen-reader-text\"> \"%s\"</span>"
+msgstr ""
+
+#: ui/site-footer/site-footer.php:11
+msgid "All Rights Reserved."
+msgstr ""
+
+#. Theme Name of the plugin/theme
+msgid "Components"
+msgstr ""
+
+#. Theme URI of the plugin/theme
+msgid "https://github.com/kalebheitzman/components"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid ""
+"A minimalistic WordPress theme that uses component based design for theme "
+"organization. JS, CSS, and HTML are bundled into individual components under "
+"the <code>./ui</code> folder to be used across your site heavily referencing "
+"the <code>get_template_part()</code> function. This theme includes gulp for "
+"compiling and minifying css and js."
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "Kaleb Heitzman"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "https://heitzman.co"
+msgstr ""
+
+#. Template Name of the plugin/theme
+msgid "With Right Sidebar"
+msgstr ""

@@ -166,7 +166,7 @@ if ( ! function_exists( 'components_breadcrumbs' ) ) :
    * @return void
    */
   function components_breadcrumbs() {
-    echo '<a href="'.home_url().'" rel="nofollow">Home</a>';
+    echo '<a href="'.home_url().'" rel="nofollow">' . __( 'Home', 'components' ) . '</a>';
     if (is_category() || is_single()) {
       echo "&nbsp;&nbsp;&#187;&nbsp;&nbsp;";
       the_category(' &bull; ');

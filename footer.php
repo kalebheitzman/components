@@ -14,7 +14,8 @@
 		<?php get_component( 'site-colophon' ); ?>
 
 		<?php get_component( 'site-footer' ); ?>
-	<div><!--.site-wrapper-->
+
+    <div><!--.site-wrapper-->
 
 	<?php wp_footer(); ?>
 </body>

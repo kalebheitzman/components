@@ -1,0 +1,276 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Components\n"
+"POT-Creation-Date: 2020-07-17 08:18-0400\n"
+"PO-Revision-Date: 2020-07-17 08:22-0400\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: ru_RU\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.3.1\n"
+"X-Poedit-Basepath: ..\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<12 || n%100>14) ? 1 : 2);\n"
+"X-Poedit-Flags-xgettext: --add-comments=translators:\n"
+"X-Poedit-WPHeader: style.css\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.min.js\n"
+"X-Poedit-SearchPathExcluded-1: vendor\n"
+"X-Poedit-SearchPathExcluded-2: node_modules\n"
+
+#: 404.php:19
+msgid "Oops! That page can&rsquo;t be found."
+msgstr "Упс! Эта страница не найдена."
+
+#: 404.php:23
+msgid ""
+"It looks like nothing was found at this location. Maybe try one of the links "
+"below or a search?"
+msgstr ""
+"Похоже, в этом месте ничего не было найдено. Возможно, попробуйте одну из "
+"ссылок ниже или поиск?"
+
+#: 404.php:32
+msgid "Most Used Categories"
+msgstr "Самые популярные категории"
+
+#. translators: %1$s: smiley
+#: 404.php:48
+#, php-format
+msgid "Try looking in the monthly archives. %1$s"
+msgstr "Попробуйте посмотреть в ежемесячных архивах. %1$s"
+
+#. translators: 1: title.
+#: comments.php:36
+#, php-format
+msgid "One thought on &ldquo;%1$s&rdquo;"
+msgstr "Один комментарий о &ldquo;%1$s&rdquo;"
+
+#. translators: 1: comment count number, 2: title.
+#: comments.php:42
+#, php-format
+msgctxt "comments title"
+msgid "%1$s thought on &ldquo;%2$s&rdquo;"
+msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+
+#: comments.php:69
+msgid "Comments are closed."
+msgstr "Комментарии закрыты."
+
+#: header.php:23
+msgid "Skip to content"
+msgstr "Перейти к содержанию"
+
+#: inc/register-nav-menus.php:20
+msgid "Primary Menu"
+msgstr "Основное меню"
+
+#: inc/register-nav-menus.php:21
+msgid "Secondary Menu"
+msgstr "Вторичное меню"
+
+#: inc/register-nav-menus.php:22
+msgid "Footer Menu"
+msgstr "Нижнее меню"
+
+#: inc/register-nav-menus.php:23
+msgid "Social Menu"
+msgstr "Социальное меню"
+
+#: inc/register-widgets.php:19
+msgid "Main Sidebar"
+msgstr "Основной сайдбар"
+
+#: inc/register-widgets.php:21
+#, fuzzy
+msgid "Widgets in this area will be shown on the main sidebar."
+msgstr "Виджеты в этой области будут показаны на главной боковой панели."
+
+#: inc/register-widgets.php:39
+msgid "Post Sidebar"
+msgstr "Боковая панель записей"
+
+#: inc/register-widgets.php:41
+#, fuzzy
+msgid "Widgets in this area will be shown on all posts."
+msgstr "Виджеты в этой области будут показаны на всех постах."
+
+#: inc/register-widgets.php:59
+msgid "Page Sidebar"
+msgstr "Сайдбар страницы"
+
+#: inc/register-widgets.php:61
+#, fuzzy
+msgid "Widgets in this area will be shown on all pages."
+msgstr "Виджеты в этой области будут показаны на всех страницах."
+
+#: inc/register-widgets.php:80
+#, fuzzy
+msgid "Colophon Sidebar"
+msgstr "Колофон боковая панель"
+
+#: inc/register-widgets.php:82
+#, fuzzy
+msgid "Widgets in this area will be shown on the colophon area."
+msgstr "Виджеты в этой области будут показаны на колофоне."
+
+#: inc/register-widgets.php:100
+#, fuzzy
+msgid "Search Widgets"
+msgstr "Поиск виджетов"
+
+#: inc/register-widgets.php:102
+#, fuzzy
+msgid "Widgets in this area will be shown under the search form."
+msgstr "Виджеты в этой области будут показаны в форме поиска."
+
+#. translators: %s: post date.
+#: inc/template-tags.php:75
+#, php-format
+msgctxt "post date"
+msgid "Posted on %s"
+msgstr "Опубликовано %s"
+
+#. translators: %s: post author.
+#: inc/template-tags.php:92
+#, php-format
+msgctxt "post author"
+msgid "by %s"
+msgstr "от %s"
+
+#. translators: used between list items, there is a space after the comma
+#: inc/template-tags.php:110
+msgid ", "
+msgstr ", "
+
+#. translators: 1: list of categories.
+#: inc/template-tags.php:113
+#, php-format
+msgid "Posted in %1$s"
+msgstr "Опубликовано в %1$s"
+
+#. translators: used between list items, there is a space after the comma
+#: inc/template-tags.php:117
+msgctxt "list item separator"
+msgid ", "
+msgstr ", "
+
+#. translators: 1: list of tags.
+#: inc/template-tags.php:120
+#, php-format
+msgid "Tagged %1$s"
+msgstr "Метки: %1$s"
+
+#. translators: %s: post title
+#: inc/template-tags.php:130
+#, fuzzy, php-format
+msgid "Leave a Comment<span class=\"screen-reader-text\"> on %s</span>"
+msgstr "Оставить комментарий<span class=\"screen-reader-text\"> на %s</span>"
+
+#. translators: %s: Name of current post. Only visible to screen readers
+#: inc/template-tags.php:147 ui/content/content-page.php:35
+#, php-format
+msgid "Edit <span class=\"screen-reader-text\">%s</span>"
+msgstr "Редактировать <span class=\"screen-reader-text\">%s</span>"
+
+#: inc/template-tags.php:169
+msgid "Home"
+msgstr "Домой"
+
+#. translators: %s: search query.
+#: search.php:23
+#, php-format
+msgid "Search Results for: %s"
+msgstr "Результаты поиска для: %s"
+
+#: ui/content/content-none.php:14
+msgid "Nothing Found"
+msgstr "Ничего не найдено"
+
+#. translators: 1: link to WP admin new post page.
+#: ui/content/content-none.php:24
+#, php-format
+msgid ""
+"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr ""
+"Готовы опубликовать свой первый пост? <a href=\"%1$s\">Начните здесь</a>."
+
+#: ui/content/content-none.php:37
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+msgstr ""
+"Извините, но ничто не соответствовало вашим условиям поиска. Пожалуйста, "
+"попытайтесь снова с другими ключевыми словами."
+
+#: ui/content/content-none.php:44
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
+msgstr ""
+"Кажется, мы не можем найти то, что вы ищете. Возможно, поиск может помочь."
+
+#: ui/content/content-page.php:21 ui/content/content.php:51
+msgid "Pages:"
+msgstr "Страницы:"
+
+#. translators: %s: Name of current post. Only visible to screen readers
+#: ui/content/content.php:38
+#, php-format
+msgid "Continue reading<span class=\"screen-reader-text\"> \"%s\"</span>"
+msgstr "Продолжить чтение<span class=\"screen-reader-text\"> \"%s\"</span>"
+
+#: ui/site-footer/site-footer.php:11
+msgid "All Rights Reserved."
+msgstr "Все права защищены."
+
+#. Theme Name of the plugin/theme
+msgid "Components"
+msgstr "Компоненты"
+
+#. Theme URI of the plugin/theme
+#, fuzzy
+msgid "https://github.com/kalebheitzman/components"
+msgstr "https://github.com/kalebheitzman/components"
+
+#. Description of the plugin/theme
+#, fuzzy
+msgid ""
+"A minimalistic WordPress theme that uses component based design for theme "
+"organization. JS, CSS, and HTML are bundled into individual components under "
+"the <code>./ui</code> folder to be used across your site heavily referencing "
+"the <code>get_template_part()</code> function. This theme includes gulp for "
+"compiling and minifying css and js."
+msgstr ""
+"Минималистичная тема WordPress, которая использует компонентный дизайн для "
+"организации темы. JS, CSS и HTML объединяются в отдельные компоненты под "
+"<code>./ui</code> папкой, которые будут использоваться на вашем сайте, в "
+"значительной степени ссылаясь на <code>get_template_part()</code> функцию. "
+"Эта тема включает в себя глоток для компиляции и мигрирования css и js."
+
+#. Author of the plugin/theme
+#, fuzzy
+msgid "Kaleb Heitzman"
+msgstr "Калеб Хейцман"
+
+#. Author URI of the plugin/theme
+#, fuzzy
+msgid "https://heitzman.co"
+msgstr "https://heitzman.co"
+
+#. Template Name of the plugin/theme
+msgid "With Right Sidebar"
+msgstr "Боковая панель справа"
+
+#. Template Name of the plugin/theme
+msgid "With Left Sidebar"
+msgstr "Боковая панель слева"
