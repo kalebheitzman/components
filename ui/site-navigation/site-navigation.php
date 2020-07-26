@@ -10,15 +10,19 @@
 <nav class="site-navigation" aria-label="Main Navigation">
 
 	<?php
-		wp_nav_menu(
-			array(
-				'theme_location' => 'primary_menu',
-				'container'      => 'ul',
-				'menu_class'     => 'primary-menu',
-				'menu_id'        => '',
-				'walker'         => new Components_Menu_Walker(),
-			)
-		);
+    if ( has_nav_menu( 'primary_menu' ) ) :
+
+      wp_nav_menu(
+        array(
+          'theme_location' => 'primary_menu',
+          'container'      => 'ul',
+          'menu_class'     => 'primary-menu',
+          'menu_id'        => '',
+          'walker'         => new Components_Menu_Walker(),
+        )
+      );
+
+    endif;
     ?>
     
   <div class="nav-mobile">
