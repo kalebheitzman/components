@@ -22,11 +22,12 @@
  * @since 1.0.0
  */
 function get_component( $component = null, $partial = null ) {
-	if ( null === $component ) {
-		return;
-	}
+	// if ( null === $component ) {
+	// 	return;
+	// }
 	// define components path.
 	$ui_dir = get_stylesheet_directory() . '/ui';
+  $js_dir = get_stylesheet_directory() . '/js';
 
 	// set partial to component if not specified.
 	if ( is_null( $partial ) ) {
@@ -40,27 +41,21 @@ function get_component( $component = null, $partial = null ) {
 	if ( file_exists( $component_php_path ) ) {
 		// load the component.
 		include_once $component_php_path;
-	} else {
-		// fail silently.
-		return;
 	}
 
 	// set js component path.
-	$component_js_path = $ui_dir . '/' . $component . '/' . $partial . '.js';
+	$component_js_path = $js_dir . '/' . $component . '/' . $partial . '.min.js';
 
 	// if js exists for this component load it.
 	if ( file_exists( $component_js_path ) ) {
 		// load the component.
 		wp_enqueue_script(
-			$partial . '-js',
-			get_stylesheet_directory_uri() . '/ui/' . $component . '/' . $partial . '.js',
+			$partial,
+			get_stylesheet_directory_uri() . '/js/' . $component . '/' . $partial . '.min.js?#deferload',
 			array( 'jquery' ),
-			'1.0.0',
+			filemtime(get_template_directory() . '/js/' . $component . '/' . $partial . '.min.js'),
 			true
 		);
-	} else {
-		// fail silently.
-		return;
 	}
 
 }

@@ -1,6 +1,5 @@
 ;(function($) {
-  $(function() {
-
+  $(function() { 
 		/**
 		 * Detect anchor click with submenu children
 		 */
@@ -8,7 +7,7 @@
 			// add an attribute specifiying menu is open
 			let open = $(this).attr('aria-expanded')
 			let state = open === 'false' ? 'true' : 'false'
-			$(this).attr('aria-expanded', state)
+			$(this).attr('aria-expanded', state) 
 
 			// hide all other sub menus at this data level
 			let dataLevel = $(this).attr('data-level')

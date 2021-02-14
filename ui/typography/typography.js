@@ -5,7 +5,7 @@
 // })();
 
 WebFontConfig = {
-	google: { families: [ 'Lato:400,300,700,100,300italic&subset=latin,latin-ext' ] },
+	google: { families: [ 'Lato:400,300,700,100,300italic&subset=latin,latin-ext&display=swap' ] },
 	active: function() {
 		sessionStorage.fonts = true;
 	}

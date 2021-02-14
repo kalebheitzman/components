@@ -29,13 +29,13 @@ function components_scripts() {
 		'5.11.2'
 	);
 
-	wp_enqueue_script(
-		'typography_js',
-		get_template_directory_uri() . '/js/typography.js',
-		null,
-		'1.0.0',
-		true
-	);
+	// wp_enqueue_script(
+	// 	'typography_js',
+	// 	get_template_directory_uri() . '/js/typography.js',
+	// 	null,
+	// 	'1.0.0',
+	// 	true
+	// );
 
 }
 add_action( 'wp_enqueue_scripts', 'components_scripts' );

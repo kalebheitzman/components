@@ -6,6 +6,8 @@
  * @since 1.0.0
  */
 
+get_component( 'typography' );
+
 $frontpage = is_front_page();
 
 ?><div class="site-header-background-bar"></div>

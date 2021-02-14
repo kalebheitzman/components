@@ -38,3 +38,35 @@ function components_pingback_header() {
 	}
 }
 add_action( 'wp_head', 'components_pingback_header' );
+
+/**
+ * Enable Defer Scripts
+ */
+if ( ! function_exists( 'components_defer_scripts') ) :
+  function components_defer_scripts( $url ) {
+    if ( strpos( $url, '#deferload') === false ) {
+      return $url;
+    } else if ( is_admin() ) {
+      return str_replace( '#deferload', '', $url );
+    } else {
+      return str_replace( '#deferload', '', $url )."' defer='defer";
+    }
+  }
+  add_filter( 'clean_url', 'components_defer_scripts', 11, 1 );
+endif;
+
+/**
+ * Enable Async Scripts
+ */
+if ( ! function_exists( 'components_async_scripts') ) :
+  function components_async_scripts( $url ) {
+    if ( strpos( $url, '#asyncload') === false ) {
+      return $url;
+    } else if ( is_admin() ) {
+      return str_replace( '#asyncload', '', $url );
+    } else {
+      return str_replace( '#asyncload', '', $url )."' async='async";
+    }
+  }
+  add_filter( 'clean_url', 'components_async_scripts', 11, 1 );
+endif;
