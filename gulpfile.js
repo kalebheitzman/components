@@ -1,10 +1,12 @@
 'use strict';
 
-var gulp = require('gulp');
-var sass = require('gulp-sass');
-var sassGlob = require('gulp-sass-glob');
-var sourcemaps = require('gulp-sourcemaps');
-var livereload = require('gulp-livereload');
+var gulp        = require('gulp'),
+    sass        = require('gulp-sass'),
+    sassGlob    = require('gulp-sass-glob'),
+    watch       = require('gulp-watch'),
+    browserSync = require('browser-sync').create(),
+    reload      = browserSync.reload,
+    sourcemaps  = require('gulp-sourcemaps');
 
 sass.compiler = require('node-sass');
 
@@ -17,11 +19,22 @@ gulp.task('sass', function () {
 		.pipe(sass().on('error', sass.logError))
 		.pipe(sourcemaps.write('./'))
 		.pipe(gulp.dest('./css'))
-		.pipe(livereload());
+    .pipe(reload({stream:true}));
+});
+
+// browser-sync task for starting the server
+gulp.task('browser-sync', function() {
+  var files = [
+    './ui/*.scss'
+  ]
+
+  return browserSync.init(files, {
+    proxy: "https://bedrock.lndo.site",
+    notify: true
+  })
 });
 
 // watch sass
-gulp.task('default', function() {
-	livereload.listen();
+gulp.task('default', gulp.series('sass', 'browser-sync', function() {
 	gulp.watch('./ui/**/*.scss', gulp.series('sass'));
-});
+}));
