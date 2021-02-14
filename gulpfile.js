@@ -6,6 +6,7 @@ var gulp        = require('gulp'),
     watch       = require('gulp-watch'),
     browserSync = require('browser-sync').create(),
     reload      = browserSync.reload,
+    stream      = browserSync.stream,
     sourcemaps  = require('gulp-sourcemaps');
 
 sass.compiler = require('node-sass');
@@ -19,19 +20,18 @@ gulp.task('sass', function () {
 		.pipe(sass().on('error', sass.logError))
 		.pipe(sourcemaps.write('./'))
 		.pipe(gulp.dest('./css'))
-    .pipe(reload({stream:true}));
+    .pipe(browserSync.stream());
 });
 
 // browser-sync task for starting the server
 gulp.task('browser-sync', function() {
-  var files = [
-    './ui/*.scss'
-  ]
 
-  return browserSync.init(files, {
+  browserSync.init({
     proxy: "https://bedrock.lndo.site",
     notify: true
   })
+
+  gulp.watch('./ui/**/*.scss', gulp.series('sass'));
 });
 
 // watch sass
